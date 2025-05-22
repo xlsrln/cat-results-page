@@ -186,7 +186,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground p-4 md:p-8">
       <header className="mb-8 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold text-bright-blue mb-2">CAT S5 results</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-black mb-2">CAT S5 results</h1>
         <p className="text-xl text-muted-foreground">Live results from the championship</p>
       </header>
 
