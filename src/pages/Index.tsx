@@ -61,7 +61,7 @@ const processDataForLeaderboards = (data: TournamentData[]): EventLeaderboard[] 
 
   const processedLeaderboards: EventLeaderboard[] = [];
 
-  for (const eventName in dataByEvent) {
+  for (const eventName in dataByEvent.reverse()) {
     const eventData = dataByEvent[eventName];
     
     // Group data by name within this event
