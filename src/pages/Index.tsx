@@ -1,14 +1,12 @@
+
 import { useQuery } from "@tanstack/react-query";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Skeleton } from "@/components/ui/skeleton";
 import { parseCSV } from "@/lib/csvParser";
-import { FileText, ExternalLink, Trophy } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { formatTime } from "@/lib/timeFormatter";
-import { calculateChampionshipStandings, ChampionshipEntry } from "@/lib/pointsCalculator";
-import ChampionshipStandingsTable from "@/components/ChampionshipStandingsTable";
+import { FileText, ExternalLink } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"; // Added Card components
+import { Button } from "@/components/ui/button"; // For clickable video link
 
 const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvpxG6EchgG9RszhPdZwv8-ZkHSRo9zxu7moy6t4Nbvg0-Sxi9h7sazU4PdR0lP8T8c5NkFYNgHtL9/pub?output=csv";
 
@@ -16,17 +14,16 @@ interface TournamentData {
   [key: string]: string;
 }
 
-// Exporting these interfaces for use in pointsCalculator.ts
-export interface LeaderboardEntry {
+// New interfaces for processed leaderboard data
+interface LeaderboardEntry {
   rank: number;
   name: string;
-  time: string; // This will now store formatted time
-  originalTimeValue?: number; // Keep original for sorting if needed, though sorting now happens on parsed values
-  powerStageTime: string; // This will now store formatted time
+  time: string; // Fastest time for this name in this event
+  powerStageTime: string;
   videoLink?: string;
 }
 
-export interface EventLeaderboard {
+interface EventLeaderboard {
   eventName: string;
   leaderboard: LeaderboardEntry[];
 }
@@ -73,72 +70,40 @@ const processDataForLeaderboards = (data: TournamentData[]): EventLeaderboard[] 
       return acc;
     }, {} as Record<string, TournamentData[]>);
 
-    const currentEventLeaderboardEntries: Omit<LeaderboardEntry, 'rank' | 'originalTimeValue'>[] = [];
+    const currentEventLeaderboardEntries: Omit<LeaderboardEntry, 'rank'>[] = [];
 
     for (const name in dataByName) {
       const nameEntries = dataByName[name];
       if (nameEntries.length === 0) continue;
 
+      // Find the entry with the fastest (minimum) time for this name
       let bestEntry = nameEntries[0];
-      let bestTimeValue = parseFloat(bestEntry.time);
-
       for (let i = 1; i < nameEntries.length; i++) {
-        const currentTimeValue = parseFloat(nameEntries[i].time);
-        if (!isNaN(currentTimeValue) && (isNaN(bestTimeValue) || currentTimeValue < bestTimeValue)) {
+        // Ensure 'time' exists and is a valid number for comparison
+        const currentTime = parseFloat(nameEntries[i].time);
+        const bestTime = parseFloat(bestEntry.time);
+        if (!isNaN(currentTime) && (isNaN(bestTime) || currentTime < bestTime)) {
           bestEntry = nameEntries[i];
-          bestTimeValue = currentTimeValue;
         }
       }
       
-      if (bestEntry && typeof bestEntry.time === 'string') { // Ensure time is a string before formatting
+      // Ensure bestEntry.time is valid before pushing
+      if (bestEntry && typeof bestEntry.time === 'string') {
          currentEventLeaderboardEntries.push({
           name: bestEntry.name,
-          time: formatTime(bestEntry.time), // Format time here
-          // originalTimeValue: bestTimeValue, // Store original if needed for precise re-sorting later
-          powerStageTime: formatTime(bestEntry['power stage time']), // Format power stage time
+          time: bestEntry.time,
+          powerStageTime: bestEntry['power stage time'] || "N/A",
           videoLink: bestEntry['video link'] || undefined,
         });
       }
     }
 
-    // Sort leaderboard by original time value (ascending) before formatting
-    // For sorting, we need the numeric values. We'll sort based on the original unformatted times.
-    // This requires a slight refactor: get all best entries, then sort, then format.
+    // Sort leaderboard by fastest time (ascending)
+    currentEventLeaderboardEntries.sort((a, b) => parseFloat(a.time) - parseFloat(b.time));
 
-    // Let's adjust: get all best entries with their original times, then sort, then map to final structure with formatted times.
-    const entriesWithOriginalTimes: {name: string, originalTime: number, powerStageTimeRaw: string, videoLink?: string}[] = [];
-    for (const name in dataByName) {
-        const nameEntries = dataByName[name];
-        if (nameEntries.length === 0) continue;
-
-        let bestEntryForSort = nameEntries[0];
-        let bestTimeValueForSort = parseFloat(bestEntryForSort.time);
-
-        for (let i = 1; i < nameEntries.length; i++) {
-            const currentTimeValueForSort = parseFloat(nameEntries[i].time);
-            if (!isNaN(currentTimeValueForSort) && (isNaN(bestTimeValueForSort) || currentTimeValueForSort < bestTimeValueForSort)) {
-                bestEntryForSort = nameEntries[i];
-                bestTimeValueForSort = currentTimeValueForSort;
-            }
-        }
-        if (bestEntryForSort && typeof bestEntryForSort.time === 'string' && !isNaN(bestTimeValueForSort)) {
-            entriesWithOriginalTimes.push({
-                name: bestEntryForSort.name,
-                originalTime: bestTimeValueForSort,
-                powerStageTimeRaw: bestEntryForSort['power stage time'] || "N/A",
-                videoLink: bestEntryForSort['video link'] || undefined,
-            });
-        }
-    }
-    
-    entriesWithOriginalTimes.sort((a, b) => a.originalTime - b.originalTime);
-
-    const rankedLeaderboard: LeaderboardEntry[] = entriesWithOriginalTimes.map((entry, index) => ({
-      name: entry.name,
-      time: formatTime(entry.originalTime.toString()), // Format after sorting
-      originalTimeValue: entry.originalTime, // Keep for reference or points calculation if needed
-      powerStageTime: formatTime(entry.powerStageTimeRaw), // Format after sorting
-      videoLink: entry.videoLink,
+    // Add rank
+    const rankedLeaderboard: LeaderboardEntry[] = currentEventLeaderboardEntries.map((entry, index) => ({
+      ...entry,
       rank: index + 1,
     }));
 
@@ -150,6 +115,7 @@ const processDataForLeaderboards = (data: TournamentData[]): EventLeaderboard[] 
     }
   }
 
+  // Sort events alphabetically by name
   processedLeaderboards.sort((a, b) => a.eventName.localeCompare(b.eventName));
   
   return processedLeaderboards;
@@ -162,7 +128,6 @@ const Index = () => {
   });
 
   const leaderboards = rawData ? processDataForLeaderboards(rawData) : [];
-  const championshipStandings = leaderboards.length > 0 ? calculateChampionshipStandings(leaderboards) : [];
 
   return (
     <div className="min-h-screen bg-charcoal-gray text-pure-white p-4 md:p-8">
@@ -198,10 +163,7 @@ const Index = () => {
           </Alert>
         )}
         {!isLoading && !error && leaderboards.length > 0 && (
-          <div className="space-y-8 mt-8">
-            {championshipStandings.length > 0 && (
-              <ChampionshipStandingsTable standings={championshipStandings} />
-            )}
+          <div className="space-y-8">
             {leaderboards.map((eventLeaderboard) => (
               <Card key={eventLeaderboard.eventName} className="bg-dark-charcoal shadow-xl">
                 <CardHeader>
