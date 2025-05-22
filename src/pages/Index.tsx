@@ -12,7 +12,7 @@ import ChampionshipStandingsTable from "@/components/ChampionshipStandingsTable"
 import PointsBreakdownTable from "@/components/PointsBreakdownTable";
 import { parseTimeToSeconds } from "@/lib/parseTimeToSeconds";
 
-const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvpxG6EchgG9RszhPdZwv8-ZkHSRo9zxu7moy6t4Nbvg0-Sxi9h7sazU4PdR0lP8T8c5NkFYNgHtL9/pub?output=csv";
+const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvpxG6EchgG9RszhPdZwv8-ZkHSRo9zxu7moy6t4Nbvg0-Sxi9h7sazU4PdR0lP8T8c5NkFYNgHtL9/pub?gid=1794825689&single=true&output=csv";
 
 interface TournamentData {
   [key: string]: string;
