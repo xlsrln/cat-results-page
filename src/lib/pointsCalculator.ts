@@ -1,4 +1,4 @@
-import { EventLeaderboard, LeaderboardEntry } from "@/pages/Index"; // Assuming interfaces are exported from Index or a shared types file
+import { EventLeaderboard } from "@/pages/Index"; // Assuming interfaces are exported from Index or a shared types file
 import { formatTime } from "./timeFormatter"; // For consistent power stage time display if needed within this logic
 import { parseTimeToSeconds } from "./parseTimeToSeconds"; // Added import
 
@@ -6,6 +6,7 @@ export interface ChampionshipEntry {
   rank: number;
   name: string;
   totalPoints: number;
+  pointsPerEvent: Record<string, number>; // Key: eventName, Value: points for that event
 }
 
 const eventPointsMap: Record<number, number> = {
@@ -19,22 +20,30 @@ const powerStagePointsMap: Record<number, number> = {
 };
 
 export const calculateChampionshipStandings = (eventLeaderboards: EventLeaderboard[]): ChampionshipEntry[] => {
-  const totalPointsByName: Record<string, number> = {};
+  // Store total points and points per event for each participant
+  const pointsDataByName: Record<string, { totalPoints: number; events: Record<string, number> }> = {};
 
-  // Helper to safely add points
-  const addPoints = (name: string, points: number) => {
-    if (!name) return;
-    totalPointsByName[name] = (totalPointsByName[name] || 0) + points;
+  // Helper to safely add points to both total and specific event
+  const addPoints = (name: string, eventName: string, pointsToAdd: number) => {
+    if (!name || pointsToAdd === 0) return; // Don't process if no name or no points to add
+
+    if (!pointsDataByName[name]) {
+      pointsDataByName[name] = { totalPoints: 0, events: {} };
+    }
+    pointsDataByName[name].totalPoints += pointsToAdd;
+    pointsDataByName[name].events[eventName] = (pointsDataByName[name].events[eventName] || 0) + pointsToAdd;
   };
 
   eventLeaderboards.forEach(event => {
+    const currentEventName = event.eventName; // Capture event name for use in addPoints
+
     // Calculate Event Points
     event.leaderboard.forEach(entry => {
       // Points based on overall rank in the event
       // If originalTimeValue is available and valid, could use it to break ties or validate DNF etc.
       // For now, direct rank is used.
       const points = eventPointsMap[entry.rank] || MIN_EVENT_POINTS;
-      addPoints(entry.name, points);
+      addPoints(entry.name, currentEventName, points);
     });
 
     // Calculate Power Stage Points
@@ -53,17 +62,24 @@ export const calculateChampionshipStandings = (eventLeaderboards: EventLeaderboa
 
     powerStageContenders.forEach((contender, index) => {
       const powerStageRank = index + 1;
-      const points = powerStagePointsMap[powerStageRank] || 0;
-      if (points > 0) {
-        addPoints(contender.name, points);
+      const powerStageBonusPoints = powerStagePointsMap[powerStageRank] || 0;
+      if (powerStageBonusPoints > 0) {
+        // Add power stage points to the specific event's score and total score
+        addPoints(contender.name, currentEventName, powerStageBonusPoints);
       }
     });
   });
 
-  const sortedStandings: Omit<ChampionshipEntry, 'rank'>[] = Object.entries(totalPointsByName)
-    .map(([name, totalPoints]) => ({ name, totalPoints }))
-    .sort((a, b) => b.totalPoints - a.totalPoints);
+  // Map to the ChampionshipEntry structure including pointsPerEvent
+  const sortedStandings: Omit<ChampionshipEntry, 'rank'>[] = Object.entries(pointsDataByName)
+    .map(([name, data]) => ({
+      name,
+      totalPoints: data.totalPoints,
+      pointsPerEvent: data.events, // Include the breakdown of points per event
+    }))
+    .sort((a, b) => b.totalPoints - a.totalPoints); // Sort by total points descending
 
+  // Add rank
   return sortedStandings.map((entry, index) => ({
     ...entry,
     rank: index + 1,

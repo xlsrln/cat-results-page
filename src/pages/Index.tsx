@@ -3,12 +3,13 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Skeleton } from "@/components/ui/skeleton";
 import { parseCSV } from "@/lib/csvParser";
-import { FileText, ExternalLink, Trophy } from "lucide-react";
+import { FileText, ExternalLink } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { formatTime } from "@/lib/timeFormatter";
 import { calculateChampionshipStandings, ChampionshipEntry } from "@/lib/pointsCalculator";
 import ChampionshipStandingsTable from "@/components/ChampionshipStandingsTable";
+import PointsBreakdownTable from "@/components/PointsBreakdownTable";
 import { parseTimeToSeconds } from "@/lib/parseTimeToSeconds";
 
 const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvpxG6EchgG9RszhPdZwv8-ZkHSRo9zxu7moy6t4Nbvg0-Sxi9h7sazU4PdR0lP8T8c5NkFYNgHtL9/pub?output=csv";
@@ -166,7 +167,11 @@ const Index = () => {
   });
 
   const leaderboards = rawData ? processDataForLeaderboards(rawData) : [];
-  const championshipStandings = leaderboards.length > 0 ? calculateChampionshipStandings(leaderboards) : [];
+  // championshipStandings now includes pointsPerEvent
+  const championshipStandings: ChampionshipEntry[] = leaderboards.length > 0 ? calculateChampionshipStandings(leaderboards) : [];
+
+  // Extract unique event names for the PointsBreakdownTable headers
+  const uniqueEventNames = Array.from(new Set(leaderboards.map(lb => lb.eventName)));
 
   return (
     <div className="min-h-screen bg-charcoal-gray text-pure-white p-4 md:p-8">
@@ -178,7 +183,7 @@ const Index = () => {
       <main className="container mx-auto">
         {isLoading && (
           <div className="space-y-6">
-            {[...Array(2)].map((_, i) => ( // Skeleton for a couple of cards
+            {[...Array(2)].map((_, i) => ( 
               <Card key={i} className="bg-dark-charcoal shadow-xl">
                 <CardHeader>
                   <Skeleton className="h-8 w-3/4 mb-2" />
@@ -203,6 +208,12 @@ const Index = () => {
         )}
         {!isLoading && !error && leaderboards.length > 0 && (
           <div className="space-y-8 mt-8">
+            {/* Render the new PointsBreakdownTable */}
+            {championshipStandings.length > 0 && (
+              <PointsBreakdownTable standings={championshipStandings} eventNames={uniqueEventNames} />
+            )}
+            {/* The existing ChampionshipStandingsTable can remain or be removed based on preference */}
+            {/* For now, I'll keep it as per current structure, it shows a summary */}
             {championshipStandings.length > 0 && (
               <ChampionshipStandingsTable standings={championshipStandings} />
             )}

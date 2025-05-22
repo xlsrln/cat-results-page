@@ -1,12 +1,11 @@
-
 import React from 'react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ChampionshipEntry } from '@/lib/pointsCalculator'; // Import the interface
-import { Trophy } from 'lucide-react'; // Using Trophy icon
+import { ChampionshipEntry } from '@/lib/pointsCalculator'; // This interface now includes pointsPerEvent
+import { Trophy } from 'lucide-react';
 
 interface ChampionshipStandingsTableProps {
-  standings: ChampionshipEntry[];
+  standings: ChampionshipEntry[]; // ChampionshipEntry now includes pointsPerEvent
 }
 
 const ChampionshipStandingsTable: React.FC<ChampionshipStandingsTableProps> = ({ standings }) => {
