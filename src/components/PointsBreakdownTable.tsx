@@ -16,7 +16,7 @@ const PointsBreakdownTable: React.FC<PointsBreakdownTableProps> = ({ standings, 
   }
 
   // Sort event names alphabetically for consistent column order
-  const sortedEventNames = [...eventNames].sort((a, b) => a.localeCompare(b));
+  const sortedEventNames = [...eventNames];//.sort((a, b) => a.localeCompare(b));
 
   return (
     <Card className="bg-dark-charcoal shadow-xl mt-8">
