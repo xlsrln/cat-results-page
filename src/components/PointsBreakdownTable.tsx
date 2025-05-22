@@ -34,16 +34,16 @@ const PointsBreakdownTable: React.FC<PointsBreakdownTableProps> = ({ standings, 
               {/* Removed border-medium-gray, hover:bg-mid-gray/20. Theme should handle this */}
               <TableRow> 
                 {/* Sticky cells now use bg-card for theme consistency */}
-                <TableHead className="text-sky-blue font-semibold w-16 sticky left-0 bg-card z-10">Rank</TableHead>
-                <TableHead className="text-sky-blue font-semibold sticky left-[64px] bg-card z-10 min-w-[150px]">Name</TableHead>
+                <TableHead className="text-black font-semibold w-16 sticky left-0 bg-card z-10">Rank</TableHead>
+                <TableHead className="text-black font-semibold sticky left-[64px] bg-card z-10 min-w-[150px]">Name</TableHead>
                 {eventNames.map(eventName => ( // Use eventNames directly
-                  <TableHead key={eventName} className="text-sky-blue font-semibold min-w-[120px]">
+                  <TableHead key={eventName} className="text-black font-semibold min-w-[120px]">
                     <a href={`#${slugify(eventName)}`} className="hover:underline focus:outline-none focus:ring-2 focus:ring-sky-blue rounded">
                       {eventName}
                     </a>
                   </TableHead>
                 ))}
-                <TableHead className="text-sky-blue font-semibold min-w-[100px] sticky right-0 bg-card z-10">Total Points</TableHead>
+                <TableHead className="text-black font-semibold min-w-[100px] sticky right-0 bg-card z-10">Total Points</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
