@@ -35,20 +35,25 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Blue vibes color palette */
+    --charcoal-gray: 255 3% 25%; /* #403E43 */
+    --pure-white: 0 0% 100%; /* #FFFFFF */
+    --medium-gray: 240 1% 55%; /* #8A898C */
+    --bright-blue: 196 85% 52%; /* #1EAEDB */
+    --dark-charcoal: 270 10% 14%; /* #221F26 */
+    --light-gray: 240 2% 78%; /* #C8C8C9 */
+    --silver-gray: 270 1% 63%; /* #9F9EA1 */
+    --sky-blue: 194 85% 59%; /* #33C3F0 */
+    --dark-gray: 240 1% 97%; /* #F6F6F7 - Using this for a lighter dark shade for alerts etc. */
+    --mid-gray: 0 0% 13%; /* #222222 - Using this as a general dark gray */
   }
 
   .dark {
@@ -87,6 +92,18 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Blue vibes color palette for dark mode (can be same or adjusted if needed) */
+    --charcoal-gray: 255 3% 25%;
+    --pure-white: 0 0% 100%; /* Text will often be light on dark backgrounds */
+    --medium-gray: 240 1% 55%;
+    --bright-blue: 196 85% 52%;
+    --dark-charcoal: 270 10% 14%;
+    --light-gray: 210 40% 98%; /* Adjusted for better contrast in dark mode */
+    --silver-gray: 210 10% 75%; /* Adjusted for better contrast in dark mode */
+    --sky-blue: 194 85% 59%;
+    --dark-gray: 222.2 84% 4.9%; /* Darker shade for alerts in dark mode */
+    --mid-gray: 0 0% 13%;
   }
 }
 
