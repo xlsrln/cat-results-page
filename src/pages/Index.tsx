@@ -176,7 +176,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-charcoal-gray text-pure-white p-4 md:p-8">
       <header className="mb-8 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold text-bright-blue mb-2">Tournament Standings</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-bright-blue mb-2">CAT S5 results</h1>
         <p className="text-xl text-light-gray">Live results from the championship</p>
       </header>
 
@@ -283,7 +283,7 @@ const Index = () => {
         )}
       </main>
       <footer className="text-center mt-8 text-medium-gray text-sm">
-        <p>&copy; {new Date().getFullYear()} Tourney Sheet Champ. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} catface rally club</p>
       </footer>
     </div>
   );
