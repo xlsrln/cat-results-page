@@ -232,11 +232,11 @@ const Index = () => {
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead className="text-sky-blue font-semibold w-16">Rank</TableHead>
-                          <TableHead className="text-sky-blue font-semibold">Name</TableHead>
-                          <TableHead className="text-sky-blue font-semibold">Time</TableHead>
-                          <TableHead className="text-sky-blue font-semibold">Power Stage Time</TableHead>
-                          <TableHead className="text-sky-blue font-semibold">Video</TableHead>
+                          <TableHead className="text-black font-semibold w-16">Rank</TableHead>
+                          <TableHead className="text-black font-semibold">Name</TableHead>
+                          <TableHead className="text-black font-semibold">Time</TableHead>
+                          <TableHead className="text-black font-semibold">Power Stage Time</TableHead>
+                          <TableHead className="text-black font-semibold">Video</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
@@ -250,7 +250,7 @@ const Index = () => {
                               {entry.videoLink ? (
                                 <Button
                                   variant="link"
-                                  className="p-0 h-auto text-bright-blue hover:text-sky-blue"
+                                  className="p-0 h-auto text-bright-blue hover:text-black"
                                   asChild
                                 >
                                   <a href={entry.videoLink} target="_blank" rel="noopener noreferrer">
@@ -275,8 +275,8 @@ const Index = () => {
         )}
         {!isLoading && !error && leaderboards.length === 0 && rawData && rawData.length > 0 && (
            <Alert>
-            <FileText className="h-4 w-4 text-sky-blue" />
-            <AlertTitle className="text-sky-blue">No Leaderboards Generated</AlertTitle>
+            <FileText className="h-4 w-4 text-black" />
+            <AlertTitle className="text-black">No Leaderboards Generated</AlertTitle>
             <AlertDescription className="text-muted-foreground">
               Data was fetched, but no valid leaderboard entries could be generated. Check if 'event', 'name', and 'time' columns are correctly populated in the CSV.
             </AlertDescription>
@@ -284,8 +284,8 @@ const Index = () => {
         )}
          {!isLoading && !error && rawData && rawData.length === 0 && (
            <Alert>
-            <FileText className="h-4 w-4 text-sky-blue" />
-            <AlertTitle className="text-sky-blue">No Data Available</AlertTitle>
+            <FileText className="h-4 w-4 text-black" />
+            <AlertTitle className="text-black">No Data Available</AlertTitle>
             <AlertDescription className="text-muted-foreground">
               The tournament data sheet appears to be empty or could not be parsed correctly.
             </AlertDescription>
