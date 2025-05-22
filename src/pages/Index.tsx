@@ -110,7 +110,7 @@ const processDataForLeaderboards = (data: TournamentData[]): EventLeaderboard[] 
         }
       }
       
-      const parsedPowerStageTime = parseTimeToSeconds(bestEntryForSort['power stage time']);
+      const parsedPowerStageTime = parseTimeToSeconds(bestEntryForSort['ps']);
       let sortValue: number;
 
       if (typeof bestTimeForSort === 'number') {
