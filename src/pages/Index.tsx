@@ -168,7 +168,7 @@ const Index = () => {
 
   const leaderboards = rawData ? processDataForLeaderboards(rawData) : [];
   // championshipStandings now includes pointsPerEvent
-  //const championshipStandings: ChampionshipEntry[] = leaderboards.length > 0 ? calculateChampionshipStandings(leaderboards) : [];
+  const championshipStandings: ChampionshipEntry[] = leaderboards.length > 0 ? calculateChampionshipStandings(leaderboards) : [];
 
   // Extract unique event names for the PointsBreakdownTable headers
   const uniqueEventNames = Array.from(new Set(leaderboards.map(lb => lb.eventName)));
