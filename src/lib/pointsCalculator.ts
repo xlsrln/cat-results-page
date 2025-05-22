@@ -1,6 +1,6 @@
-
 import { EventLeaderboard, LeaderboardEntry } from "@/pages/Index"; // Assuming interfaces are exported from Index or a shared types file
 import { formatTime } from "./timeFormatter"; // For consistent power stage time display if needed within this logic
+import { parseTimeToSeconds } from "./parseTimeToSeconds"; // Added import
 
 export interface ChampionshipEntry {
   rank: number;
@@ -30,18 +30,25 @@ export const calculateChampionshipStandings = (eventLeaderboards: EventLeaderboa
   eventLeaderboards.forEach(event => {
     // Calculate Event Points
     event.leaderboard.forEach(entry => {
+      // Points based on overall rank in the event
+      // If originalTimeValue is available and valid, could use it to break ties or validate DNF etc.
+      // For now, direct rank is used.
       const points = eventPointsMap[entry.rank] || MIN_EVENT_POINTS;
       addPoints(entry.name, points);
     });
 
     // Calculate Power Stage Points
     const powerStageContenders = event.leaderboard
-      .filter(entry => entry.powerStageTime && entry.powerStageTime !== "N/A" && !isNaN(parseFloat(entry.powerStageTime)))
       .map(entry => ({
         name: entry.name,
-        // Parse time for sorting, store original string for potential use or formatted one
-        timeValue: parseFloat(entry.powerStageTime as string),
+        // entry.powerStageTime is a formatted string like "MM:SS.mmm" or "N/A"
+        // We parse it to get numerical seconds for sorting.
+        timeValue: parseTimeToSeconds(entry.powerStageTime),
       }))
+      // Filter out entries where timeValue is not a valid number (e.g., "N/A" or undefined from parsing)
+      .filter(entry => typeof entry.timeValue === 'number' && !isNaN(entry.timeValue) && entry.timeValue >= 0)
+      // Explicitly cast timeValue to number after filter for sort comparison
+      .map(entry => ({ ...entry, timeValue: entry.timeValue as number }))
       .sort((a, b) => a.timeValue - b.timeValue);
 
     powerStageContenders.forEach((contender, index) => {
