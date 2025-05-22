@@ -213,7 +213,7 @@ const Index = () => {
               <PointsBreakdownTable standings={championshipStandings} eventNames={uniqueEventNames} />
             )}
             {/* The existing ChampionshipStandingsTable can remain or be removed based on preference */}
-            {/* For now, I'll keep it as per current structure, it shows a summary */}
+            //{/* For now, I'll keep it as per current structure, it shows a summary */}
             //{championshipStandings.length > 0 && (
             //  <ChampionshipStandingsTable standings={championshipStandings} />
             //)}
