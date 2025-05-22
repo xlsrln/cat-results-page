@@ -225,7 +225,7 @@ const Index = () => {
             {leaderboards.map((eventLeaderboard) => (
               <Card key={eventLeaderboard.eventName} id={slugify(eventLeaderboard.eventName)} className="shadow-xl scroll-mt-20">
                 <CardHeader>
-                  <CardTitle className="text-2xl text-sky-blue">{eventLeaderboard.eventName}</CardTitle>
+                  <CardTitle className="text-2xl text-black">{eventLeaderboard.eventName}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   {eventLeaderboard.leaderboard.length > 0 ? (
