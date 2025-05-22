@@ -1,3 +1,4 @@
+
 import { EventLeaderboard, LeaderboardEntry } from "@/pages/Index"; // Assuming interfaces are exported from Index or a shared types file
 import { formatTime } from "./timeFormatter"; // For consistent power stage time display if needed within this logic
 
@@ -34,14 +35,14 @@ export const calculateChampionshipStandings = (eventLeaderboards: EventLeaderboa
     });
 
     // Calculate Power Stage Points
-    // Use the numeric powerStageTimeValue for sorting
     const powerStageContenders = event.leaderboard
-      .filter(entry => entry.powerStageTimeValue !== null && entry.powerStageTimeValue > 0) // Filter by numeric value
+      .filter(entry => entry.powerStageTime && entry.powerStageTime !== "N/A" && !isNaN(parseFloat(entry.powerStageTime)))
       .map(entry => ({
         name: entry.name,
-        timeValue: entry.powerStageTimeValue as number, // Already a number (or null filtered out)
+        // Parse time for sorting, store original string for potential use or formatted one
+        timeValue: parseFloat(entry.powerStageTime as string),
       }))
-      .sort((a, b) => a.timeValue - b.timeValue); // Sort by numeric time value
+      .sort((a, b) => a.timeValue - b.timeValue);
 
     powerStageContenders.forEach((contender, index) => {
       const powerStageRank = index + 1;
