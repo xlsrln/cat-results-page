@@ -2,53 +2,63 @@
 import React from 'react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ChampionshipEntry } from '@/lib/pointsCalculator'; // Uses the updated interface
+import { ChampionshipEntry } from '@/lib/pointsCalculator';
 import { Trophy } from 'lucide-react';
+import { slugify } from '@/lib/slugify'; // Added import
 
 interface PointsBreakdownTableProps {
   standings: ChampionshipEntry[];
-  eventNames: string[]; // To dynamically create columns for each event
+  eventNames: string[]; // Now expects chronologically sorted event names (oldest to newest)
 }
 
 const PointsBreakdownTable: React.FC<PointsBreakdownTableProps> = ({ standings, eventNames }) => {
   if (!standings || standings.length === 0) {
-    return null; // Or a message like "No standings data available for breakdown."
+    return null;
   }
 
-  // Sort event names alphabetically for consistent column order
-  const sortedEventNames = [...eventNames].sort((a, b) => a.localeCompare(b));
+  // Removed: const sortedEventNames = [...eventNames].sort((a, b) => a.localeCompare(b));
+  // eventNames prop is now expected to be pre-sorted chronologically.
 
   return (
-    <Card className="bg-dark-charcoal shadow-xl mt-8">
+    <Card className="shadow-xl mt-8"> {/* Removed bg-dark-charcoal */}
       <CardHeader>
         <CardTitle className="text-2xl text-bright-blue flex items-center">
           <Trophy className="mr-2 h-6 w-6" /> Points Breakdown per Event
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="relative w-full overflow-auto"> {/* Added for horizontal scrolling on small screens */}
-          <Table className="text-silver-gray min-w-[800px]"> {/* min-w to encourage scrolling if needed */}
+        <div className="relative w-full overflow-auto">
+          {/* Removed text-silver-gray. min-w to encourage scrolling if needed */}
+          <Table className="min-w-[800px]"> 
             <TableHeader>
-              <TableRow className="border-medium-gray hover:bg-mid-gray/20">
-                <TableHead className="text-sky-blue font-semibold w-16 sticky left-0 bg-dark-charcoal z-10">Rank</TableHead>
-                <TableHead className="text-sky-blue font-semibold sticky left-[64px] bg-dark-charcoal z-10 min-w-[150px]">Name</TableHead>
-                {sortedEventNames.map(eventName => (
-                  <TableHead key={eventName} className="text-sky-blue font-semibold min-w-[120px]">{eventName}</TableHead>
+              {/* Removed border-medium-gray, hover:bg-mid-gray/20. Theme should handle this */}
+              <TableRow> 
+                {/* Sticky cells now use bg-card for theme consistency */}
+                <TableHead className="text-sky-blue font-semibold w-16 sticky left-0 bg-card z-10">Rank</TableHead>
+                <TableHead className="text-sky-blue font-semibold sticky left-[64px] bg-card z-10 min-w-[150px]">Name</TableHead>
+                {eventNames.map(eventName => ( // Use eventNames directly
+                  <TableHead key={eventName} className="text-sky-blue font-semibold min-w-[120px]">
+                    <a href={`#${slugify(eventName)}`} className="hover:underline focus:outline-none focus:ring-2 focus:ring-sky-blue rounded">
+                      {eventName}
+                    </a>
+                  </TableHead>
                 ))}
-                <TableHead className="text-sky-blue font-semibold min-w-[100px] sticky right-0 bg-dark-charcoal z-10">Total Points</TableHead>
+                <TableHead className="text-sky-blue font-semibold min-w-[100px] sticky right-0 bg-card z-10">Total Points</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
               {standings.map((entry) => (
-                <TableRow key={`${entry.name}-${entry.rank}`} className="border-medium-gray hover:bg-mid-gray/10">
-                  <TableCell className="py-3 px-4 font-medium sticky left-0 bg-dark-charcoal z-0">{entry.rank}</TableCell>
-                  <TableCell className="py-3 px-4 sticky left-[64px] bg-dark-charcoal z-0">{entry.name}</TableCell>
-                  {sortedEventNames.map(eventName => (
+                // Removed border-medium-gray, hover:bg-mid-gray/10. Theme should handle this
+                <TableRow key={`${entry.name}-${entry.rank}`}> 
+                  {/* Sticky cells now use bg-card. Kept z-0 as original, might need review if layering issues occur. */}
+                  <TableCell className="py-3 px-4 font-medium sticky left-0 bg-card z-0">{entry.rank}</TableCell>
+                  <TableCell className="py-3 px-4 sticky left-[64px] bg-card z-0">{entry.name}</TableCell>
+                  {eventNames.map(eventName => ( // Use eventNames directly
                     <TableCell key={`${entry.name}-${eventName}`} className="py-3 px-4">
                       {entry.pointsPerEvent[eventName] || 0}
                     </TableCell>
                   ))}
-                  <TableCell className="py-3 px-4 font-medium sticky right-0 bg-dark-charcoal z-0">{entry.totalPoints}</TableCell>
+                  <TableCell className="py-3 px-4 font-medium sticky right-0 bg-card z-0">{entry.totalPoints}</TableCell>
                 </TableRow>
               ))}
             </TableBody>

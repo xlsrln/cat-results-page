@@ -11,6 +11,7 @@ import { calculateChampionshipStandings, ChampionshipEntry } from "@/lib/pointsC
 import ChampionshipStandingsTable from "@/components/ChampionshipStandingsTable";
 import PointsBreakdownTable from "@/components/PointsBreakdownTable";
 import { parseTimeToSeconds } from "@/lib/parseTimeToSeconds";
+import { slugify } from "@/lib/slugify";
 
 const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvpxG6EchgG9RszhPdZwv8-ZkHSRo9zxu7moy6t4Nbvg0-Sxi9h7sazU4PdR0lP8T8c5NkFYNgHtL9/pub?gid=1794825689&single=true&output=csv";
 
@@ -43,15 +44,26 @@ const fetchTournamentData = async (): Promise<TournamentData[]> => {
 };
 
 // Function to process raw tournament data into structured leaderboards
-const processDataForLeaderboards = (data: TournamentData[]): EventLeaderboard[] => {
+const processDataForLeaderboards = (data: TournamentData[]): { leaderboards: EventLeaderboard[], orderedEventNames: string[] } => {
   if (!data || data.length === 0) {
-    return [];
+    return { leaderboards: [], orderedEventNames: [] };
   }
 
-  // Group data by event
+  // Get unique event names in their order of appearance from the raw data
+  const orderedEventNames: string[] = [];
+  const eventSet = new Set<string>();
+  for (const row of data) {
+    const eventName = row.event?.trim();
+    if (eventName && !eventSet.has(eventName)) {
+      eventSet.add(eventName);
+      orderedEventNames.push(eventName);
+    }
+  }
+
+  // Group data by event for efficient lookup
   const dataByEvent: Record<string, TournamentData[]> = data.reduce((acc, row) => {
     const eventName = row.event?.trim();
-    if (!eventName) return acc; // Skip rows with no event name
+    if (!eventName) return acc;
     if (!acc[eventName]) {
       acc[eventName] = [];
     }
@@ -61,8 +73,9 @@ const processDataForLeaderboards = (data: TournamentData[]): EventLeaderboard[] 
 
   const processedLeaderboards: EventLeaderboard[] = [];
 
-  for (const eventName in dataByEvent) {
+  for (const eventName of orderedEventNames) { // Iterate in chronological order
     const eventData = dataByEvent[eventName];
+    if (!eventData) continue;
     
     // Group data by name within this event
     const dataByName: Record<string, TournamentData[]> = eventData.reduce((acc, row) => {
@@ -154,10 +167,8 @@ const processDataForLeaderboards = (data: TournamentData[]): EventLeaderboard[] 
       });
     }
   }
-
-  processedLeaderboards.sort((a, b) => a.eventName.localeCompare(b.eventName));
   
-  return processedLeaderboards;
+  return { leaderboards: processedLeaderboards, orderedEventNames };
 };
 
 const Index = () => {
@@ -166,25 +177,24 @@ const Index = () => {
     queryFn: fetchTournamentData,
   });
 
-  const leaderboards = rawData ? processDataForLeaderboards(rawData) : [];
-  // championshipStandings now includes pointsPerEvent
+  const { leaderboards, orderedEventNames } = rawData ? processDataForLeaderboards(rawData) : { leaderboards: [], orderedEventNames: [] };
   const championshipStandings: ChampionshipEntry[] = leaderboards.length > 0 ? calculateChampionshipStandings(leaderboards) : [];
 
   // Extract unique event names for the PointsBreakdownTable headers
-  const uniqueEventNames = Array.from(new Set(leaderboards.map(lb => lb.eventName)));
+  // const uniqueEventNames = Array.from(new Set(leaderboards.map(lb => lb.eventName)));
 
   return (
-    <div className="min-h-screen bg-charcoal-gray text-pure-white p-4 md:p-8">
+    <div className="min-h-screen bg-background text-foreground p-4 md:p-8">
       <header className="mb-8 text-center">
         <h1 className="text-4xl md:text-5xl font-bold text-bright-blue mb-2">CAT S5 results</h1>
-        <p className="text-xl text-light-gray">Live results from the championship</p>
+        <p className="text-xl text-muted-foreground">Live results from the championship</p>
       </header>
 
       <main className="container mx-auto">
         {isLoading && (
           <div className="space-y-6">
             {[...Array(2)].map((_, i) => ( 
-              <Card key={i} className="bg-dark-charcoal shadow-xl">
+              <Card key={i} className="shadow-xl">
                 <CardHeader>
                   <Skeleton className="h-8 w-3/4 mb-2" />
                 </CardHeader>
@@ -198,7 +208,7 @@ const Index = () => {
           </div>
         )}
         {error && (
-          <Alert variant="destructive" className="bg-destructive/20 border-destructive text-destructive-foreground">
+          <Alert variant="destructive">
             <FileText className="h-4 w-4" />
             <AlertTitle>Error Fetching Data</AlertTitle>
             <AlertDescription>
@@ -210,18 +220,18 @@ const Index = () => {
           <div className="space-y-8 mt-8">
             {/* Render the new PointsBreakdownTable */}
             {championshipStandings.length > 0 && (
-              <PointsBreakdownTable standings={championshipStandings} eventNames={uniqueEventNames} />
+              <PointsBreakdownTable standings={championshipStandings} eventNames={orderedEventNames} />
             )}
             {leaderboards.map((eventLeaderboard) => (
-              <Card key={eventLeaderboard.eventName} className="bg-dark-charcoal shadow-xl">
+              <Card key={eventLeaderboard.eventName} id={slugify(eventLeaderboard.eventName)} className="shadow-xl scroll-mt-20">
                 <CardHeader>
                   <CardTitle className="text-2xl text-sky-blue">{eventLeaderboard.eventName}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   {eventLeaderboard.leaderboard.length > 0 ? (
-                    <Table className="text-silver-gray">
+                    <Table>
                       <TableHeader>
-                        <TableRow className="border-medium-gray hover:bg-mid-gray/20">
+                        <TableRow>
                           <TableHead className="text-sky-blue font-semibold w-16">Rank</TableHead>
                           <TableHead className="text-sky-blue font-semibold">Name</TableHead>
                           <TableHead className="text-sky-blue font-semibold">Time</TableHead>
@@ -231,7 +241,7 @@ const Index = () => {
                       </TableHeader>
                       <TableBody>
                         {eventLeaderboard.leaderboard.map((entry) => (
-                          <TableRow key={`${eventLeaderboard.eventName}-${entry.name}-${entry.rank}`} className="border-medium-gray hover:bg-mid-gray/10">
+                          <TableRow key={`${eventLeaderboard.eventName}-${entry.name}-${entry.rank}`}>
                             <TableCell className="py-3 px-4 font-medium">{entry.rank}</TableCell>
                             <TableCell className="py-3 px-4">{entry.name}</TableCell>
                             <TableCell className="py-3 px-4">{entry.time}</TableCell>
@@ -256,7 +266,7 @@ const Index = () => {
                       </TableBody>
                     </Table>
                   ) : (
-                     <p className="text-light-gray">No entries for this event.</p>
+                     <p className="text-muted-foreground">No entries for this event.</p>
                   )}
                 </CardContent>
               </Card>
@@ -264,25 +274,25 @@ const Index = () => {
           </div>
         )}
         {!isLoading && !error && leaderboards.length === 0 && rawData && rawData.length > 0 && (
-           <Alert className="bg-dark-gray/50 border-medium-gray">
+           <Alert>
             <FileText className="h-4 w-4 text-sky-blue" />
             <AlertTitle className="text-sky-blue">No Leaderboards Generated</AlertTitle>
-            <AlertDescription className="text-light-gray">
+            <AlertDescription className="text-muted-foreground">
               Data was fetched, but no valid leaderboard entries could be generated. Check if 'event', 'name', and 'time' columns are correctly populated in the CSV.
             </AlertDescription>
           </Alert>
         )}
          {!isLoading && !error && rawData && rawData.length === 0 && (
-           <Alert className="bg-dark-gray/50 border-medium-gray">
+           <Alert>
             <FileText className="h-4 w-4 text-sky-blue" />
             <AlertTitle className="text-sky-blue">No Data Available</AlertTitle>
-            <AlertDescription className="text-light-gray">
+            <AlertDescription className="text-muted-foreground">
               The tournament data sheet appears to be empty or could not be parsed correctly.
             </AlertDescription>
           </Alert>
         )}
       </main>
-      <footer className="text-center mt-8 text-medium-gray text-sm">
+      <footer className="text-center mt-8 text-muted-foreground text-sm">
         <p>&copy; {new Date().getFullYear()} catface rally club</p>
       </footer>
     </div>
