@@ -4,6 +4,24 @@
 [home](index.md) | [rules](rules.md) | [stages and rallies](s1.md) | [results and standings](results.md) | [teams](teams.md)
 
 
+## podium summary
+
+| japan | indonesia | kenya   | germany | sardinia |
+|-------|-----------|---------|---------|----------|
+| 🥇 wes   | 🥇 proporo   | 🥇 proporo | 🥇 proporo | 🥇 proporo  |
+| 🥈 turbo | 🥈 myth      | 🥈 playerz | 🥈 playerz | 🥈 playerz  |
+| 🥉 kk    | 🥉 wes       | 🥉 turbo   | 🥉 myth    | 🥉 toucan   |
+
+
+## team standings
+
+| pos | team              |   indonesia |   kenya |   germany |   sardinia |   total |
+|:-|:------------------|------------:|--------:|----------:|-----------:|--------:|
+| 1 | cat face nospace  |          36 |      36 |        36 |         36 |     144 |
+| 2 | G2D Racing        |          33 |      36 |        36 |         36 |     141 |
+| 3 | Brick Motorsports |          26 |      13 |        23 |         23 |      85 |
+| 4 | Noot Squad Rally  |           0 |       0 |        17 |          9 |      26 |
+
 ## standings
 
 | pos    | name              |   indonesia |   kenya |   germany |   sardinia |   total |
@@ -33,24 +51,6 @@
 | 23  | nap               |           1 |       2 |         0 |          0 |       3 |
 | 24  | Steamed Jams      |           0 |       0 |         0 |          0 |       0 |
 | 25  | Shelly Blossom    |           0 |       0 |         0 |          0 |       0 |
-
-## team standings
-
-| pos | team              |   indonesia |   kenya |   germany |   sardinia |   total |
-|:-|:------------------|------------:|--------:|----------:|-----------:|--------:|
-| 1 | cat face nospace  |          36 |      36 |        36 |         36 |     144 |
-| 2 | G2D Racing        |          33 |      36 |        36 |         36 |     141 |
-| 3 | Brick Motorsports |          26 |      13 |        23 |         23 |      85 |
-| 4 | Noot Squad Rally  |           0 |       0 |        17 |          9 |      26 |
-
-## podium summary
-
-| japan | indonesia | kenya   | germany | sardinia |
-|-------|-----------|---------|---------|----------|
-| 🥇 wes   | 🥇 proporo   | 🥇 proporo | 🥇 proporo | 🥇 proporo  |
-| 🥈 turbo | 🥈 myth      | 🥈 playerz | 🥈 playerz | 🥈 playerz  |
-| 🥉 kk    | 🥉 wes       | 🥉 turbo   | 🥉 myth    | 🥉 toucan   |
-
 
 ## japan asphalt rally (warmup event)
 
