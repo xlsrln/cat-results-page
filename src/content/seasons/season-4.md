@@ -1,11 +1,5 @@
 # Results
 
-
-
-[home](index.md) | [rules](rules.md) | [stages and rallies](stages.md) | [results and standings](results.md) | [teams](teams.md)
-
-
-
 ## team standings
 
 |   pos | team              |   kenya |   indonesia |   germany |   norway |   australia |   total |

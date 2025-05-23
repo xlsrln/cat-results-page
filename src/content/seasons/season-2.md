@@ -1,11 +1,5 @@
 # Results
 
-
-
-[home](index.md) | [rules](rules.md) | [stages and rallies](stages.md) | [results and standings](results.md) | [teams](teams.md)
-
-
-
 ## team standings
 
 | pos | team              |   norway |   sardinia |   japan |   kenya |   germany |   finland |   indonesia |   total |
@@ -52,7 +46,6 @@
 | - | Revenger210       |        1 |          0 |       0 |       0 |         0 |         0 |           0 |       1 |
 | - | TrekkerGek        |        1 |          0 |       0 |       0 |         0 |         0 |           0 |       1 |
 | - | Kariston          |        1 |          0 |       0 |       0 |         0 |         0 |           0 |       1 |
-
 
 
 ## norway

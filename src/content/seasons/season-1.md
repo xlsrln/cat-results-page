@@ -1,17 +1,4 @@
-
 # Season 1 results
-
-[home](index.md) | [rules](rules.md) | [stages and rallies](s1.md) | [results and standings](results.md) | [teams](teams.md)
-
-
-## podium summary
-
-| japan | indonesia | kenya   | germany | sardinia |
-|-------|-----------|---------|---------|----------|
-| 🥇 wes   | 🥇 proporo   | 🥇 proporo | 🥇 proporo | 🥇 proporo  |
-| 🥈 turbo | 🥈 myth      | 🥈 playerz | 🥈 playerz | 🥈 playerz  |
-| 🥉 kk    | 🥉 wes       | 🥉 turbo   | 🥉 myth    | 🥉 toucan   |
-
 
 ## team standings
 
