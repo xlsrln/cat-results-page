@@ -36,7 +36,7 @@ export const calculateTeamChampionshipStandings = (
     const teamDrivers: Record<string, Array<{ name: string; rank: number }>> = {};
     
     event.leaderboard.forEach(entry => {
-      const teamName = teamMembership[entry.name.toLowerCase()];
+      const teamName = teamMembership[entry.name];
       if (teamName) {
         if (!teamDrivers[teamName]) {
           teamDrivers[teamName] = [];
