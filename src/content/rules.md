@@ -1,21 +1,21 @@
 # Rules for CAT - Catface Aor Tournament 😹
 
-### Overall
+## Overall
 - Participate by recording a video of the rally and entering the link in the submission form
 - No signups: everyone who submits an entry will be classified in the championship
 
-### Drivers championship
+## Drivers championship
 - There is a driver’s championship. See the current season for more info.
 - Points for each rally (and powerstage) according to the [table below](#appendix-points)
 
-### Team championship
+## Team championship
 - There is a team championship. It is not mandatory to be part of a team.
 - Teams are handled by their respective team manager. Ask in #paddock
 - The best **three** drivers per team for each rally score team points. (new!)
 - Team points are calculated as if only the top three drivers per team exist. ([example](#appendix-team-points))
 - Power stage points don't apply to the team score
 
-### In-game rules
+## In-game rules
 - No ghosts. No unauthorised mods.
 - Damage setting: severe damage
 - Authorised mods: [the rally saver mod](https://www.nexusmods.com/artofrally/mods/6), camera mods, purely cosmetic mods
