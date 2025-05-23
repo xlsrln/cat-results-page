@@ -1,48 +1,48 @@
 # Rules for CAT - Catface Aor Tournament 😹
 
-#### Overall
+### Overall
 - Participate by recording a video of the rally and entering the link in the submission form
 - No signups: everyone who submits an entry will be classified in the championship
 
-#### Drivers championship
+### Drivers championship
 - There is a driver’s championship. See the current season for more info.
 - Points for each rally (and powerstage) according to the [table below](#appendix-points)
 
-#### Team championship
+### Team championship
 - There is a team championship. It is not mandatory to be part of a team.
 - Teams are handled by their respective team manager. Ask in #paddock
 - The best **three** drivers per team for each rally score team points. (new!)
 - Team points are calculated as if only the top three drivers per team exist. ([example](#appendix-team-points))
 - Power stage points don't apply to the team score
 
-#### In-game rules
+### In-game rules
 - No ghosts. No unauthorised mods.
 - Damage setting: severe damage
 - Authorised mods: [the rally saver mod](https://www.nexusmods.com/artofrally/mods/6), camera mods, purely cosmetic mods
 - Banned mods: If it feels wrong, don't use it (e.g. reset zone visualisers etc)
 
-#### Restarts
+### Restarts
 
 - Max 1 restart per service, or equivalently one per pair of stages (1&2, 3&4, 5&6 etc)
 - Free restarts on the first stage of the rally. These do not count towards the previous rule
 - No restarts on the power stage
 - Free restart if you experience a bug, e.g. spawning sideways
 
-#### Liveries
+### Liveries
 - Custom liveries, numberplates and team liveries are optional but encouraged
 - For each rally, everyone in the team are encouraged to use a similar livery (not applicable to console players)
 
-#### Videos should
+### Videos should
 - Capture the whole rally from setup to finish screen
 - Be published before the deadline with no expiration date
 
-#### Penalties
+### Penalties
 - Drivers are expected to be honest. 
 - Cheating will be punished if detected.
 - You can get penalties for breaking rules. 
 - See examples of time penalties below
 
-##### Examples of time penalties
+### Examples of time penalties
 
 | offence | penalty |
 | ----------------------------------------------- | ----------- |
