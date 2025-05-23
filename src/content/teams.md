@@ -16,7 +16,7 @@ Interested in joining a team? Each team has their own recruitment process and re
 - Driving skill that complements the team's existing strengths
 - Commitment to team goals and championship campaign
 
-Contact team representatives through our Discord server or forum to learn about current opportunities.
+Contact team representatives through our Discord server to learn about current opportunities.
 
 ## Independent Drivers
 
