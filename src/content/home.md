@@ -1,44 +1,123 @@
+## Welcome!
 
-# Welcome to the CAT Rally Championship
+All you need to enter is the **art of rally** game, your favourite screen recording software and somewhere to upload your videos. 
 
-The CAT Rally Championship is the premier virtual rally racing series, bringing together drivers from around the world to compete in thrilling stage-based events. Our championship features diverse locations, challenging terrain, and intense competition that pushes drivers to their limits.
+<img src="https://raw.githubusercontent.com/xlsrln/cat/main/images/catface_banner.png" alt="drawing" style="height:200px"/>
 
-## Championship Overview
+_(picture by [nap](https://twitter.com/napfirm))_
 
-Founded in 2020, the CAT Rally Championship has grown to become one of the most respected virtual rally series in the motorsport community. We pride ourselves on fair competition, innovative event formats, and fostering a strong community of rally enthusiasts.
+This championship is meant to be fun and easy to participate in. It relies on a combination of automation, trust and peer review. If you make an error or spot something suspicious, please get in touch. If you have any feedback or want to help automate something also don't hesitate to reach out! You'll find us on Discord...
 
-Our season typically runs from February to November, featuring 6-8 events across different rally disciplines including tarmac, gravel, and snow stages. Each event consists of multiple stages with varying lengths and difficulty levels.
+#
 
-## Hall of Fame
 
-### Season Champions
+**Useful links:**
 
-- **Season 4 (2023)**: TBD - Coming Soon
-- **Season 3 (2022)**: [Previous Champion Name]
-- **Season 2 (2021)**: [Previous Champion Name] 
-- **Season 1 (2020)**: [Previous Champion Name]
+- [cool trailer video](https://www.youtube.com/watch?v=sI15aMLKqyU)
+- [season 2 trailer](https://www.youtube.com/watch?v=B2H0nykopyo)
+- [setup help](setup.md)
 
-### Notable Achievements
+#
 
-- **Most Event Wins**: [Driver Name] - 12 wins
-- **Most Consecutive Podiums**: [Driver Name] - 8 consecutive podiums
-- **Fastest Single Stage**: [Driver Name] - [Stage Name] in [Time]
+**Previous Catface AOR World Champions**
 
-## Previous Seasons
+Driver's champions:
 
-Explore the rich history of our championship through previous season results:
+- Season 1: Proporo
+- Season 2: Late
+- Season 3: Franky M.
+- Season 4: Franky M.
 
-- [Season 4 Results (2023)](#) - Current Season
-- [Season 3 Results (2022)](#) - Complete season archive
-- [Season 2 Results (2021)](#) - Complete season archive  
-- [Season 1 Results (2020)](#) - Complete season archive
+Team champions:
 
-## Community
+- Season 1: Cat face NoSpace
+- Season 2: G2D Racing
+- Season 3: G2D Racing
+- Season 4: Brick Motorsports
 
-Join our vibrant community of rally drivers and enthusiasts:
+Cool cat of the year:
 
-- **Discord Server**: Connect with other drivers, share setups, and get event updates
-- **Forum**: Participate in discussions about rules, techniques, and upcoming events
-- **Social Media**: Follow us for highlights, behind-the-scenes content, and announcements
+- 2022: Domer
+- 2023: Franky M.
 
-Ready to join the action? Check out our [Rules](/rules) page to learn how to participate, or visit our [Teams](/teams) page to see which team might be the right fit for you.
+#
+
+**Hall of fame**
+
+| player                                                | trophies | 
+| --------------------------------------------------- |  ------- | 
+| franky m. | 🏆🏆🥇🥇🥇🥇🥇🥇🥈🥈🥈🥈🥈🥈🥈🥈🥈🥉🥉🥉 |
+| proporo | 🏆🥇🥇🥇🥇🥇🥇🥇🥇🥇🥇🥇🥈🥈🥈🥈🥈🥈🥈🥈🥈🥉🥉 | 
+| late | 🏆🥇🥇🥇🥇🥇🥇🥇🥈🥉 | 
+| radi | 🥇🥇🥈🥈🥈🥉🥉🥉🥉🥉🥉🥉🥉 |
+| turbo | 🥇🥈🥉🥉🥉🥉 | 
+| wes | 🥇🥈🥉 | 
+| playerz | 🥈🥈🥈🥈 | 
+| myth | 🥈🥉 | 
+| dryout | 🥉🥉🥉 |
+| domer | 🥉🥉 | 
+| kk | 🥉 | 
+| toucan | 🥉 | 
+| major clanger | 🥉 |
+
+**Team hall of fame**
+
+| team                                                | trophies | 
+| --------------------------------------------------- |  ------- | 
+| G2D Racing | 🏆🏆 | 
+| Cat Face NoSpace | 🏆 | 
+| Brick Motorsports | 🏆 | 
+
+
+## podium summary
+
+**season 1**
+
+| japan | indonesia | kenya   | germany | sardinia | live event |
+|-------|-----------|---------|---------|----------|---------|
+| 🥇 wes   | 🥇 proporo   | 🥇 proporo | 🥇 proporo | 🥇 proporo  | 🥇 turbo |
+| 🥈 turbo | 🥈 myth      | 🥈 playerz | 🥈 playerz | 🥈 playerz  | 🥈 wes |
+| 🥉 kk    | 🥉 wes       | 🥉 turbo   | 🥉 myth    | 🥉 toucan   | 🥉 domer | 
+
+**season 2**
+
+| norway | sardinia | japan   | kenya | germany | finland | indonesia |
+|-------|-----------|---------|---------|----------|----------|----------|
+| 🥇 late   | 🥇 late   | 🥇 late | 🥇 late | 🥇 late  | 🥇 late  | 🥇 proporo  |
+| 🥈 playerz | 🥈 proporo      | 🥈 proporo | 🥈 proporo | 🥈 proporo  | 🥈 proporo  | 🥈 franky m  |
+| 🥉 turbo    | 🥉 turbo       | 🥉 franky m   | 🥉 turbo    | 🥉 franky m   | 🥉 dryout | 🥉 dryout |
+
+**season 3**
+
+| norway | germany | 	kenya |	indonesia |	japan |	finland |
+|-------|-----------|---------|---------|----------|----------|
+| 🥇 late   | 🥇 proporo   | 🥇 proporo | 🥇 franky m | 🥇 franky m  | 🥇 radi  |
+| 🥈 proporo | 🥈 franky m      | 🥈 franky m | 🥈 radi | 🥈 radi  | 🥈 franky m  | 
+| 🥉 franky m    | 🥉 late       | 🥉 radi   | 🥉 proporo    | 🥉 major clanger   | 🥉 dryout |
+
+**season 4**
+
+| kenya | indonesia | 	germany |	norway |	australia |
+|-------|-----------|---------|---------|----------|
+| 🥇 franky m   | 🥇 franky m   | 🥇 franky m | 🥇 proporo  | 🥇 franky m |
+| 🥈 late | 🥈 radi      | 🥈 proporo | 🥈 franky m | 🥈 proporo |
+| 🥉 radi   | 🥉 domer       | 🥉 radi   | 🥉 radi | 🥉 radi |
+
+**season 5**
+
+| scandi flick | night safari | delivery dash |	enduring friendship | long short | x |
+|-------|-----------|---------|----|----|----|
+| 🥇 proporo   | 🥇 proporo   | 🥇 radi | 🥇 proporo | 🥇 | 🥇 |
+| 🥈 franky m | 🥈 franky m      | 🥈 franky m | 🥈 franky m | 🥈 | 🥈 |
+| 🥉 radi   | 🥉 radi       | 🥉 proporo   | 🥉 radi | 🥉 | 🥉 |
+
+
+#
+
+**rally master (multi-game championship)**
+
+| art of rally  | dirt rally 2       | rush rally 3       | richard burns rally  |
+|----------------|---------------------|---------------------|-----------------------|
+|  🥇 franky    |  🥇 colin mccrack  |  🥇 franky         |  🥇 noEihaOo         |
+|  🥈 domer     |  🥈 colorcat       |  🥈 colin mccrack  |  🥈 dryout           |
+|  🥉 playerz   |  🥉 nept           |  🥉 nept           |  🥉 colin mccrack    |
