@@ -1,4 +1,3 @@
-
 import { useQuery } from "@tanstack/react-query";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
@@ -166,6 +165,9 @@ const processDataForLeaderboards = (data: TournamentData[]): { leaderboards: Eve
       powerStageTime: formatTime(toFormatArg(entry.powerStageTimeDisplayValue)),
       videoLink: entry.videoLink,
       rank: index + 1,
+      individualPoints: 0, // Will be filled later
+      teamPoints: 0, // Will be filled later
+      teamName: undefined, // Will be filled later
     }));
 
     if (rankedLeaderboard.length > 0) {
