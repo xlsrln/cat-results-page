@@ -22,7 +22,7 @@ export const fetchTeamData = async (): Promise<TeamMembership> => {
   const teamMembership: TeamMembership = {};
   
   data.forEach(row => {
-    const driverName = row.driver?.trim();
+    const driverName = row.name?.trim();
     const teamName = row.team?.trim();
     
     if (driverName && teamName) {
