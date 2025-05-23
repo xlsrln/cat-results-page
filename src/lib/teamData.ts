@@ -26,7 +26,7 @@ export const fetchTeamData = async (): Promise<TeamMembership> => {
     const teamName = row.team?.trim();
     
     if (driverName && teamName) {
-      teamMembership[driverName] = teamName;
+      teamMembership[driverName].toLowerCase() = teamName.toLowerCase();
     }
   });
   
