@@ -45,20 +45,26 @@ export const calculateTeamChampionshipStandings = (
       }
     });
 
-    // For each team, take top 3 drivers and redistribute points
+    // Collect all top 3 drivers from each team
+    const allTopDrivers = [];
     Object.entries(teamDrivers).forEach(([teamName, drivers]) => {
       // Sort by rank (best rank first)
       drivers.sort((a, b) => a.rank - b.rank);
       
       // Take top 3 drivers
       const topThreeDrivers = drivers.slice(0, 3);
-      
-      // Redistribute points as if only these drivers exist
-      topThreeDrivers.forEach((driver, index) => {
-        const teamEventRank = index + 1; // 1st, 2nd, 3rd in team
-        const points = eventPointsMap[teamEventRank] || MIN_EVENT_POINTS;
-        addTeamPoints(teamName, event.eventName, points);
-      });
+      allTopDrivers.push(...topThreeDrivers);
+    });
+    
+    // Sort all top drivers by rank
+    allTopDrivers.sort((a, b) => a.rank - b.rank);
+    
+    // Redistribute points as if only these drivers exist
+    allTopDrivers.forEach((driver, index) => {
+      const overallRank = index + 1; // 1st, 2nd, 3rd overall
+      const points = eventPointsMap[overallRank] || MIN_EVENT_POINTS;
+      const teamName = Object.keys(teamDrivers).find(team => teamDrivers[team].includes(driver));
+      addTeamPoints(teamName, event.eventName, points);
     });
   });
 
