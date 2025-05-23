@@ -5,18 +5,18 @@ import { useQuery } from "@tanstack/react-query";
 import { MarkdownRenderer } from "@/lib/markdownRenderer";
 import { MedalTable } from "@/components/MedalTable";
 import { calculateDriverMedals } from "@/lib/medalCounter";
-import { fetchResultsData } from "@/pages/Index";
+import { fetchResultsData, EventLeaderboard } from "@/pages/Index";
 import homeContent from "../content/home.md?raw";
 
 const Home = () => {
-  const { data: resultsData, isLoading } = useQuery({
+  const { data: resultsData, isLoading } = useQuery<EventLeaderboard[], Error>({
     queryKey: ["resultsData"],
     queryFn: fetchResultsData,
   });
 
   // Calculate medal table from current season
   const driverMedals = React.useMemo(() => {
-    if (!resultsData) return [];
+    if (!resultsData || !Array.isArray(resultsData)) return [];
     return calculateDriverMedals(resultsData);
   }, [resultsData]);
 
