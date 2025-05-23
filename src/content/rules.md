@@ -21,22 +21,22 @@
 - Authorised mods: [the rally saver mod](https://www.nexusmods.com/artofrally/mods/6), camera mods, purely cosmetic mods
 - Banned mods: If it feels wrong, don't use it (e.g. reset zone visualisers etc)
 
-### Restarts
+## Restarts
 
 - Max 1 restart per service, or equivalently one per pair of stages (1&2, 3&4, 5&6 etc)
 - Free restarts on the first stage of the rally. These do not count towards the previous rule
 - No restarts on the power stage
 - Free restart if you experience a bug, e.g. spawning sideways
 
-### Liveries
+## Liveries
 - Custom liveries, numberplates and team liveries are optional but encouraged
 - For each rally, everyone in the team are encouraged to use a similar livery (not applicable to console players)
 
-### Videos should
+## Videos should
 - Capture the whole rally from setup to finish screen
 - Be published before the deadline with no expiration date
 
-### Penalties
+## Penalties
 - Drivers are expected to be honest. 
 - Cheating will be punished if detected.
 - You can get penalties for breaking rules. 
