@@ -1,3 +1,4 @@
+
 import { useQuery } from "@tanstack/react-query";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
@@ -8,10 +9,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { formatTime } from "@/lib/timeFormatter";
 import { calculateChampionshipStandings, ChampionshipEntry } from "@/lib/pointsCalculator";
+import { calculateDriverTeamPoints } from "@/lib/teamPointsCalculator";
 import ChampionshipStandingsTable from "@/components/ChampionshipStandingsTable";
 import PointsBreakdownTable from "@/components/PointsBreakdownTable";
+import TeamChampionshipStandingsTable from "@/components/TeamChampionshipStandingsTable";
+import TeamPointsBreakdownTable from "@/components/TeamPointsBreakdownTable";
 import { parseTimeToSeconds } from "@/lib/parseTimeToSeconds";
 import { slugify } from "@/lib/slugify";
+import { fetchTeamData, TeamMembership } from "@/lib/teamData";
+import { calculateTeamChampionshipStandings, TeamChampionshipEntry } from "@/lib/teamPointsCalculator";
 
 const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvpxG6EchgG9RszhPdZwv8-ZkHSRo9zxu7moy6t4Nbvg0-Sxi9h7sazU4PdR0lP8T8c5NkFYNgHtL9/pub?gid=1794825689&single=true&output=csv";
 
@@ -19,14 +25,16 @@ interface TournamentData {
   [key: string]: string;
 }
 
-// Exporting these interfaces for use in pointsCalculator.ts
 export interface LeaderboardEntry {
   rank: number;
   name: string;
-  time: string; // This will now store formatted time
-  originalTimeValue?: number; // Keep original for sorting if needed, though sorting now happens on parsed values
-  powerStageTime: string; // This will now store formatted time
+  time: string;
+  originalTimeValue?: number;
+  powerStageTime: string;
   videoLink?: string;
+  individualPoints: number; // Points scored for individual championship
+  teamPoints: number; // Points scored for team championship
+  teamName?: string; // Team name if member of a team
 }
 
 export interface EventLeaderboard {
@@ -177,11 +185,32 @@ const Index = () => {
     queryFn: fetchTournamentData,
   });
 
+  const { data: teamMembership, error: teamError, isLoading: teamLoading } = useQuery<TeamMembership, Error>({
+    queryKey: ["teamData"],
+    queryFn: fetchTeamData,
+  });
+
   const { leaderboards, orderedEventNames } = rawData ? processDataForLeaderboards(rawData) : { leaderboards: [], orderedEventNames: [] };
   const championshipStandings: ChampionshipEntry[] = leaderboards.length > 0 ? calculateChampionshipStandings(leaderboards) : [];
+  const teamChampionshipStandings: TeamChampionshipEntry[] = leaderboards.length > 0 && teamMembership ? 
+    calculateTeamChampionshipStandings(leaderboards, teamMembership) : [];
 
-  // Extract unique event names for the PointsBreakdownTable headers
-  // const uniqueEventNames = Array.from(new Set(leaderboards.map(lb => lb.eventName)));
+  // Enhanced leaderboards with team and points information
+  const enhancedLeaderboards: EventLeaderboard[] = leaderboards.map(eventLeaderboard => ({
+    ...eventLeaderboard,
+    leaderboard: eventLeaderboard.leaderboard.map(entry => {
+      const teamName = teamMembership?.[entry.name];
+      const individualPoints = championshipStandings.find(cs => cs.name === entry.name)?.pointsPerEvent[eventLeaderboard.eventName] || 0;
+      const teamPoints = teamMembership ? calculateDriverTeamPoints(entry.name, eventLeaderboard.eventName, leaderboards, teamMembership) : 0;
+      
+      return {
+        ...entry,
+        teamName,
+        individualPoints,
+        teamPoints,
+      };
+    }),
+  }));
 
   return (
     <div className="min-h-screen bg-background text-foreground p-4 md:p-8">
@@ -191,7 +220,7 @@ const Index = () => {
       </header>
 
       <main className="container mx-auto">
-        {isLoading && (
+        {(isLoading || teamLoading) && (
           <div className="space-y-6">
             {[...Array(2)].map((_, i) => ( 
               <Card key={i} className="shadow-xl">
@@ -207,22 +236,31 @@ const Index = () => {
             ))}
           </div>
         )}
-        {error && (
+        {(error || teamError) && (
           <Alert variant="destructive">
             <FileText className="h-4 w-4" />
             <AlertTitle>Error Fetching Data</AlertTitle>
             <AlertDescription>
-              There was a problem fetching the tournament data: {error.message}. Please try again later.
+              There was a problem fetching the data: {error?.message || teamError?.message}. Please try again later.
             </AlertDescription>
           </Alert>
         )}
-        {!isLoading && !error && leaderboards.length > 0 && (
+        {!isLoading && !teamLoading && !error && !teamError && leaderboards.length > 0 && (
           <div className="space-y-8 mt-8">
-            {/* Render the new PointsBreakdownTable */}
+            {/* Individual Championship Tables */}
             {championshipStandings.length > 0 && (
               <PointsBreakdownTable standings={championshipStandings} eventNames={orderedEventNames} />
             )}
-            {leaderboards.map((eventLeaderboard) => (
+
+            {/* Team Championship Tables */}
+            {teamChampionshipStandings.length > 0 && (
+              <>
+                <TeamPointsBreakdownTable standings={teamChampionshipStandings} eventNames={orderedEventNames} />
+                <TeamChampionshipStandingsTable standings={teamChampionshipStandings} />
+              </>
+            )}
+
+            {enhancedLeaderboards.map((eventLeaderboard) => (
               <Card key={eventLeaderboard.eventName} id={slugify(eventLeaderboard.eventName)} className="shadow-xl scroll-mt-20">
                 <CardHeader>
                   <CardTitle className="text-2xl text-black">{eventLeaderboard.eventName}</CardTitle>
@@ -234,8 +272,11 @@ const Index = () => {
                         <TableRow>
                           <TableHead className="text-black font-semibold w-16">Rank</TableHead>
                           <TableHead className="text-black font-semibold">Name</TableHead>
+                          <TableHead className="text-black font-semibold">Team</TableHead>
                           <TableHead className="text-black font-semibold">Time</TableHead>
                           <TableHead className="text-black font-semibold">Power Stage Time</TableHead>
+                          <TableHead className="text-black font-semibold">Individual Points</TableHead>
+                          <TableHead className="text-black font-semibold">Team Points</TableHead>
                           <TableHead className="text-black font-semibold">Video</TableHead>
                         </TableRow>
                       </TableHeader>
@@ -244,8 +285,11 @@ const Index = () => {
                           <TableRow key={`${eventLeaderboard.eventName}-${entry.name}-${entry.rank}`}>
                             <TableCell className="py-3 px-4 font-medium">{entry.rank}</TableCell>
                             <TableCell className="py-3 px-4">{entry.name}</TableCell>
+                            <TableCell className="py-3 px-4">{entry.teamName || ""}</TableCell>
                             <TableCell className="py-3 px-4">{entry.time}</TableCell>
                             <TableCell className="py-3 px-4">{entry.powerStageTime}</TableCell>
+                            <TableCell className="py-3 px-4">{entry.individualPoints}</TableCell>
+                            <TableCell className="py-3 px-4">{entry.teamPoints}</TableCell>
                             <TableCell className="py-3 px-4">
                               {entry.videoLink ? (
                                 <Button
