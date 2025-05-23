@@ -21,19 +21,19 @@ export const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content, cla
       if (line.startsWith('### ')) {
         elements.push(
           <h3 key={key++} className="text-xl font-semibold text-black mt-6 mb-3">
-            {line.substring(4)}
+            {parseInlineMarkdown(line.substring(4))}
           </h3>
         );
       } else if (line.startsWith('## ')) {
         elements.push(
           <h2 key={key++} className="text-2xl font-bold text-black mt-8 mb-4">
-            {line.substring(3)}
+            {parseInlineMarkdown(line.substring(3))}
           </h2>
         );
       } else if (line.startsWith('# ')) {
         elements.push(
           <h1 key={key++} className="text-3xl font-bold text-black mt-8 mb-6">
-            {line.substring(2)}
+            {parseInlineMarkdown(line.substring(2))}
           </h1>
         );
       }
@@ -121,7 +121,7 @@ export const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content, cla
       else if (line.startsWith('*') && line.endsWith('*') && !line.startsWith('**')) {
         elements.push(
           <p key={key++} className="text-gray-600 italic text-center mb-4">
-            {line.substring(1, line.length - 1)}
+            {parseInlineMarkdown(line.substring(1, line.length - 1))}
           </p>
         );
       }

@@ -50,6 +50,13 @@ const fetchTournamentData = async (): Promise<TournamentData[]> => {
   return parseCSV(csvText);
 };
 
+// Export this function so it can be used in other components
+export const fetchResultsData = async (): Promise<EventLeaderboard[]> => {
+  const data = await fetchTournamentData();
+  const { leaderboards } = processDataForLeaderboards(data);
+  return leaderboards;
+};
+
 // Function to process raw tournament data into structured leaderboards
 const processDataForLeaderboards = (data: TournamentData[]): { leaderboards: EventLeaderboard[], orderedEventNames: string[] } => {
   if (!data || data.length === 0) {
