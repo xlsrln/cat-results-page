@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Results from "./pages/Results";
 import Teams from "./pages/Teams";
 import Rules from "./pages/Rules";
+import Stages from "./pages/Stages";
 import NotFound from "./pages/NotFound";
 import { ThemeProvider } from "next-themes";
 
@@ -25,6 +26,7 @@ const App = () => (
             <Route path="/results" element={<Results />} />
             <Route path="/teams" element={<Teams />} />
             <Route path="/rules" element={<Rules />} />
+            <Route path="/stages" element={<Stages />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

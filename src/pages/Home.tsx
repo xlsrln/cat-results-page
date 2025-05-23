@@ -1,13 +1,25 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { useQuery } from "@tanstack/react-query";
 import { MarkdownRenderer } from "@/lib/markdownRenderer";
-import { Trophy, Users, FileText, BarChart3 } from "lucide-react";
+import { MedalTable } from "@/components/MedalTable";
+import { calculateDriverMedals } from "@/lib/medalCounter";
+import { fetchResultsData } from "@/pages/Index";
 import homeContent from "../content/home.md?raw";
 
 const Home = () => {
+  const { data: resultsData, isLoading } = useQuery({
+    queryKey: ["resultsData"],
+    queryFn: fetchResultsData,
+  });
+
+  // Calculate medal table from current season
+  const driverMedals = React.useMemo(() => {
+    if (!resultsData) return [];
+    return calculateDriverMedals(resultsData);
+  }, [resultsData]);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Navigation */}
@@ -27,6 +39,9 @@ const Home = () => {
               <Link to="/teams" className="text-gray-700 hover:text-black font-medium">
                 Teams
               </Link>
+              <Link to="/stages" className="text-gray-700 hover:text-black font-medium">
+                Stages
+              </Link>
               <Link to="/rules" className="text-gray-700 hover:text-black font-medium">
                 Rules
               </Link>
@@ -35,83 +50,58 @@ const Home = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-6">CAT Rally Championship</h1>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            The premier virtual rally racing series bringing together the world's best drivers
-          </p>
-          <div className="flex justify-center space-x-4">
-            <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-              <Link to="/results">View Current Standings</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
-              <Link to="/rules">Learn How to Join</Link>
-            </Button>
-          </div>
-        </div>
-      </div>
-
-      {/* Quick Navigation Cards */}
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          <Card className="hover:shadow-lg transition-shadow">
-            <CardHeader className="text-center">
-              <BarChart3 className="h-8 w-8 mx-auto mb-2 text-blue-600" />
-              <CardTitle className="text-lg">Current Results</CardTitle>
-            </CardHeader>
-            <CardContent className="text-center">
-              <p className="text-gray-600 mb-4">View live championship standings and event results</p>
-              <Button asChild className="w-full">
-                <Link to="/results">View Results</Link>
-              </Button>
-            </CardContent>
-          </Card>
-
-          <Card className="hover:shadow-lg transition-shadow">
-            <CardHeader className="text-center">
-              <Users className="h-8 w-8 mx-auto mb-2 text-green-600" />
-              <CardTitle className="text-lg">Teams</CardTitle>
-            </CardHeader>
-            <CardContent className="text-center">
-              <p className="text-gray-600 mb-4">Discover teams and their talented drivers</p>
-              <Button asChild className="w-full">
-                <Link to="/teams">Browse Teams</Link>
-              </Button>
-            </CardContent>
-          </Card>
-
-          <Card className="hover:shadow-lg transition-shadow">
-            <CardHeader className="text-center">
-              <FileText className="h-8 w-8 mx-auto mb-2 text-purple-600" />
-              <CardTitle className="text-lg">Rules</CardTitle>
-            </CardHeader>
-            <CardContent className="text-center">
-              <p className="text-gray-600 mb-4">Championship regulations and participation guide</p>
-              <Button asChild className="w-full">
-                <Link to="/rules">Read Rules</Link>
-              </Button>
-            </CardContent>
-          </Card>
-
-          <Card className="hover:shadow-lg transition-shadow">
-            <CardHeader className="text-center">
-              <Trophy className="h-8 w-8 mx-auto mb-2 text-yellow-600" />
-              <CardTitle className="text-lg">Hall of Fame</CardTitle>
-            </CardHeader>
-            <CardContent className="text-center">
-              <p className="text-gray-600 mb-4">Champions and record holders throughout history</p>
-              <Button asChild className="w-full">
-                <Link to="/#hall-of-fame">View Champions</Link>
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Main Content */}
-        <div className="max-w-4xl mx-auto">
+      <div className="container mx-auto px-4 py-8">
+        {/* Content from markdown */}
+        <div className="max-w-4xl mx-auto mb-12">
           <MarkdownRenderer content={homeContent} />
+        </div>
+
+        {/* Current Season Medal Table */}
+        {!isLoading && driverMedals.length > 0 && (
+          <div className="max-w-4xl mx-auto mb-12">
+            <MedalTable 
+              driverMedals={driverMedals} 
+              title="Current Season Medal Table" 
+            />
+          </div>
+        )}
+
+        {/* Quick Links */}
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-black mb-6">Quick Links</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Link 
+              to="/results" 
+              className="bg-white border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <h3 className="text-lg font-semibold text-black mb-2">Current Season Results</h3>
+              <p className="text-gray-600">View championship standings and event results</p>
+            </Link>
+            <Link 
+              to="/stages" 
+              className="bg-white border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <h3 className="text-lg font-semibold text-black mb-2">Rally Stages</h3>
+              <p className="text-gray-600">Check out the itineraries for this season's rallies</p>
+            </Link>
+            <div className="bg-white border rounded-lg p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-black mb-2">Previous Seasons</h3>
+              <p className="text-gray-600 mb-3">Browse results from past championships</p>
+              <div className="space-y-1">
+                <a href="#" className="block text-blue-600 hover:text-blue-800 text-sm">Season 4 Results</a>
+                <a href="#" className="block text-blue-600 hover:text-blue-800 text-sm">Season 3 Results</a>
+                <a href="#" className="block text-blue-600 hover:text-blue-800 text-sm">Season 2 Results</a>
+                <a href="#" className="block text-blue-600 hover:text-blue-800 text-sm">Season 1 Results</a>
+              </div>
+            </div>
+            <Link 
+              to="/teams" 
+              className="bg-white border rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <h3 className="text-lg font-semibold text-black mb-2">Championship Teams</h3>
+              <p className="text-gray-600">Meet the teams competing for glory</p>
+            </Link>
+          </div>
         </div>
       </div>
 
