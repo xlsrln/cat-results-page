@@ -104,23 +104,37 @@ export const calculateDriverTeamPoints = (
   // Find this driver's position within the team
   const driverTeamPosition = teamDrivers.findIndex(driver => driver.name === driverName);
   
-  // Only top 3 score points for team
+  // Only top 3 drivers from each team score points
   if (driverTeamPosition >= 3 || driverTeamPosition === -1) return 0;
 
-  // Collect all top 3 drivers from each team
+  // Collect all top 3 drivers from each team across all teams
   const allTopDrivers = [];
-  const allTeams = Object.keys(teamMembership);
-  allTeams.forEach(team => {
+  
+  // First, collect all teams with drivers in this event
+  const teamsInEvent = new Set<string>();
+  event.leaderboard.forEach(entry => {
+    const team = teamMembership[entry.name];
+    if (team) teamsInEvent.add(team);
+  });
+  
+  // For each team, add their top 3 drivers to the list
+  Array.from(teamsInEvent).forEach(team => {
     const teamDriversInEvent = event.leaderboard
       .filter(entry => teamMembership[entry.name] === team)
-      .sort((a, b) => a.rank - b.rank);
-    const topThreeDrivers = teamDriversInEvent.slice(0, 3);
-    allTopDrivers.push(...topThreeDrivers);
+      .sort((a, b) => a.rank - b.rank)
+      .slice(0, 3); // Only take top 3
+      
+    allTopDrivers.push(...teamDriversInEvent);
   });
-
-  // Find this driver's position within the overall list of top drivers
+  
+  // Sort all top drivers by their overall rank in the event
+  allTopDrivers.sort((a, b) => a.rank - b.rank);
+  
+  // Find this driver's position within all top drivers
   const overallPosition = allTopDrivers.findIndex(driver => driver.name === driverName);
   
-  // Return points based on overall position
+  if (overallPosition === -1) return 0;
+  
+  // Return points based on this overall position among top drivers from all teams
   return eventPointsMap[overallPosition + 1] || MIN_EVENT_POINTS;
 };
