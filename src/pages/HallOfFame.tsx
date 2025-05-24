@@ -8,6 +8,7 @@ import { calculateDriverMedals } from "@/lib/medalCounter";
 import { MedalTable } from "@/components/MedalTable";
 import { Trophy } from "lucide-react";
 import Navigation from '@/components/Navigation';
+import { MarkdownRenderer } from "@/lib/markdownRenderer";
 
 const HallOfFame = () => {
   const { data: eventData, error, isLoading } = useQuery({
@@ -78,7 +79,7 @@ const HallOfFame = () => {
 
 #
 
-
+MarkdownRenderer("""
 **Previous Catface AOR World Champions**
 
 Driver's champions:
@@ -181,7 +182,7 @@ Cool cat of the year:
 |  🥇 franky    |  🥇 colin mccrack  |  🥇 franky         |  🥇 noEihaOo         |
 |  🥈 domer     |  🥈 colorcat       |  🥈 colin mccrack  |  🥈 dryout           |
 |  🥉 playerz   |  🥉 nept           |  🥉 nept           |  🥉 colin mccrack    |
-    
+"""  
   );
 };
 
