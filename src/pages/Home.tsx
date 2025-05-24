@@ -7,6 +7,7 @@ import { MedalTable } from "@/components/MedalTable";
 import { calculateDriverMedals } from "@/lib/medalCounter";
 import { fetchResultsData, EventLeaderboard } from "@/pages/Index";
 import homeContent from "../content/home.md?raw";
+import Navigation from "@/components/Navigation";
 
 const Home = () => {
   const { data: resultsData, isLoading } = useQuery<EventLeaderboard[], Error>({
