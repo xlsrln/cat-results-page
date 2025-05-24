@@ -28,25 +28,29 @@ export const teamInformation: Record<string, TeamInfo> = {
     foundedYear: 2021,
     philosophy: "make bricks fly",
     achievements: ["Season 4 Team champions"]
-  },"Noot Squad Rally": {
+  },
+  "Noot Squad Rally": {
     name: "Noot Squad Rally",
     description: "The newest addition to the championship, bringing fresh energy and innovative approaches to rally racing. Despite being newcomers, they've shown impressive potential and determination.",
     foundedYear: 2023,
     philosophy: "New perspectives, unlimited potential.",
     achievements: ["Rising stars in the championship", "Rapid skill development"]
-  },"superturbo": {
+  },
+  "superturbo": {
     name: "Superturbo",
     description: "superturbo was founded in 1967 by a small group of British privateers - and has evolved into an internationally-based outfit. our team has a long relationship with the manufacturers of ‘il gorilla’, ensuring that our team always aims to bring home victories, without compromising style",
     foundedYear: 1967,
     philosophy: "superturbo - the crowd’s choice.",
     achievements: ["Great success individually", "Real life karting kings"]
-  },"purple sunset": {
+  },
+"purple sunset": {
     name: "purple sunset",
     description: "Founded in 2024 by two guys originating from the desolate arctic wastelands of Finland and northern Canada, these two have honed their driving skills in the hostile forest and backroads, mostly out of necessity rather than training. Armed with Fujin FRXs modified to group A spec, a couple Cozzie Transfer vans and a crippling debt with their houses on the line, Purple Sunset Motorsports is purely driven by the determination to prove itself in the Catface Rally, and maybe on the side win enough money to pay of their debts or at least convince the banks not to foreclose their houses.",
     foundedYear: 2023,
     philosophy: "drive hills, pay bills",
     achievements: []
-  },"bike-a-cycle": {
+  },
+  "bike-a-cycle": {
     name: "bike-a-cycle",
     description: "A group of mechanics of the continental bicycle racing team, bike-a-cycle, decided to use their vacation to go rallying after being suspended for putting petrol in their rider's water bottles. So here they are, roof racks installed, partially lycra clad, and confused as to why the gears are in a box and not just screwed onto the rear wheel, ready to go racing in cat!",
     foundedYear: 2023,
