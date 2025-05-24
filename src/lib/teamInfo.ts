@@ -15,8 +15,8 @@ export const teamInformation: Record<string, TeamInfo> = {
     philosophy: "Drive fast, take every shortcut, never brake.",
     achievements: ["Season 1 Team Champions", "Multiple individual rally wins"]
   },
-  "G2D Racing": {
-    name: "G2D Racing",
+  "G2D Righto": {
+    name: "G2D Righto",
     description: "Perennial competitors, G2D Racing has a mercenary reputation in the paddock despite their humble enthusiast origins, aggressively pursuing and fielding promising drivers. G2D's philosophy of The Racer's Choice revolves around letting each driver find the package that they can extract the most from, be it car or setup.",
     foundedYear: 2022,
     philosophy: "fun is good but winning is better",
@@ -54,7 +54,7 @@ export const teamInformation: Record<string, TeamInfo> = {
     name: "bike-a-cycle",
     description: "A group of mechanics of the continental bicycle racing team, bike-a-cycle, decided to use their vacation to go rallying after being suspended for putting petrol in their rider's water bottles. So here they are, roof racks installed, partially lycra clad, and confused as to why the gears are in a box and not just screwed onto the rear wheel, ready to go racing in cat!",
     foundedYear: 2023,
-    philosophy: "allez allez",
+    philosophy: "allez allez allez",
     achievements: []
   }
 };
