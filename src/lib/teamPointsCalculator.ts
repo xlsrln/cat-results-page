@@ -118,9 +118,6 @@ export const calculateDriverTeamPoints = (
     allTopDrivers.push(...topThreeDrivers);
   });
 
-  // Sort all top drivers by rank
-  allTopDrivers.sort((a, b) => a.rank - b.rank);
-
   // Find this driver's position within the overall list of top drivers
   const overallPosition = allTopDrivers.findIndex(driver => driver.name === driverName);
   
