@@ -64,10 +64,10 @@ const Home = () => {
               <h3 className="text-lg font-semibold text-black mb-2">Previous Seasons</h3>
               <p className="text-gray-600 mb-3">Browse results from past championships</p>
               <div className="space-y-1">
-                <a href="#" className="block text-blue-600 hover:text-blue-800 text-sm">Season 4 Results</a>
-                <a href="#" className="block text-blue-600 hover:text-blue-800 text-sm">Season 3 Results</a>
-                <a href="#" className="block text-blue-600 hover:text-blue-800 text-sm">Season 2 Results</a>
-                <a href="#" className="block text-blue-600 hover:text-blue-800 text-sm">Season 1 Results</a>
+                <a href="season-1" className="block text-blue-600 hover:text-blue-800 text-sm">Season 4 Results</a>
+                <a href="season-2" className="block text-blue-600 hover:text-blue-800 text-sm">Season 3 Results</a>
+                <a href="season-3" className="block text-blue-600 hover:text-blue-800 text-sm">Season 2 Results</a>
+                <a href="season-4" className="block text-blue-600 hover:text-blue-800 text-sm">Season 1 Results</a>
               </div>
             </div>
             <Link 
