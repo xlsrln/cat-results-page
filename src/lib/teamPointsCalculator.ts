@@ -107,6 +107,23 @@ export const calculateDriverTeamPoints = (
   // Only top 3 score points for team
   if (driverTeamPosition >= 3 || driverTeamPosition === -1) return 0;
 
-  const teamEventRank = driverTeamPosition + 1;
-  return eventPointsMap[teamEventRank] || MIN_EVENT_POINTS;
+  // Collect all top 3 drivers from each team
+  const allTopDrivers = [];
+  const allTeams = Object.keys(teamMembership);
+  allTeams.forEach(team => {
+    const teamDriversInEvent = event.leaderboard
+      .filter(entry => teamMembership[entry.name] === team)
+      .sort((a, b) => a.rank - b.rank);
+    const topThreeDrivers = teamDriversInEvent.slice(0, 3);
+    allTopDrivers.push(...topThreeDrivers);
+  });
+
+  // Sort all top drivers by rank
+  allTopDrivers.sort((a, b) => a.rank - b.rank);
+
+  // Find this driver's position within the overall list of top drivers
+  const overallPosition = allTopDrivers.findIndex(driver => driver.name === driverName);
+  
+  // Return points based on overall position
+  return eventPointsMap[overallPosition + 1] || MIN_EVENT_POINTS;
 };
