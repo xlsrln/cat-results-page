@@ -17,7 +17,7 @@ export const teamInformation: Record<string, TeamInfo> = {
   },
   "G2D Racing": {
     name: "G2D Racing",
-    description: "Perennial competitors, G2D Racing has a mercenary reputation in the paddock despite their humble enthusiast origins, aggressively pursuing and fielding promising drivers. G2D's philosophy of "The Racer's Choice" revolves around letting each driver find the package that they can extract the most from, be it car or setup.",
+    description: "Perennial competitors, G2D Racing has a mercenary reputation in the paddock despite their humble enthusiast origins, aggressively pursuing and fielding promising drivers. G2D's philosophy of The Racer's Choice revolves around letting each driver find the package that they can extract the most from, be it car or setup.",
     foundedYear: 2022,
     philosophy: "fun is good but winning is better",
     achievements: ["Champions of CAT S2 and S3"]
