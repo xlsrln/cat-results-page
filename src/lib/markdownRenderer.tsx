@@ -53,7 +53,7 @@ export const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content, cla
           
           // Check if second row is a separator (contains dashes)
           if (separatorRow.includes('-')) {
-            const headers = headerRow.split('|').map(h => h.trim()));
+            const headers = headerRow.split('|').map(h => h.trim());
             const rows = dataRows.map(row => 
               row.split('|').map(cell => cell.trim())
             );
