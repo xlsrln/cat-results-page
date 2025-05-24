@@ -51,7 +51,7 @@ Congratulations to Wes, turbo and KK for finishing on the podium!
 | 4   | Hulter            | 08:56.1 | [link](https://youtu.be/-g5NBrjKzA8)                 |
 | 5   | nept              | 08:58.5 | [link](https://www.youtube.com/watch?v=en_yPK5yPG0) |
 | 6   | Red Sun           | 09:00.1 | [link](https://www.twitch.tv/videos/1607608745)      |
-| 7   | capablanca	   | 09:11.3 | [link](https://youtu.be/yhjtPe59kZg)
+| 7   | capablanca	   | 09:11.3 | [link](https://youtu.be/yhjtPe59kZg) |
 | 8   | domer             | 09:12.8 | [link](https://youtu.be/rBMY4pOHQu8)                 |
 | 9   | MxCraven          | 09:43.8 | [link](https://www.twitch.tv/videos/1607365265)      |
 |10   | nap               | 09:50.5 | [link](https://www.youtube.com/watch?v=OjfTEOvrbTY)  |
