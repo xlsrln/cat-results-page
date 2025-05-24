@@ -10,10 +10,10 @@ export interface TeamInfo {
 export const teamInformation: Record<string, TeamInfo> = {
   "cat face nospace": {
     name: "Cat Face Nospace",
-    description: "A legendary team known for their precision driving and strategic approach to rally championships. Founded by veterans of the sport, they have consistently performed at the highest level across multiple seasons.",
-    foundedYear: 2022,
-    philosophy: "Speed through precision, victory through teamwork.",
-    achievements: ["Season 1 Team Champions", "Multiple individual race wins"]
+    description: "Active since 2021, team Cat Face NoSpace come from the cold northern forests and refer to themselves as the beasts of the north.",
+    foundedYear: 2021,
+    philosophy: "Drive fast, take every shortcut, never brake.",
+    achievements: ["Season 1 Team Champions", "Multiple individual rally wins"]
   },
   "G2D Racing": {
     name: "G2D Racing",
@@ -24,10 +24,10 @@ export const teamInformation: Record<string, TeamInfo> = {
   },
   "Brick Motorsports": {
     name: "Brick Motorsports",
-    description: "A team built on solid foundations and reliable performance. They may not always be the flashiest, but their consistency and technical expertise make them a threat in every championship.",
-    foundedYear: 2022,
-    philosophy: "Steady progress leads to lasting success.",
-    achievements: ["Multiple season participations", "Strong technical development"]
+    description: "Brick Motorsports was created in 2021 by an international group of racers united by the mission to make bricks fly. Throughout the years Brick Motorsports has worked with talented drivers from Finland, Germany, USA, UK, Ukraine, Norway, and Antarctica.",
+    foundedYear: 2021,
+    philosophy: "make bricks fly",
+    achievements: ["Team champions S4"]
   },
   "Noot Squad Rally": {
     name: "Noot Squad Rally",
