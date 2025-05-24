@@ -19,13 +19,15 @@ import { ThemeProvider } from "next-themes";
 
 const queryClient = new QueryClient();
 
+const VITE_BASE_PATH = import.meta.env.BASE_URL;
+
 const App = () => (
   <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <BrowserRouter basename={VITE_BASE_PATH}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/results" element={<Results />} />
