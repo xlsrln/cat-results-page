@@ -1,0 +1,53 @@
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Or your default branch if it's not 'main'
+  workflow_dispatch: # Allows manual triggering from the Actions tab
+
+permissions:
+  contents: read # Needed to checkout the repository
+  pages: write    # Needed to deploy to GitHub Pages
+  id-token: write # Needed for OIDC token authentication
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18' # Or your preferred Node.js version
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build 
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+        # No specific configuration needed here if using default settings
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist' # Vite's default output directory
+
+  deploy:
+    needs: build # This job runs after the build job completes
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }} # Sets the deployment URL in the GitHub environment
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        # This action automatically uses the artifact uploaded in the 'build' job
