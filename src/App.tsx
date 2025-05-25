@@ -3,8 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom"; // Removed useLocation, useNavigate
-// Removed useEffect
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Results from "./pages/Results";
 import Teams from "./pages/Teams";
@@ -17,10 +16,9 @@ import Season4 from "./pages/Season4";
 import Season5 from "./pages/Season5";
 import RallyMaster from "./pages/RallyMaster";
 import HallOfFame from "./pages/HallOfFame";
+import AllTimeStats from "./pages/AllTimeStats"; // <-- New Import
 import NotFound from "./pages/NotFound";
 import { ThemeProvider } from "next-themes";
-
-// RedirectHandler function removed
 
 const queryClient = new QueryClient();
 
@@ -33,7 +31,6 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter basename={VITE_BASE_PATH}>
-          {/* RedirectHandler component instance removed */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/results" element={<Results />} />
@@ -47,6 +44,7 @@ const App = () => (
             <Route path="/season-5" element={<Season5 />} />
             <Route path="/rally-master" element={<RallyMaster />} />
             <Route path="/hall-of-fame" element={<HallOfFame />} />
+            <Route path="/all-time-stats" element={<AllTimeStats />} /> {/* <-- New Route */}
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
@@ -57,4 +55,3 @@ const App = () => (
 );
 
 export default App;
-

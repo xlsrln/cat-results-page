@@ -57,7 +57,17 @@ const Navigation = () => {
                         </p>
                       </Link>
                     </NavigationMenuLink>
-                    {/* Rally Master link moved below */}
+                     <NavigationMenuLink asChild> {/* <-- New Link for All-Time Stats --> */}
+                      <Link 
+                        to="/all-time-stats" 
+                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                      >
+                        <div className="text-sm font-medium leading-none">All-Time Stats</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Aggregate championship medals across all seasons
+                        </p>
+                      </Link>
+                    </NavigationMenuLink>
                     <div className="border-t pt-2">
                       <p className="text-xs text-muted-foreground mb-2">Previous Seasons & Events</p>
                       <div className="grid grid-cols-3 gap-2">
@@ -102,7 +112,6 @@ const Navigation = () => {
                           </Link>
                         </NavigationMenuLink>
                         <NavigationMenuLink asChild>
-                           {/* Rally Master link moved here */}
                           <Link 
                             to="/rally-master" 
                             className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-sm"
@@ -148,4 +157,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-
