@@ -30,7 +30,7 @@ const Navigation = () => {
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-gray-700 hover:text-black font-medium">
+                <NavigationMenuTrigger className="text-gray-700 hover:text-black font-medium text-base">
                   Results
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -57,9 +57,20 @@ const Navigation = () => {
                         </p>
                       </Link>
                     </NavigationMenuLink>
+                    <NavigationMenuLink asChild>
+                      <Link 
+                        to="/rally-master" 
+                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                      >
+                        <div className="text-sm font-medium leading-none">Rally Master</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Special events and elite competition
+                        </p>
+                      </Link>
+                    </NavigationMenuLink>
                     <div className="border-t pt-2">
                       <p className="text-xs text-muted-foreground mb-2">Previous Seasons</p>
-                      <div className="grid grid-cols-2 gap-2">
+                      <div className="grid grid-cols-3 gap-2">
                         <NavigationMenuLink asChild>
                           <Link 
                             to="/season-1" 
@@ -90,6 +101,14 @@ const Navigation = () => {
                             className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-sm"
                           >
                             Season 4
+                          </Link>
+                        </NavigationMenuLink>
+                        <NavigationMenuLink asChild>
+                          <Link 
+                            to="/season-5" 
+                            className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-sm"
+                          >
+                            Season 5
                           </Link>
                         </NavigationMenuLink>
                       </div>
