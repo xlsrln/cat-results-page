@@ -23,7 +23,7 @@ const Navigation = () => {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link to="/" className="text-gray-700 hover:text-black font-medium px-4 py-2">
+                  <Link to="/" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base"> {/* Ensured text-base like others */}
                     Home
                   </Link>
                 </NavigationMenuLink>
@@ -33,7 +33,8 @@ const Navigation = () => {
                 <NavigationMenuTrigger className="text-gray-700 hover:text-black font-medium text-base">
                   Results
                 </NavigationMenuTrigger>
-                <NavigationMenuContent>
+                {/* Added z-50 to ensure dropdown is above other content */}
+                <NavigationMenuContent className="z-50"> 
                   <div className="grid w-[400px] gap-3 p-4">
                     <NavigationMenuLink asChild>
                       <Link 
@@ -119,7 +120,7 @@ const Navigation = () => {
               
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link to="/teams" className="text-gray-700 hover:text-black font-medium px-4 py-2">
+                  <Link to="/teams" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base"> {/* Ensured text-base */}
                     Teams
                   </Link>
                 </NavigationMenuLink>
@@ -127,7 +128,7 @@ const Navigation = () => {
               
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link to="/stages" className="text-gray-700 hover:text-black font-medium px-4 py-2">
+                  <Link to="/stages" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base"> {/* Ensured text-base */}
                     Stages
                   </Link>
                 </NavigationMenuLink>
@@ -135,7 +136,7 @@ const Navigation = () => {
               
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link to="/rules" className="text-gray-700 hover:text-black font-medium px-4 py-2">
+                  <Link to="/rules" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base"> {/* Ensured text-base */}
                     Rules
                   </Link>
                 </NavigationMenuLink>
@@ -149,3 +150,4 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
