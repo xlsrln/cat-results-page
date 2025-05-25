@@ -22,11 +22,9 @@ const Navigation = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuLink asChild>
-                  <Link to="/" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base">
-                    Home
-                  </Link>
-                </NavigationMenuLink>
+                <Link to="/" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base">
+                  Home
+                </Link>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
@@ -35,90 +33,72 @@ const Navigation = () => {
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="z-50"> 
                   <div className="grid w-[400px] gap-3 p-4">
-                    <NavigationMenuLink asChild>
-                      <Link 
-                        to="/results" 
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      >
-                        <div className="text-sm font-medium leading-none">Current Season</div>
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Season 5 standings and results
-                        </p>
-                      </Link>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link 
-                        to="/hall-of-fame" 
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      >
-                        <div className="text-sm font-medium leading-none">Hall of Fame</div>
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Medal table and championship legends
-                        </p>
-                      </Link>
-                    </NavigationMenuLink>
-                     <NavigationMenuLink asChild> {/* <-- New Link for All-Time Stats --> */}
-                      <Link 
-                        to="/all-time-stats" 
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      >
-                        <div className="text-sm font-medium leading-none">All-Time Stats</div>
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Aggregate championship medals across all seasons
-                        </p>
-                      </Link>
-                    </NavigationMenuLink>
+                    <Link 
+                      to="/results" 
+                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                    >
+                      <div className="text-sm font-medium leading-none">Current Season</div>
+                      <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                        Season 5 standings and results
+                      </p>
+                    </Link>
+                    <Link 
+                      to="/hall-of-fame" 
+                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                    >
+                      <div className="text-sm font-medium leading-none">Hall of Fame</div>
+                      <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                        Medal table and championship legends
+                      </p>
+                    </Link>
+                    <Link 
+                      to="/all-time-stats" 
+                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                    >
+                      <div className="text-sm font-medium leading-none">All-Time Stats</div>
+                      <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                        Aggregate championship medals across all seasons
+                      </p>
+                    </Link>
                     <div className="border-t pt-2">
                       <p className="text-xs text-muted-foreground mb-2">Previous Seasons & Events</p>
                       <div className="grid grid-cols-3 gap-2">
-                        <NavigationMenuLink asChild>
-                          <Link 
-                            to="/season-1" 
-                            className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-sm"
-                          >
-                            Season 1
-                          </Link>
-                        </NavigationMenuLink>
-                        <NavigationMenuLink asChild>
-                          <Link 
-                            to="/season-2" 
-                            className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-sm"
-                          >
-                            Season 2
-                          </Link>
-                        </NavigationMenuLink>
-                        <NavigationMenuLink asChild>
-                          <Link 
-                            to="/season-3" 
-                            className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-sm"
-                          >
-                            Season 3
-                          </Link>
-                        </NavigationMenuLink>
-                        <NavigationMenuLink asChild>
-                          <Link 
-                            to="/season-4" 
-                            className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-sm"
-                          >
-                            Season 4
-                          </Link>
-                        </NavigationMenuLink>
-                        <NavigationMenuLink asChild>
-                          <Link 
-                            to="/season-5" 
-                            className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-sm"
-                          >
-                            Season 5
-                          </Link>
-                        </NavigationMenuLink>
-                        <NavigationMenuLink asChild>
-                          <Link 
-                            to="/rally-master" 
-                            className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-sm"
-                          >
-                            Rally Master
-                          </Link>
-                        </NavigationMenuLink>
+                        <Link 
+                          to="/season-1" 
+                          className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-sm"
+                        >
+                          Season 1
+                        </Link>
+                        <Link 
+                          to="/season-2" 
+                          className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-sm"
+                        >
+                          Season 2
+                        </Link>
+                        <Link 
+                          to="/season-3" 
+                          className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-sm"
+                        >
+                          Season 3
+                        </Link>
+                        <Link 
+                          to="/season-4" 
+                          className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-sm"
+                        >
+                          Season 4
+                        </Link>
+                        <Link 
+                          to="/season-5" 
+                          className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-sm"
+                        >
+                          Season 5
+                        </Link>
+                        <Link 
+                          to="/rally-master" 
+                          className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-sm"
+                        >
+                          Rally Master
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -126,27 +106,21 @@ const Navigation = () => {
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <NavigationMenuLink asChild>
-                  <Link to="/teams" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base">
-                    Teams
-                  </Link>
-                </NavigationMenuLink>
+                <Link to="/teams" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base">
+                  Teams
+                </Link>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <NavigationMenuLink asChild>
-                  <Link to="/stages" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base">
-                    Stages
-                  </Link>
-                </NavigationMenuLink>
+                <Link to="/stages" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base">
+                  Stages
+                </Link>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <NavigationMenuLink asChild>
-                  <Link to="/rules" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base">
-                    Rules
-                  </Link>
-                </NavigationMenuLink>
+                <Link to="/rules" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base">
+                  Rules
+                </Link>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
