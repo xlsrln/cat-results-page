@@ -23,7 +23,7 @@ const Navigation = () => {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link to="/" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base"> {/* Ensured text-base like others */}
+                  <Link to="/" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base">
                     Home
                   </Link>
                 </NavigationMenuLink>
@@ -33,7 +33,6 @@ const Navigation = () => {
                 <NavigationMenuTrigger className="text-gray-700 hover:text-black font-medium text-base">
                   Results
                 </NavigationMenuTrigger>
-                {/* Added z-50 to ensure dropdown is above other content */}
                 <NavigationMenuContent className="z-50"> 
                   <div className="grid w-[400px] gap-3 p-4">
                     <NavigationMenuLink asChild>
@@ -58,19 +57,9 @@ const Navigation = () => {
                         </p>
                       </Link>
                     </NavigationMenuLink>
-                    <NavigationMenuLink asChild>
-                      <Link 
-                        to="/rally-master" 
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      >
-                        <div className="text-sm font-medium leading-none">Rally Master</div>
-                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          Special events and elite competition
-                        </p>
-                      </Link>
-                    </NavigationMenuLink>
+                    {/* Rally Master link moved below */}
                     <div className="border-t pt-2">
-                      <p className="text-xs text-muted-foreground mb-2">Previous Seasons</p>
+                      <p className="text-xs text-muted-foreground mb-2">Previous Seasons & Events</p>
                       <div className="grid grid-cols-3 gap-2">
                         <NavigationMenuLink asChild>
                           <Link 
@@ -112,6 +101,15 @@ const Navigation = () => {
                             Season 5
                           </Link>
                         </NavigationMenuLink>
+                        <NavigationMenuLink asChild>
+                           {/* Rally Master link moved here */}
+                          <Link 
+                            to="/rally-master" 
+                            className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-sm"
+                          >
+                            Rally Master
+                          </Link>
+                        </NavigationMenuLink>
                       </div>
                     </div>
                   </div>
@@ -120,7 +118,7 @@ const Navigation = () => {
               
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link to="/teams" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base"> {/* Ensured text-base */}
+                  <Link to="/teams" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base">
                     Teams
                   </Link>
                 </NavigationMenuLink>
@@ -128,7 +126,7 @@ const Navigation = () => {
               
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link to="/stages" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base"> {/* Ensured text-base */}
+                  <Link to="/stages" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base">
                     Stages
                   </Link>
                 </NavigationMenuLink>
@@ -136,7 +134,7 @@ const Navigation = () => {
               
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link to="/rules" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base"> {/* Ensured text-base */}
+                  <Link to="/rules" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base">
                     Rules
                   </Link>
                 </NavigationMenuLink>

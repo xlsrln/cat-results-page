@@ -3,8 +3,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useLocation, useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom"; // Removed useLocation, useNavigate
+// Removed useEffect
 import Home from "./pages/Home";
 import Results from "./pages/Results";
 import Teams from "./pages/Teams";
@@ -20,21 +20,7 @@ import HallOfFame from "./pages/HallOfFame";
 import NotFound from "./pages/NotFound";
 import { ThemeProvider } from "next-themes";
 
-// Handle GitHub Pages redirect
-function RedirectHandler() {
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  useEffect(() => {
-    const path = window.location.hash;
-    if (path && path.includes("#/?/")) {
-      const redirectUrl = path.replace("#/?/", "");
-      navigate("/" + redirectUrl);
-    }
-  }, [navigate]);
-
-  return null;
-}
+// RedirectHandler function removed
 
 const queryClient = new QueryClient();
 
@@ -47,7 +33,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter basename={VITE_BASE_PATH}>
-          <RedirectHandler />
+          {/* RedirectHandler component instance removed */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/results" element={<Results />} />
@@ -71,3 +57,4 @@ const App = () => (
 );
 
 export default App;
+

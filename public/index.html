@@ -11,33 +11,21 @@
       // Single Page Apps for GitHub Pages
       // MIT License
       // https://github.com/rafgraph/spa-github-pages
+      // This script checks for query parameters p (path) and q (query) and rewrites URL.
       (function(l) {
-        if (l.search[1] === '/' ) { // Checks if query string starts with '/?' e.g. /?/results
-          var searchParamsString = l.search.slice(1); // e.g., "?/results" or "?/results&param=value"
-          
-          // Split by '&' to handle original query params, then restore original '&' from '~and~'
-          var parts = searchParamsString.split('&').map(function(s) {
-            return s.replace(/~and~/g, '&');
+        if (l.search) { // Check if there are any query parameters
+          var q = {};
+          l.search.slice(1).split('&').forEach(function(v) {
+            var a = v.split('=');
+            q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
           });
-          
-          // The first part contains the path, like "?/results"
-          var pathPartWithQueryMarker = parts[0]; // e.g. "?/results"
-          
-          // Extract the actual path, e.g. "/results"
-          // It starts after the first '/' in "?/results"
-          var actualPath = pathPartWithQueryMarker.substring(pathPartWithQueryMarker.indexOf('/')); 
-          
-          // Reconstruct the query string if there were original query params
-          var queryString = parts.slice(1).join('&'); // e.g. "param=value"
-          
-          var newDecodedPath = actualPath;
-          if (queryString) {
-            newDecodedPath += '?' + queryString;
+          if (q.p !== undefined) { // Check if 'p' (path) parameter exists
+            window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + (q.p || '') + // Use q.p as the path, ensure leading / from q.p
+              (q.q ? ('?' + q.q) : '') + // Append original query string if q.q exists
+              l.hash
+            );
           }
-          
-          window.history.replaceState(null, null,
-              l.pathname.slice(0, -1) + newDecodedPath + l.hash // l.pathname is like /repo/, so slice(-1) removes trailing /
-          );
         }
       }(window.location))
     </script>
