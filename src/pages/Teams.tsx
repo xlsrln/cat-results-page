@@ -71,6 +71,7 @@ const Teams = () => {
                 const foundedYear = teamInfo?.foundedYear;
                 const philosophy = teamInfo?.philosophy;
                 const achievements = teamInfo?.achievements;
+                const imageUrl = teamInfo?.imageUrl;
 
                 return (
                   <div key={teamKey} className="bg-white border rounded-lg p-6 shadow-sm flex flex-col">
@@ -81,9 +82,17 @@ const Teams = () => {
                           <p className="text-sm text-gray-500 mb-2">Founded {foundedYear}</p>
                         )}
                       </div>
-                      <div className="w-24 h-16 bg-gray-200 rounded flex items-center justify-center shrink-0">
-                        <span className="text-gray-400 text-xs">Team Logo</span> {/* Placeholder */}
-                      </div>
+                      {imageUrl ? (
+                        <img 
+                          src={imageUrl} 
+                          alt={`${displayName} Logo`} 
+                          className="w-24 h-24 md:w-32 md:h-32 object-cover rounded-md shrink-0 border" // Adjusted size and added border
+                        />
+                      ) : (
+                        <div className="w-24 h-24 md:w-32 md:h-32 bg-gray-200 rounded-md flex items-center justify-center shrink-0"> {/* Adjusted size */}
+                          <span className="text-gray-400 text-xs">No Logo</span>
+                        </div>
+                      )}
                     </div>
                     
                     {philosophy && (
@@ -157,3 +166,4 @@ const Teams = () => {
 };
 
 export default Teams;
+
