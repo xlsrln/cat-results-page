@@ -74,67 +74,67 @@ const Teams = () => {
                 const imageUrl = teamInfo?.imageUrl;
 
                 return (
-                  <div key={teamKey} className="bg-white border rounded-lg p-6 shadow-sm flex flex-col">
-                    <div className="flex items-start justify-between mb-4">
-                      <div>
-                        <h3 className="text-xl font-bold text-black mb-2">{displayName}</h3>
-                        {foundedYear && (
-                          <p className="text-sm text-gray-500 mb-2">Founded {foundedYear}</p>
-                        )}
-                      </div>
-                    </div>
-                    
-                    {philosophy && (
-                      <p className="text-sm italic text-gray-600 mb-4">"{philosophy}"</p>
-                    )}
-                    
-                    <div className="flex items-start mb-4">
-                      {imageUrl ? (
-                        <img 
-                          src={imageUrl} 
-                          alt={`${displayName} Logo`} 
-                          className="w-24 h-24 md:w-32 md:h-32 object-cover rounded-md shrink-0 border mr-4" 
-                        />
-                      ) : (
-                        <div className="w-24 h-24 md:w-32 md:h-32 bg-gray-200 rounded-md flex items-center justify-center shrink-0 mr-4"> 
-                          <span className="text-gray-400 text-xs">No Logo</span>
-                        </div>
+                <div key={teamKey} className="bg-white border rounded-lg p-6 shadow-sm flex flex-col">
+                  <div className="flex items-start justify-between mb-4">
+                    <div>
+                      <h3 className="text-xl font-bold text-black mb-2">{displayName}</h3>
+                      {foundedYear && (
+                        <p className="text-sm text-gray-500 mb-2">Founded {foundedYear}</p>
                       )}
-                      <p className="text-gray-700 leading-relaxed flex-grow">{description}</p>
                     </div>
-                    
-                    {achievements && achievements.length > 0 && (
-                      <p>
-                        <div>
-                          <h4 className="font-semibold text-black mb-2">Notable Achievements</h4>
-                          <ul className="text-sm text-gray-600 space-y-1">
-                            {achievements.map((achievement, idx) => (
-                              <li key={idx} className="flex items-center">
-                                <span className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span>
-                                {achievement}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </p>
-                    )}
-                    
-                    {currentMembers.length > 0 && (
-                      <div className="mt-6 mb-4"> 
-                        <h4 className="font-semibold text-black mb-2 flex items-center">
-                          <Users className="h-4 w-4 mr-1" />
-                          Current Members ({currentMembers.length})
-                        </h4>
-                        <div className="flex flex-wrap gap-2">
-                          {currentMembers.map(member => (
-                            <span key={member} className="bg-gray-100 px-2 py-1 rounded text-sm">
-                              {member}
-                            </span>
-                          ))}
-                        </div>
+                  </div>
+                  
+                  {philosophy && (
+                    <p className="text-sm italic text-gray-600 mb-4">"{philosophy}"</p>
+                  )}
+                  
+                  <div className="flex items-start mb-4">
+                    <p className="text-gray-700 leading-relaxed flex-grow">{description}</p>
+                    {imageUrl ? (
+                      <img 
+                        src={imageUrl} 
+                        alt={`${displayName} Logo`} 
+                        className="w-24 h-24 md:w-32 md:h-32 object-cover rounded-md shrink-0 border ml-4" 
+                      />
+                    ) : (
+                      <div className="w-24 h-24 md:w-32 md:h-32 bg-gray-200 rounded-md flex items-center justify-center shrink-0 ml-4"> 
+                        <span className="text-gray-400 text-xs">No Logo</span>
                       </div>
                     )}
                   </div>
+                  
+                  {achievements && achievements.length > 0 && (
+                    <p>
+                      <div>
+                        <h4 className="font-semibold text-black mb-2">Notable Achievements</h4>
+                        <ul className="text-sm text-gray-600 space-y-1">
+                          {achievements.map((achievement, idx) => (
+                            <li key={idx} className="flex items-center">
+                              <span className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span>
+                              {achievement}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </p>
+                  )}
+                  
+                  {currentMembers.length > 0 && (
+                    <div className="mt-6 mb-4"> 
+                      <h4 className="font-semibold text-black mb-2 flex items-center">
+                        <Users className="h-4 w-4 mr-1" />
+                        Current Members ({currentMembers.length})
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        {currentMembers.map(member => (
+                          <span key={member} className="bg-gray-100 px-2 py-1 rounded text-sm">
+                            {member}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
                 );
               })}
             </div>
