@@ -5,10 +5,38 @@ import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
+  // NavigationMenuLink, // No longer using asChild for these Links
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils"; // For cn helper if needed for custom styling
+
+// Re-usable ListItem component for NavigationMenu
+const ListItem = React.forwardRef<
+  React.ElementRef<typeof Link>,
+  React.ComponentPropsWithoutRef<typeof Link> & { title: string; children: React.ReactNode }
+>(({ className, title, children, to, ...props }, ref) => {
+  return (
+    <li>
+      <Link
+        to={to}
+        ref={ref}
+        className={cn(
+          "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+          className
+        )}
+        {...props}
+      >
+        <div className="text-sm font-medium leading-none">{title}</div>
+        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+          {children}
+        </p>
+      </Link>
+    </li>
+  );
+});
+ListItem.displayName = "ListItem";
+
 
 const Navigation = () => {
   return (
@@ -22,103 +50,68 @@ const Navigation = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link to="/" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base">
+                 <Link to="/" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base inline-flex items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground">
                   Home
                 </Link>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-gray-700 hover:text-black font-medium text-base">
+                <NavigationMenuTrigger className="text-gray-700 hover:text-black font-medium text-base data-[state=open]:bg-accent data-[state=open]:text-accent-foreground">
                   Results
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="z-50"> 
-                  <div className="grid w-[400px] gap-3 p-4">
-                    <Link 
-                      to="/results" 
-                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                    >
-                      <div className="text-sm font-medium leading-none">Current Season</div>
-                      <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                        Season 5 standings and results
-                      </p>
-                    </Link>
-                    <Link 
-                      to="/hall-of-fame" 
-                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                    >
-                      <div className="text-sm font-medium leading-none">Hall of Fame</div>
-                      <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                        Medal table and championship legends
-                      </p>
-                    </Link>
-                    <Link 
-                      to="/all-time-stats" 
-                      className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                    >
-                      <div className="text-sm font-medium leading-none">All-Time Stats</div>
-                      <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                        Aggregate championship medals across all seasons
-                      </p>
-                    </Link>
-                    <div className="border-t pt-2">
-                      <p className="text-xs text-muted-foreground mb-2">Previous Seasons & Events</p>
+                  <ul className="grid w-[400px] gap-3 p-4"> {/* Changed div to ul for ListItem */}
+                    <ListItem to="/results" title="Current Season">
+                      Season 5 standings and results
+                    </ListItem>
+                    <ListItem to="/hall-of-fame" title="Hall of Fame">
+                       Driver medals, championships, and team accolades
+                    </ListItem>
+                    {/* All-Time Stats link removed as it's now Hall of Fame */}
+                    {/* 
+                    <ListItem to="/all-time-stats" title="All-Time Stats">
+                      Aggregate championship medals across all seasons
+                    </ListItem> 
+                    */}
+                    <div className="border-t pt-3 mt-2"> {/* Added mt-2 for spacing */}
+                      <p className="text-xs text-muted-foreground px-3 mb-2">Previous Seasons & Events</p>
                       <div className="grid grid-cols-3 gap-2">
-                        <Link 
-                          to="/season-1" 
-                          className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-sm"
-                        >
-                          Season 1
-                        </Link>
-                        <Link 
-                          to="/season-2" 
-                          className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-sm"
-                        >
-                          Season 2
-                        </Link>
-                        <Link 
-                          to="/season-3" 
-                          className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-sm"
-                        >
-                          Season 3
-                        </Link>
-                        <Link 
-                          to="/season-4" 
-                          className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-sm"
-                        >
-                          Season 4
-                        </Link>
-                        <Link 
-                          to="/season-5" 
-                          className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-sm"
-                        >
-                          Season 5
-                        </Link>
-                        <Link 
-                          to="/rally-master" 
-                          className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-sm"
-                        >
-                          Rally Master
-                        </Link>
+                        {[
+                          { to: "/season-1", label: "Season 1" },
+                          { to: "/season-2", label: "Season 2" },
+                          { to: "/season-3", label: "Season 3" },
+                          { to: "/season-4", label: "Season 4" },
+                          { to: "/season-5", label: "Season 5" },
+                          { to: "/rally-master", label: "Rally Master" },
+                        ].map((item) => (
+                          <Link
+                            key={item.to}
+                            to={item.to}
+                            className="block select-none rounded-md p-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-sm text-center"
+                          >
+                            {item.label}
+                          </Link>
+                        ))}
                       </div>
                     </div>
-                  </div>
+                  </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <Link to="/teams" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base">
+                <Link to="/teams" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base inline-flex items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground">
                   Teams
                 </Link>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <Link to="/stages" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base">
+                 <Link to="/stages" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base inline-flex items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground">
                   Stages
                 </Link>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <Link to="/rules" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base">
+                <Link to="/rules" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base inline-flex items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground">
                   Rules
                 </Link>
               </NavigationMenuItem>

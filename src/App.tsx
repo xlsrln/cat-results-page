@@ -15,8 +15,8 @@ import Season3 from "./pages/Season3";
 import Season4 from "./pages/Season4";
 import Season5 from "./pages/Season5";
 import RallyMaster from "./pages/RallyMaster";
-import HallOfFame from "./pages/HallOfFame";
-import AllTimeStats from "./pages/AllTimeStats"; // <-- New Import
+// import HallOfFame from "./pages/HallOfFame"; // This will be effectively replaced
+import AllTimeStats from "./pages/AllTimeStats"; // This component will serve as Hall of Fame content
 import NotFound from "./pages/NotFound";
 import { ThemeProvider } from "next-themes";
 
@@ -43,8 +43,10 @@ const App = () => (
             <Route path="/season-4" element={<Season4 />} />
             <Route path="/season-5" element={<Season5 />} />
             <Route path="/rally-master" element={<RallyMaster />} />
-            <Route path="/hall-of-fame" element={<HallOfFame />} />
-            <Route path="/all-time-stats" element={<AllTimeStats />} /> {/* <-- New Route */}
+            {/* Route /hall-of-fame now uses AllTimeStats component */}
+            <Route path="/hall-of-fame" element={<AllTimeStats />} /> 
+            {/* The old /all-time-stats route is removed as its content is now at /hall-of-fame */}
+            {/* <Route path="/all-time-stats" element={<AllTimeStats />} /> Removed */}
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
