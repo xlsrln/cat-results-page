@@ -205,53 +205,6 @@ const AllTimeStats = () => {
           </div>
         )}
 
-        <section className="mt-16">
-          <header className="mb-8 text-center">
-            <h2 className="text-3xl font-bold text-black mb-2">Team Accolades</h2>
-            <p className="text-lg text-gray-600">Recognizing team achievements throughout the seasons.</p>
-          </header>
-          {sortedTeams.length > 0 ? (
-            <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
-              {sortedTeams.map((team) => (
-                <Card key={team.name} className="flex flex-col">
-                  <CardHeader>
-                    <CardTitle className="flex items-center">
-                      <Users className="mr-2 h-6 w-6 text-primary" /> 
-                      {team.name}
-                    </CardTitle>
-                    {team.foundedYear && (
-                      <CardDescription>Founded: {team.foundedYear}</CardDescription>
-                    )}
-                  </CardHeader>
-                  <CardContent className="flex-grow">
-                    {team.philosophy && (
-                      <p className="italic text-sm text-muted-foreground mb-4">"{team.philosophy}"</p>
-                    )}
-                    {team.achievements && team.achievements.length > 0 ? (
-                      <>
-                        <h4 className="font-semibold mb-2 flex items-center text-sm">
-                          <ListChecks className="mr-2 h-4 w-4 text-green-600" />
-                          Key Achievements:
-                        </h4>
-                        <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
-                          {team.achievements.map((achievement, idx) => (
-                            <li key={idx}>{achievement}</li>
-                          ))}
-                        </ul>
-                      </>
-                    ) : (
-                      <p className="text-sm text-muted-foreground">No specific achievements listed.</p>
-                    )}
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          ) : (
-             <div className="text-center py-8">
-              <p className="text-gray-500">No team information available.</p>
-            </div>
-          )}
-        </section>
       </div>
       <footer className="bg-gray-50 border-t py-8 mt-12">
         <div className="container mx-auto px-4 text-center text-gray-600">
