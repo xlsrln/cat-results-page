@@ -13,11 +13,11 @@
 
 | pos    | name              |   indonesia |   kenya |   germany |   sardinia |   total |
 |:----|:------------------|------------:|--------:|----------:|-----------:|--------:|
-| 1   | Proporo           |          27 |      29 |        29 |         29 |      87 |
-| 2   | PlayerZ           |           0 |      23 |        23 |         23 |      69 |
-| 3   | Wesley Daggleston |          19 |      14 |        12 |         11 |      45 |
+| 1   | proporo           |          27 |      29 |        29 |         29 |      87 |
+| 2   | playerZ           |           0 |      23 |        23 |         23 |      69 |
+| 3   | wesley daggleston |          19 |      14 |        12 |         11 |      45 |
 | 4   | turbo             |          12 |      18 |        10 |         14 |      44 |
-| 5   | Myth              |          24 |       0 |        16 |          0 |      40 |
+| 5   | myth              |          24 |       0 |        16 |          0 |      40 |
 | 6   | Get Goblinated    |          13 |       0 |         9 |          6 |      28 |
 | 7   | Hulter            |          10 |       8 |         6 |          9 |      27 |
 | 8   | domer             |           8 |      11 |         3 |          7 |      26 |
@@ -45,7 +45,7 @@ Congratulations to Wes, turbo and KK for finishing on the podium!
 
 | pos | name              | min     | link                                         |
 | ---- | ----------------- | ------- | -------------------------------------------- |
-| 1   | Wesley Daggleston | 08:46.7 | [link](https://youtu.be/yrHIN4VkbfM)                 |
+| 1   | wesley daggleston | 08:46.7 | [link](https://youtu.be/yrHIN4VkbfM)                 |
 | 2   | turbo             | 08:50.3 | [link](https://youtu.be/PXC8I5Oxz9U)                 |
 | 3   | kk                | 08:51.6 | [link](https://youtu.be/55p4QR5be0k)                 |
 | 4   | Hulter            | 08:56.1 | [link](https://youtu.be/-g5NBrjKzA8)                 |
@@ -60,13 +60,13 @@ Congratulations to Wes, turbo and KK for finishing on the podium!
 
 ## rally 1: indonesia
 
-Well done Proporo!
+Well done proporo!
 
 |   pos | name              | time     | powerstage   |   rally |   ps |   points | team              | link  |
 |------:|:------------------|:---------|:-------------|--------:|-----:|---------:|:------------------|:----------------------------------------------------------------------|
-|     1 | Proporo           | 12:33.25 | 01:03.16     |      25 |    2 |       27 | cat face nospace  | [link](https://youtu.be/tSuLEyKSEns)                                  |
-|     2 | Myth              | 12:38.01 | 01:02.00     |      20 |    4 |       24 | G2D Racing        | [link](https://youtu.be/tQipaK_-5Qc)                                  |
-|     3 | Wesley Daggleston | 12:39.86 | 01:02.62     |      16 |    3 |       19 | Brick Motorsports | [link](https://youtu.be/Bt6dVuNJp2I)                                  |
+|     1 | proporo           | 12:33.25 | 01:03.16     |      25 |    2 |       27 | cat face nospace  | [link](https://youtu.be/tSuLEyKSEns)                                  |
+|     2 | myth              | 12:38.01 | 01:02.00     |      20 |    4 |       24 | G2D Racing        | [link](https://youtu.be/tQipaK_-5Qc)                                  |
+|     3 | wesley daggleston | 12:39.86 | 01:02.62     |      16 |    3 |       19 | Brick Motorsports | [link](https://youtu.be/Bt6dVuNJp2I)                                  |
 |     4 | Get Goblinated    | 12:43.51 | 01:03.56     |      13 |    0 |       13 |                   | [link](https://youtu.be/1vpcnS4CMng)                                  |
 |     5 | turbo             | 12:48.38 | 01:03.49     |      11 |    1 |       12 | G2D Racing        | [link](https://youtu.be/3HKmLByop2M)                                  |
 |     6 | Hulter            | 12:53.45 | 01:05.67     |      10 |    0 |       10 | cat face nospace  | [link](https://youtu.be/eQN9zB_f8e0)                                  |
@@ -83,14 +83,14 @@ Well done Proporo!
 
 ## rally 2: kenya
 
-Strong showing by Proporo and the returning PlayerZ, as well as a good effort by capablanca!
+Strong showing by proporo and the returning playerz, as well as a good effort by capablanca!
 
 |   pos | name              | time     | powerstage   |   rally |   ps |   points | team              | link   |
 |------:|:------------------|:---------|:-------------|--------:|-----:|---------:|:------------------|:-----------------------------------------------------------------------|
-|     1 | Proporo           | 17:04.07 | 03:19.63     |      25 |    4 |       29 | cat face nospace  | [link](https://youtu.be/wwR6pmk4L94)                                   |
-|     2 | PlayerZ           | 17:16.00 | 03:20.72     |      20 |    3 |       23 | G2D Racing        | [link](https://youtu.be/s8S5dyTnNpc)                                   |
+|     1 | proporo           | 17:04.07 | 03:19.63     |      25 |    4 |       29 | cat face nospace  | [link](https://youtu.be/wwR6pmk4L94)                                   |
+|     2 | playerz           | 17:16.00 | 03:20.72     |      20 |    3 |       23 | G2D Racing        | [link](https://youtu.be/s8S5dyTnNpc)                                   |
 |     3 | turbo             | 17:45.39 | 03:25.35     |      16 |    2 |       18 | G2D Racing        | [link](https://youtu.be/6bVu7oTrAZw)                                   |
-|     4 | Wesley Daggleston | 17:49.19 | 03:27.21     |      13 |    1 |       14 | Brick Motorsports | [link](https://youtu.be/rChRZ2kANew)                                   |
+|     4 | wesley daggleston | 17:49.19 | 03:27.21     |      13 |    1 |       14 | Brick Motorsports | [link](https://youtu.be/rChRZ2kANew)                                   |
 |     5 | domer             | 17:53.79 | 03:29.73     |      11 |    0 |       11 |                   | [link](https://youtu.be/BZS9ED1D3IQ)                                   |
 |     6 | colin mccrack     | 17:59.60 | 03:28.08     |      10 |    0 |       10 | G2D Racing        | [link](https://www.youtube.com/watch?v=l2Ee3kN6a68)                    |
 |     7 | capablanca        | 18:01.82 | 03:29.42     |       9 |    0 |        9 | G2D Racing        | [link](https://youtu.be/BNKR7ccAS-4)                                   |
@@ -109,11 +109,11 @@ Domer signs for Brick Motorsports and a debut for Noot Squad. Everyone (mostly) 
 
 |   pos | name              | time     | powerstage   |   rally |   ps |   points | team              | link                                                |
 |------:|:------------------|:---------|:-------------|--------:|-----:|---------:|:------------------|:----------------------------------------------------|
-|     1 | Proporo           | 17:30.85 | 01:37.93     |      25 |    4 |       29 | cat face nospace  | [link](https://youtu.be/h2BTycM4wWI)                |
-|     2 | PlayerZ           | 17:42.89 | 01:38.66     |      20 |    3 |       23 | G2D Racing        | [link](https://youtu.be/UyPnJC4TnH8)                |
-|     3 | Myth              | 17:44.30 | 01:40.30     |      16 |    0 |       16 | G2D Racing        | [link](https://www.youtube.com/watch?v=aSYaf0GYX3A) |
+|     1 | proporo           | 17:30.85 | 01:37.93     |      25 |    4 |       29 | cat face nospace  | [link](https://youtu.be/h2BTycM4wWI)                |
+|     2 | playerz           | 17:42.89 | 01:38.66     |      20 |    3 |       23 | G2D Racing        | [link](https://youtu.be/UyPnJC4TnH8)                |
+|     3 | myth              | 17:44.30 | 01:40.30     |      16 |    0 |       16 | G2D Racing        | [link](https://www.youtube.com/watch?v=aSYaf0GYX3A) |
 |     4 | kk                | 17:55.60 | 01:38.67     |      13 |    2 |       15 |                   | [link](https://youtu.be/_K2-HP7gZSg)                |
-|     5 | Wesley Daggleston | 17:56.37 | 01:39.87     |      11 |    1 |       12 | Brick Motorsports | [link](https://youtu.be/AgwXtVFFKYE)                |
+|     5 | wesley daggleston | 17:56.37 | 01:39.87     |      11 |    1 |       12 | Brick Motorsports | [link](https://youtu.be/AgwXtVFFKYE)                |
 |     6 | turbo             | 17:57.57 | 01:40.29     |      10 |    0 |       10 | G2D Racing        | [link](https://www.twitch.tv/videos/1650544639)     |
 |     7 | Get Goblinated    | 18:07.90 | 01:40.07     |       9 |    0 |        9 |                   | [link](https://youtu.be/RccW3YxI5Gw)                |
 |     8 | Dryout            | 18:14.00 | 01:40.60     |       8 |    0 |        8 |                   | [link](https://youtu.be/cJELaq_m6Zw)                |
@@ -132,15 +132,15 @@ Domer signs for Brick Motorsports and a debut for Noot Squad. Everyone (mostly) 
 
 ## rally 4: sardinia
 
-Toucan turned up! Proporo completes the impressive clean sweep in an exciting finish to the season!
+Toucan turned up! proporo completes the impressive clean sweep in an exciting finish to the season!
 
 |   pos | name              | time     | powerstage   |   rally |   ps |   points | team              | link   |
 |------:|:------------------|:---------|:-------------|--------:|-----:|---------:|:------------------|:-----------------------------------------------------------------------|
-|     1 | Proporo           | 13:54.01 | 02:29.80     |      25 |    4 |       29 | cat face nospace  | [link](https://youtu.be/x_RKgrxlHCA)                                   |
-|     2 | PlayerZ           | 13:58.62 | 02:29.87     |      20 |    3 |       23 | G2D Racing        | [link](https://youtu.be/Aja3JvinGlI)                                   |
+|     1 | proporo           | 13:54.01 | 02:29.80     |      25 |    4 |       29 | cat face nospace  | [link](https://youtu.be/x_RKgrxlHCA)                                   |
+|     2 | playerz           | 13:58.62 | 02:29.87     |      20 |    3 |       23 | G2D Racing        | [link](https://youtu.be/Aja3JvinGlI)                                   |
 |     3 | Toucan            | 14:05.83 | 02:30.68     |      16 |    2 |       18 |                   | [link](https://youtu.be/gmkc5FMV_sU)                                   |
 |     4 | turbo             | 14:10.07 | 02:32.37     |      13 |    1 |       14 | G2D Racing        | [link](https://youtu.be/b2M_NwiNTWc)                                   |
-|     5 | Wesley Daggleston | 14:15.01 | 02:34.24     |      11 |    0 |       11 | Brick Motorsports | [link](https://youtu.be/DPnV3wiapdI)                                   |
+|     5 | wesley daggleston | 14:15.01 | 02:34.24     |      11 |    0 |       11 | Brick Motorsports | [link](https://youtu.be/DPnV3wiapdI)                                   |
 |     6 | Dryout            | 14:19.20 | 02:32.49     |      10 |    0 |       10 |                   | [link](https://youtu.be/gFG7qTHz2jU)                                   |
 |     7 | Hulter            | 14:25.47 | 02:34.46     |       9 |    0 |        9 | cat face nospace  | [link](https://youtu.be/hpgLa9rTroU)                                   |
 |     8 | NoEihaOo          | 14:25.80 | 02:34.86     |       8 |    0 |        8 | G2D Racing        | [link](https://youtu.be/8fgQxVAsQ98)                                   |

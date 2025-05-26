@@ -15,22 +15,22 @@
 
 | pos | name              |   norway |   sardinia |   japan |   kenya |   germany |   finland |   indonesia |   total |
 |:-- |:------------------|---------:|-----------:|--------:|--------:|----------:|----------:|------------:|--------:|
-| 1 | Late              |       29 |         29 |      29 |      29 |        29 |        29 |           0 |     174 |
-| 2 | Proporo           |       11 |         23 |      23 |      23 |        22 |        20 |          29 |     140 |
-| 3 | Franky M.         |       14 |         12 |      17 |      13 |        19 |        16 |          23 |     102 |
+| 1 | late              |       29 |         29 |      29 |      29 |        29 |        29 |           0 |     174 |
+| 2 | proporo           |       11 |         23 |      23 |      23 |        22 |        20 |          29 |     140 |
+| 3 | franky m.         |       14 |         12 |      17 |      13 |        19 |        16 |          23 |     102 |
 | 4 | turbo             |       17 |         18 |      11 |      18 |         0 |         0 |          13 |      77 |
-| 5 | Dryout            |        9 |         11 |       0 |       1 |        15 |        19 |          18 |      73 |
+| 5 | dryout            |        9 |         11 |       0 |       1 |        15 |        19 |          18 |      73 |
 | 6 | domer             |       10 |          8 |      12 |      14 |         6 |         9 |          14 |      67 |
 | 7 | SonicTheSlowpoke  |        7 |          7 |       8 |      11 |        11 |        11 |          11 |      59 |
 | 8 | Sunrisecat        |        0 |          4 |      10 |      10 |        12 |        13 |           9 |      58 |
-| 9 | PlayerZ           |       23 |         15 |      16 |       0 |         0 |         0 |           0 |      54 |
+| 9 | playerz           |       23 |         15 |      16 |       0 |         0 |         0 |           0 |      54 |
 | 10 | NoEihaOo          |        5 |          9 |       6 |       8 |         8 |         8 |           0 |      44 |
 | 11 | colin mccrack     |        8 |          6 |       2 |       9 |         9 |         6 |           5 |      43 |
 | 12 | Hulter            |        6 |          1 |       7 |       3 |         5 |        10 |           6 |      37 |
 | 13 | nept              |        3 |          5 |       4 |       5 |        10 |         5 |           7 |      36 |
 | 14 | Drumstick         |        0 |          0 |       5 |       7 |         7 |         3 |           8 |      30 |
 | 15 | Radi              |        1 |          1 |       1 |       6 |         2 |         7 |          10 |      27 |
-| 16 | Wesley Daggleston |        0 |         10 |       9 |       0 |         0 |         0 |           0 |      19 |
+| 16 | wesley daggleston |        0 |         10 |       9 |       0 |         0 |         0 |           0 |      19 |
 | 17 | increasingly_phil |        1 |          1 |       1 |       4 |         4 |         2 |           4 |      16 |
 | - | capablanca        |        2 |          3 |       3 |       2 |         3 |         1 |           3 |      16 |
 | 19 | kk                |       14 |          0 |       0 |       0 |         0 |         0 |           0 |      14 |
@@ -50,18 +50,18 @@
 
 ## rally 1: norway
 
-Late wins the first event of season 2!
+late wins the first event of season 2!
 
 |   pos | name              | time      | powerstage   |   rally |   ps |   points | team              | penalty   | link         |
 |------:|:------------------|:----------|:-------------|--------:|-----:|---------:|:------------------|:----------|:-------------------------------------------------------------|
-|     1 | Late              | 08:04.964 | 01:33.66     |      25 |    4 |       29 | G2D Racing        |           | [link](https://www.youtube.com/watch?v=EHKOAfqMjFg)          |
-|     2 | PlayerZ           | 08:11.045 | 01:35.03     |      20 |    3 |       23 | G2D Racing        |           | [link](https://youtu.be/qtXAHPDUp04)                         |
+|     1 | late              | 08:04.964 | 01:33.66     |      25 |    4 |       29 | G2D Racing        |           | [link](https://www.youtube.com/watch?v=EHKOAfqMjFg)          |
+|     2 | playerz           | 08:11.045 | 01:35.03     |      20 |    3 |       23 | G2D Racing        |           | [link](https://youtu.be/qtXAHPDUp04)                         |
 |     3 | turbo             | 08:16.659 | 01:36.42     |      16 |    1 |       17 | superturbo        |           | [link](https://youtu.be/MxUeiItdx44)                         |
 |     4 | kk                | 08:18.833 | 01:37.78     |      14 |    0 |       14 | superturbo        |           | [link](https://youtu.be/gdZEHND32ig)                         |
-|     5 | Franky M.         | 08:19.335 | 01:36.37     |      12 |    2 |       14 | superturbo        |           | [link](https://youtu.be/Y4xQVDCTUrQ)                         |
-|     6 | Proporo           | 08:20.780 | 01:38.73     |      11 |    0 |       11 | cat face nospace  |           | [link](https://youtu.be/1i_1uaCK7Ds)                         |
+|     5 | franky m.         | 08:19.335 | 01:36.37     |      12 |    2 |       14 | superturbo        |           | [link](https://youtu.be/Y4xQVDCTUrQ)                         |
+|     6 | proporo           | 08:20.780 | 01:38.73     |      11 |    0 |       11 | cat face nospace  |           | [link](https://youtu.be/1i_1uaCK7Ds)                         |
 |     7 | domer             | 08:24.010 | 01:36.45     |      10 |    0 |       10 | Brick Motorsports |           | [link](https://youtu.be/f5FQXCC_dfw)                         |
-|     8 | Dryout            | 08:28.210 | 01:36.91     |       9 |    0 |        9 | superturbo        |           | [link](https://youtu.be/ynhvu-HlbJ4)                         |
+|     8 | dryout            | 08:28.210 | 01:36.91     |       9 |    0 |        9 | superturbo        |           | [link](https://youtu.be/ynhvu-HlbJ4)                         |
 |     9 | colin mccrack     | 08:31.765 | 01:39.17     |       8 |    0 |        8 | G2D Racing        |           | [link](https://www.youtube.com/watch?v=GbxSbBA5SLg)          |
 |    10 | SonicTheSlowpoke  | 08:32.931 | 01:40.04     |       7 |    0 |        7 | V-Rally Club      |           | [link](https://youtu.be/ai-T7u7nzrQ)                         |
 |    11 | Hulter            | 08:35.932 | 01:39.77     |       6 |    0 |        6 | cat face nospace  |           | [link](https://youtu.be/bie29Unw-SU)                         |
@@ -83,17 +83,17 @@ Late wins the first event of season 2!
 
 ## rally 2: sardinia
 
-With a intense fight through the night, Late beats Proporo and Turbo
+With a intense fight through the night, late beats proporo and Turbo
 
 |   pos | name              | time      | powerstage   |   rally |   ps |   points | team              | penalty   | link         |
 |------:|:------------------|:----------|:-------------|--------:|-----:|---------:|:------------------|:----------|:-------------------------------------------------------------|
-|     1 | Late              | 09:40.881 | 01:19.09     |      25 |    4 |       29 | G2D Racing        |           | [link](https://youtu.be/i8ounice42s)                         |
-|     2 | Proporo           | 09:43.299 | 01:19.23     |      20 |    3 |       23 | cat face nospace  |           | [link](https://youtu.be/2Ap1KXanuIc)                         |
+|     1 | late              | 09:40.881 | 01:19.09     |      25 |    4 |       29 | G2D Racing        |           | [link](https://youtu.be/i8ounice42s)                         |
+|     2 | proporo           | 09:43.299 | 01:19.23     |      20 |    3 |       23 | cat face nospace  |           | [link](https://youtu.be/2Ap1KXanuIc)                         |
 |     3 | turbo             | 09:49.842 | 01:20.20     |      16 |    2 |       18 | superturbo        |           | [link](https://www.twitch.tv/videos/1727974872)              |
-|     4 | PlayerZ           | 09:53.807 | 01:20.35     |      14 |    1 |       15 | G2D Racing        |           | [link](https://youtu.be/2lB8C20-hyA)                         |
-|     5 | Franky M.         | 09:54.451 | 01:20.63     |      12 |    0 |       12 | superturbo        |           | [link](https://youtu.be/4iD2W4VEvRg)                         |
-|     6 | Dryout            | 09:56.025 | 01:21.18     |      11 |    0 |       11 | superturbo        |           | [link](https://youtu.be/jY1XIpPI3OU)                         |
-|     7 | Wesley Daggleston | 09:57.542 | 01:21.44     |      10 |    0 |       10 | G2D Racing        |           | [link](https://youtu.be/AhSrXUlExc0)                         |
+|     4 | playerz           | 09:53.807 | 01:20.35     |      14 |    1 |       15 | G2D Racing        |           | [link](https://youtu.be/2lB8C20-hyA)                         |
+|     5 | franky m.         | 09:54.451 | 01:20.63     |      12 |    0 |       12 | superturbo        |           | [link](https://youtu.be/4iD2W4VEvRg)                         |
+|     6 | dryout            | 09:56.025 | 01:21.18     |      11 |    0 |       11 | superturbo        |           | [link](https://youtu.be/jY1XIpPI3OU)                         |
+|     7 | wesley daggleston | 09:57.542 | 01:21.44     |      10 |    0 |       10 | G2D Racing        |           | [link](https://youtu.be/AhSrXUlExc0)                         |
 |     8 | NoEihaOo          | 10:02.859 | 01:22.17     |       9 |    0 |        9 | cat face nospace  |           | [link](https://youtu.be/KK-__1848F4)                         |
 |     9 | domer             | 10:03.928 | 01:22.52     |       8 |    0 |        8 | Brick Motorsports |           | [link](https://youtu.be/obVFGcTT_HM)                         |
 |    10 | SonicTheSlowpoke  | 10:04.951 | 01:22.43     |       7 |    0 |        7 | V-Rally Club      |           | [link](https://youtu.be/DFWyNJb8_ac)                         |
@@ -113,18 +113,18 @@ With a intense fight through the night, Late beats Proporo and Turbo
 
 ## rally 3: japan
 
-An incredible run from Late ahead of Proporo, and a debut podium for Franky M!
+An incredible run from late ahead of proporo, and a debut podium for Franky M!
 
 |   pos | name              | time      | powerstage   |   rally |   ps |   points | team              | penalty   | link         |
 |------:|:------------------|:----------|:-------------|--------:|-----:|---------:|:------------------|:----------|:-------------------------------------------------------------|
-|     1 | Late              | 12:58.149 | 03:04.93     |      25 |    4 |       29 | G2D Racing        |           | [link](https://youtu.be/1k0kap2Z4UY)                         |
-|     2 | Proporo           | 13:09.706 | 03:08.27     |      20 |    3 |       23 | cat face nospace  |           | [link](https://youtu.be/TkgclCzLkGE)                         |
-|     3 | Franky M.         | 13:20.534 | 03:10.25     |      16 |    1 |       17 | superturbo        |           | [link](https://youtu.be/1GiuCuPnpQs)                         |
-|     4 | PlayerZ           | 13:23.757 | 03:09.78     |      14 |    2 |       16 | G2D Racing        |           | [link](https://youtu.be/OcT0Jsvj6zI)                         |
+|     1 | late              | 12:58.149 | 03:04.93     |      25 |    4 |       29 | G2D Racing        |           | [link](https://youtu.be/1k0kap2Z4UY)                         |
+|     2 | proporo           | 13:09.706 | 03:08.27     |      20 |    3 |       23 | cat face nospace  |           | [link](https://youtu.be/TkgclCzLkGE)                         |
+|     3 | franky m.         | 13:20.534 | 03:10.25     |      16 |    1 |       17 | superturbo        |           | [link](https://youtu.be/1GiuCuPnpQs)                         |
+|     4 | playerz           | 13:23.757 | 03:09.78     |      14 |    2 |       16 | G2D Racing        |           | [link](https://youtu.be/OcT0Jsvj6zI)                         |
 |     5 | domer             | 13:29.836 | 03:12.83     |      12 |    0 |       12 | Brick Motorsports |           | [link](https://youtu.be/JQK0NhgD1eY)                         |
 |     6 | turbo             | 13:31.040 | 03:17.68     |      11 |    0 |       11 | superturbo        |           | [link](https://youtu.be/kKViBYhj4NU)                         |
 |     7 | Sunrisecat        | 13:31.598 | 03:12.29     |      10 |    0 |       10 | Brick Motorsports |           | [link](https://www.youtube.com/watch?v=z7-CIJPmjM4)          |
-|     8 | Wesley Daggleston | 13:33.282 | 03:14.83     |       9 |    0 |        9 | G2D Racing        |           | [link](https://youtu.be/Dx-xOV_tK40)                         |
+|     8 | wesley daggleston | 13:33.282 | 03:14.83     |       9 |    0 |        9 | G2D Racing        |           | [link](https://youtu.be/Dx-xOV_tK40)                         |
 |     9 | SonicTheSlowpoke  | 13:35.490 | 03:14.85     |       8 |    0 |        8 | V-Rally Club      |           | [link](https://youtu.be/HcqwLPJJbLI)                         |
 |    10 | Hulter            | 13:41.317 | 03:15.71     |       7 |    0 |        7 | cat face nospace  |           | [link](https://youtu.be/0l2jQkrm9OY)                         |
 |    11 | NoEihaOo          | 13:44.395 | 03:14.92     |       6 |    0 |        6 | cat face nospace  |           | [link](https://youtu.be/5aTKNo9HebE)                         |
@@ -140,15 +140,15 @@ An incredible run from Late ahead of Proporo, and a debut podium for Franky M!
 
 ## rally 4: kenya
 
-Late crushes everyone in Kenya!
+late crushes everyone in Kenya!
 
 |   pos | name              | time      | powerstage   |   rally |   ps |   points | team              | penalty   | link         |
 |------:|:------------------|:----------|:-------------|--------:|-----:|---------:|:------------------|:----------|:-------------------------------------------------------------|
-|     1 | Late              | 14:29.009 | 01:56.98     |      25 |    4 |       29 | G2D Racing        |           | [link](https://www.youtube.com/watch?v=FB2T7OfvxZA)          |
-|     2 | Proporo           | 14:36.681 | 01:58.48     |      20 |    3 |       23 | cat face nospace  |           | [link](https://www.youtube.com/watch?v=xMcSGw5Yhlo)          |
+|     1 | late              | 14:29.009 | 01:56.98     |      25 |    4 |       29 | G2D Racing        |           | [link](https://www.youtube.com/watch?v=FB2T7OfvxZA)          |
+|     2 | proporo           | 14:36.681 | 01:58.48     |      20 |    3 |       23 | cat face nospace  |           | [link](https://www.youtube.com/watch?v=xMcSGw5Yhlo)          |
 |     3 | turbo             | 14:48.674 | 02:00.88     |      16 |    2 |       18 | superturbo        |           | [link](https://youtu.be/ISArRGGbMMs)                         |
 |     4 | domer             | 14:49.333 | 02:01.35     |      14 |    0 |       14 | Brick Motorsports |           | [link](https://youtu.be/u3UwOPbuiAw )                        |
-|     5 | Franky M.         | 14:50.790 | 02:00.95     |      12 |    1 |       13 | superturbo        |           | [link](https://youtu.be/2-BQzomxzv0)                         |
+|     5 | franky m.         | 14:50.790 | 02:00.95     |      12 |    1 |       13 | superturbo        |           | [link](https://youtu.be/2-BQzomxzv0)                         |
 |     6 | SonicTheSlowpoke  | 15:00.927 | 02:02.10     |      11 |    0 |       11 | V-Rally Club      |           | [link](https://youtu.be/iLlrQW-Vz3U)                         |
 |     7 | Sunrisecat        | 15:02.197 | 02:01.77     |      10 |    0 |       10 | Brick Motorsports |           | [link](https://youtu.be/Ok5lRKS1Pog)                         |
 |     8 | colin mccrack     | 15:02.795 | 02:01.94     |       9 |    0 |        9 | G2D Racing        |           | [link](https://www.youtube.com/watch?v=f6mZRvJcnm0)          |
@@ -160,20 +160,20 @@ Late crushes everyone in Kenya!
 |    14 | Hulter            | 15:25.246 | 02:05.46     |       3 |    0 |        3 | cat face nospace  |           | [link](https://youtu.be/SWGNkU84VII)                         |
 |    15 | capablanca        | 15:27.004 | 02:05.05     |       2 |    0 |        2 | G2D Racing        |           | [link](https://youtu.be/OMNW5kjbY5g)                         |
 |    16 | Red Sun           | 15:35.206 | 02:03.38     |       1 |    0 |        1 | Brick Motorsports |           | [link](https://youtu.be/dvenOE9oKLU)                         |
-|    17 | Dryout            | 15:35.340 | 02:04.88     |       1 |    0 |        1 | superturbo        | 10        | [link](https://youtu.be/OZiD4kNVQzQ)                         |
+|    17 | dryout            | 15:35.340 | 02:04.88     |       1 |    0 |        1 | superturbo        | 10        | [link](https://youtu.be/OZiD4kNVQzQ)                         |
 |    18 | Caden             | 16:23.699 | 02:18.68     |       1 |    0 |        1 | V-Rally Club      |           | [link](https://youtu.be/4JVhBoV4KpA)                         |
 |    19 | nap               | 17:09.792 | 02:17.11     |       1 |    0 |        1 |                   |           | [link](https://www.youtube.com/watch?v=rBEGShKsIRA)          |
 
 ## rally 5: germany
 
-Late stays on the road to win his home rally!
+late stays on the road to win his home rally!
 
 |   pos | name              | time      | powerstage   |   rally |   ps |   points | team              | penalty   | link         |
 |------:|:------------------|:----------|:-------------|--------:|-----:|---------:|:------------------|:----------|:-------------------------------------------------------------|
-|     1 | Late              | 14:23.959 | 03:42.18     |      25 |    4 |       29 | G2D Racing        |           | [link](https://www.twitch.tv/videos/1775134132)              |
-|     2 | Proporo           | 14:37.096 | 03:47.06     |      20 |    2 |       22 | cat face nospace  |           | [link](https://youtu.be/C3_5OSttBhI)                         |
-|     3 | Franky M.         | 14:37.121 | 03:44.62     |      16 |    3 |       19 | superturbo        |           | [link](https://youtu.be/OBtEG7jjN50)                         |
-|     4 | Dryout            | 14:48.554 | 03:47.10     |      14 |    1 |       15 | superturbo        |           | [link](https://youtu.be/MvrWyR-XdGI)                         |
+|     1 | late              | 14:23.959 | 03:42.18     |      25 |    4 |       29 | G2D Racing        |           | [link](https://www.twitch.tv/videos/1775134132)              |
+|     2 | proporo           | 14:37.096 | 03:47.06     |      20 |    2 |       22 | cat face nospace  |           | [link](https://youtu.be/C3_5OSttBhI)                         |
+|     3 | franky m.         | 14:37.121 | 03:44.62     |      16 |    3 |       19 | superturbo        |           | [link](https://youtu.be/OBtEG7jjN50)                         |
+|     4 | dryout            | 14:48.554 | 03:47.10     |      14 |    1 |       15 | superturbo        |           | [link](https://youtu.be/MvrWyR-XdGI)                         |
 |     5 | Sunrisecat        | 14:52.192 | 03:51.10     |      12 |    0 |       12 | Brick Motorsports |           | [link](https://youtu.be/QGVE6UBLGC4)                         |
 |     6 | SonicTheSlowpoke  | 15:02.092 | 03:51.89     |      11 |    0 |       11 | V-Rally Club      |           | [link](https://youtu.be/N16wyxRvITA)                         |
 |     7 | nept              | 15:07.225 | 03:55.21     |      10 |    0 |       10 | cat face nospace  |           | [link](https://www.youtube.com/watch?v=N8BQi8KBkNk)          |
@@ -194,10 +194,10 @@ Many cool cats and cool cuts!
 
 |   pos | name              | time      | powerstage   |   rally |   ps |   points | team              | penalty   | link         |
 |------:|:------------------|:----------|:-------------|--------:|-----:|---------:|:------------------|:----------|:-------------------------------------------------------------|
-|     1 | Late              | 09:15.703 | 01:09.64     |      25 |    4 |       29 | G2D Racing        |           | [link](https://youtu.be/n6-W0R26XrE)                         |
-|     2 | Proporo           | 09:26.564 | 01:12.76     |      20 |    0 |       20 | cat face nospace  |           | [link](https://youtu.be/ROYTy-iyfAM)                         |
-|     3 | Dryout            | 09:26.846 | 01:10.38     |      16 |    3 |       19 | superturbo        |           | [link](https://youtu.be/TkRbfe5kUTg)                         |
-|     4 | Franky M.         | 09:27.986 | 01:11.45     |      14 |    2 |       16 | superturbo        |           | [link](https://youtu.be/hM0EMxAAr4M)                         |
+|     1 | late              | 09:15.703 | 01:09.64     |      25 |    4 |       29 | G2D Racing        |           | [link](https://youtu.be/n6-W0R26XrE)                         |
+|     2 | proporo           | 09:26.564 | 01:12.76     |      20 |    0 |       20 | cat face nospace  |           | [link](https://youtu.be/ROYTy-iyfAM)                         |
+|     3 | dryout            | 09:26.846 | 01:10.38     |      16 |    3 |       19 | superturbo        |           | [link](https://youtu.be/TkRbfe5kUTg)                         |
+|     4 | franky m.         | 09:27.986 | 01:11.45     |      14 |    2 |       16 | superturbo        |           | [link](https://youtu.be/hM0EMxAAr4M)                         |
 |     5 | Sunrisecat        | 09:35.337 | 01:12.51     |      12 |    1 |       13 | Brick Motorsports |           | [link](https://youtu.be/SHdQoGDOQ1g)                         |
 |     6 | SonicTheSlowpoke  | 09:39.354 | 01:13.85     |      11 |    0 |       11 | V-Rally Club      |           | [link](https://youtu.be/wJ_yX1bgZwk)                         |
 |     7 | Hulter            | 09:39.776 | 01:13.95     |      10 |    0 |       10 | cat face nospace  |           | [link](https://youtu.be/9dzhthKjFls)                         |
@@ -215,13 +215,13 @@ Many cool cats and cool cuts!
 
 ## rally 7: indonesia
 
-Late might have sealed his championship, but Proporo wins the rally!
+late might have sealed his championship, but proporo wins the rally!
 
 |   pos | name              | time      | powerstage   |   rally |   ps |   points | team              | penalty   | link         |
 |------:|:------------------|:----------|:-------------|--------:|-----:|---------:|:------------------|:----------|:-------------------------------------------------------------|
-|     1 | Proporo           | 11:39.513 | 02:52.71     |      25 |    4 |       29 | cat face nospace  |           | [link](https://youtu.be/mD440-YF_pM)                         |
-|     2 | Franky M.         | 11:39.876 | 02:54.32     |      20 |    3 |       23 | superturbo        |           | [link](https://youtu.be/bKuRKSvoMf8)                         |
-|     3 | Dryout            | 11:41.946 | 02:54.50     |      16 |    2 |       18 | superturbo        |           | [link](https://youtu.be/zJNUWCT_D0Q)                         |
+|     1 | proporo           | 11:39.513 | 02:52.71     |      25 |    4 |       29 | cat face nospace  |           | [link](https://youtu.be/mD440-YF_pM)                         |
+|     2 | franky m.         | 11:39.876 | 02:54.32     |      20 |    3 |       23 | superturbo        |           | [link](https://youtu.be/bKuRKSvoMf8)                         |
+|     3 | dryout            | 11:41.946 | 02:54.50     |      16 |    2 |       18 | superturbo        |           | [link](https://youtu.be/zJNUWCT_D0Q)                         |
 |     4 | domer             | 11:48.935 | 02:56.45     |      14 |    0 |       14 | Brick Motorsports |           | [link](https://youtu.be/nTJ5-C4zlBo?t=270)                   |
 |     5 | turbo             | 11:49.330 | 02:55.78     |      12 |    1 |       13 | superturbo        |           | [link](https://youtu.be/vwI17rxVh78)                         |
 |     6 | SonicTheSlowpoke  | 11:56.901 | 02:57.94     |      11 |    0 |       11 | V-Rally Club      |           | [link](https://youtu.be/oyzSAeaEpg4)                         |
