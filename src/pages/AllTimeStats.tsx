@@ -22,61 +22,101 @@ const seasonData = [
   { name: "Season 5", content: season5Content },
 ];
 
-const parseSeasonChampionship = (markdownContent: string, seasonIdentifier: string): EventLeaderboard | null => {
-  const standingsHeader = "## Championship Standings";
-  const headerIndex = markdownContent.indexOf(standingsHeader);
-  if (headerIndex === -1) {
-    console.warn(`Championship Standings header not found for ${seasonIdentifier}`);
-    return null;
-  }
+// This function is no longer used for the primary medal table on this page,
+// but kept in case it's needed elsewhere or for a different feature.
+// const parseSeasonChampionship = (markdownContent: string, seasonIdentifier: string): EventLeaderboard | null => {
+//   // ... existing parseSeasonChampionship code ...
+// };
 
-  const tableStartString = "|:---"; // A common part of markdown table header separator
-  const tableStartIndex = markdownContent.indexOf(tableStartString, headerIndex);
-  if (tableStartIndex === -1) {
-    console.warn(`Table structure not found for ${seasonIdentifier} Championship Standings`);
-    return null;
-  }
+const parseRallyResults = (markdownContent: string, seasonName: string): EventLeaderboard[] => {
+  const rallyEvents: EventLeaderboard[] = [];
+  const lines = markdownContent.split('\n');
 
-  // Extract the part of markdown from the table separator onwards
-  const tableRelevantContent = markdownContent.substring(tableStartIndex);
-  const rows = tableRelevantContent.split('\n').slice(1); // Skip the separator row itself
+  let currentRallyDisplayName: string | null = null;
+  let currentLeaderboard: LeaderboardEntry[] = [];
+  let processingTable = false; // True if we are past the header and separator of a rally table
 
-  const leaderboard: LeaderboardEntry[] = [];
-  // Regex to capture: | Position | Driver Name | (anything) | (anything) |
-  const rankRegex = /\|\s*(\d+)\s*\|\s*([^|]+?)\s*\|[^|]*\|[^|]*\|/;
+  const rallyHeaderRegex = /^##\s*rally\s*(?:\d+\s*[:-\s]*)?(.*)/i;
+  // Extracts rank (group 1) and name (group 2) from a table row.
+  // Example: | 1 | Driver Name | ...
+  const tableRowRegex = /^\s*\|\s*(\d+)\s*\|\s*([^|]+?)\s*\|/;
 
-  for (const row of rows) {
-    const trimmedRow = row.trim();
-    if (!trimmedRow.startsWith("|")) { // Stop if it's no longer a table row
-        if (leaderboard.length > 0) break; // If we've already captured some, assume table ended
-        else continue; // Skip empty lines or non-table lines before the first entry
+  const finalizeCurrentRally = () => {
+    if (currentRallyDisplayName && currentLeaderboard.length > 0) {
+      rallyEvents.push({
+        eventName: `${seasonName} - ${currentRallyDisplayName}`,
+        leaderboard: [...currentLeaderboard],
+      });
+    }
+    currentLeaderboard = [];
+    processingTable = false;
+    currentRallyDisplayName = null; // Reset display name after finalizing
+  };
+
+  for (const line of lines) {
+    const rallyHeaderMatch = line.match(rallyHeaderRegex);
+
+    if (rallyHeaderMatch) {
+      finalizeCurrentRally(); // Finalize previous rally before starting new one
+      currentRallyDisplayName = rallyHeaderMatch[1].trim();
+      continue; // Processed header, move to next line
     }
 
-    const match = trimmedRow.match(rankRegex);
-    if (match) {
-      const rank = parseInt(match[1], 10);
-      const name = match[2].trim();
-      // We're interested in medal positions (1st, 2nd, 3rd)
-      if (rank >= 1 && rank <= 3) {
-        leaderboard.push({
-          rank,
-          name,
-          time: "N/A", // Time is not applicable for season championship medals
-          powerStageTime: "N/A", // Power stage time is not applicable
-          individualPoints: 0, // Points not directly used for this medal calculation
-          teamPoints: 0, // Team points not directly used
-        });
+    if (currentRallyDisplayName) { // Only process if we are within a rally section
+      if (!processingTable) {
+        // Look for table separator to confirm we are about to read data
+        // e.g. |----|------|... or |:---|:----|...
+        if (line.trim().startsWith("|") && line.includes("---")) {
+            processingTable = true; // Table data rows should start from the next line
+        }
+        // We don't 'continue' here because the very next line might be a data row if table header was absent/unconventional
+        // Or, this line itself could be a new rally header if the table ended abruptly.
+      }
+      
+      if (processingTable) {
+         // If line does not start with '|', it signifies the end of the current table.
+        if (!line.trim().startsWith("|")) {
+          finalizeCurrentRally();
+          // The current line might be a new rally header or other content.
+          // If it's a new rally header, the main loop's `rallyHeaderMatch` will catch it in the next iteration
+          // or if we re-evaluate immediately. For simplicity, rely on next iteration.
+          // However, if it was just blank lines or non-table text, currentRallyDisplayName would be null now.
+          // We need to check if this non-pipe line is a NEW rally header itself.
+          const newRallyMatchAfterTableEnd = line.match(rallyHeaderRegex);
+          if (newRallyMatchAfterTableEnd) {
+            // It's a new rally header immediately after table end.
+            // Finalize already called, set new rally name and continue.
+             currentRallyDisplayName = newRallyMatchAfterTableEnd[1].trim();
+             // processingTable will be false from finalizeCurrentRally
+          }
+          continue; // Table ended, move to next line.
+        }
+
+        const rowMatch = line.match(tableRowRegex);
+        if (rowMatch) {
+          const rank = parseInt(rowMatch[1], 10);
+          // Clean the name: remove markdown links [text](url) and any HTML tags like <img>
+          const name = rowMatch[2].trim().replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/<[^>]+>/g, '').trim();
+
+          if (rank >= 1 && rank <= 3) { // Only care about medal positions
+            currentLeaderboard.push({
+              rank,
+              name,
+              time: "N/A",
+              powerStageTime: "N/A",
+              individualPoints: 0,
+              teamPoints: 0,
+            });
+          }
+        }
       }
     }
   }
 
-  if (leaderboard.length === 0) {
-    console.warn(`No leaderboard entries extracted for ${seasonIdentifier}`);
-    return null;
-  }
-  
-  return { eventName: `${seasonIdentifier} Championship`, leaderboard };
+  finalizeCurrentRally(); // Finalize any remaining rally after processing all lines
+  return rallyEvents;
 };
+
 
 const downloadCSV = (csvContent: string, filename: string) => {
   const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
@@ -97,17 +137,26 @@ const AllTimeStats = () => {
   const [allTimeMedals, setAllTimeMedals] = useState<DriverMedals[]>([]);
 
   useEffect(() => {
-    const allSeasonEvents: EventLeaderboard[] = [];
+    const allRallyEvents: EventLeaderboard[] = [];
     seasonData.forEach(season => {
-      const eventLeaderboard = parseSeasonChampionship(season.content, season.name);
-      if (eventLeaderboard) {
-        allSeasonEvents.push(eventLeaderboard);
-      }
+      // console.log(`Parsing rallies for ${season.name}`);
+      const rallyLeaderboards = parseRallyResults(season.content, season.name);
+      // console.log(`Found ${rallyLeaderboards.length} rally events in ${season.name}`);
+      allRallyEvents.push(...rallyLeaderboards);
     });
 
-    if (allSeasonEvents.length > 0) {
-      const medals = calculateDriverMedals(allSeasonEvents);
+    if (allRallyEvents.length > 0) {
+      // console.log(`Total rally events compiled: ${allRallyEvents.length}`);
+      // allRallyEvents.forEach(event => {
+      //   if (event.leaderboard.length === 0) {
+      //     console.warn(`Event ${event.eventName} has no leaderboard entries for medals.`);
+      //   }
+      // });
+      const medals = calculateDriverMedals(allRallyEvents);
+      // console.log('Calculated Medals:', medals);
       setAllTimeMedals(medals);
+    } else {
+      // console.warn("No rally events found across all seasons.");
     }
   }, []);
 
@@ -117,7 +166,7 @@ const AllTimeStats = () => {
       allTimeMedals.forEach(d => {
         csvString += `"${d.name.replace(/"/g, '""')}",${d.medals.gold},${d.medals.silver},${d.medals.bronze},${d.total}\n`;
       });
-      downloadCSV(csvString, "cat_rally_all_time_medals.csv");
+      downloadCSV(csvString, "cat_rally_all_time_rally_medals.csv");
     }
   };
 
@@ -126,8 +175,8 @@ const AllTimeStats = () => {
       <Navigation />
       <div className="container mx-auto px-4 py-8">
         <header className="mb-8 text-center">
-          <h1 className="text-4xl font-bold text-black mb-2">All-Time Championship Medals</h1>
-          <p className="text-xl text-gray-600">Medal table based on all seasons.</p>
+          <h1 className="text-4xl font-bold text-black mb-2">All-Time Rally Medals</h1>
+          <p className="text-xl text-gray-600">Medal table based on individual rally results (top 3) from all seasons.</p>
         </header>
 
         {allTimeMedals.length > 0 ? (
@@ -138,11 +187,11 @@ const AllTimeStats = () => {
                 Download CSV
               </Button>
             </div>
-            <MedalTable driverMedals={allTimeMedals} title="All-Time Championship Medal Tally" />
+            <MedalTable driverMedals={allTimeMedals} title="All-Time Rally Medal Tally" />
           </>
         ) : (
           <div className="text-center py-8">
-            <p className="text-gray-500">No medal data could be compiled. Check console for parsing warnings.</p>
+            <p className="text-gray-500">No rally medal data could be compiled. Check markdown files for rally result tables.</p>
           </div>
         )}
       </div>
