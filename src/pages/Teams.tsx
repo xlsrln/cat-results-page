@@ -138,7 +138,6 @@ const Teams = () => {
                 );
               })}
             </div>
-          </div>
         )}
         
         {!isLoading && !error && allTeamKeys.length === 0 && teamMembership && (
