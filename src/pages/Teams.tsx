@@ -82,24 +82,26 @@ const Teams = () => {
                           <p className="text-sm text-gray-500 mb-2">Founded {foundedYear}</p>
                         )}
                       </div>
-                      {imageUrl ? (
-                        <img 
-                          src={imageUrl} 
-                          alt={`${displayName} Logo`} 
-                          className="w-24 h-24 md:w-32 md:h-32 object-cover rounded-md shrink-0 border" // Adjusted size and added border
-                        />
-                      ) : (
-                        <div className="w-24 h-24 md:w-32 md:h-32 bg-gray-200 rounded-md flex items-center justify-center shrink-0"> {/* Adjusted size */}
-                          <span className="text-gray-400 text-xs">No Logo</span>
-                        </div>
-                      )}
                     </div>
                     
                     {philosophy && (
                       <p className="text-sm italic text-gray-600 mb-4">"{philosophy}"</p>
                     )}
                     
-                    <p className="text-gray-700 mb-4 leading-relaxed flex-grow">{description}</p>
+                    <div className="flex items-start mb-4">
+                      {imageUrl ? (
+                        <img 
+                          src={imageUrl} 
+                          alt={`${displayName} Logo`} 
+                          className="w-24 h-24 md:w-32 md:h-32 object-cover rounded-md shrink-0 border mr-4" 
+                        />
+                      ) : (
+                        <div className="w-24 h-24 md:w-32 md:h-32 bg-gray-200 rounded-md flex items-center justify-center shrink-0 mr-4"> 
+                          <span className="text-gray-400 text-xs">No Logo</span>
+                        </div>
+                      )}
+                      <p className="text-gray-700 leading-relaxed flex-grow">{description}</p>
+                    </div>
                     
                     {achievements && achievements.length > 0 && (
                       <p>
@@ -132,6 +134,8 @@ const Teams = () => {
                         </div>
                       </div>
                     )}
+                  </div>
+
 
                   </div>
                 );
