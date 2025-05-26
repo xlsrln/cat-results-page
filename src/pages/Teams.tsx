@@ -135,9 +135,6 @@ const Teams = () => {
                       </div>
                     )}
                   </div>
-
-
-                  </div>
                 );
               })}
             </div>
