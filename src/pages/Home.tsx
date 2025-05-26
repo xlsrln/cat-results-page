@@ -32,16 +32,6 @@ const Home = () => {
           <MarkdownRenderer content={homeContent} />
         </div>
 
-        {/* Current Season Medal Table */}
-        {!isLoading && driverMedals.length > 0 && (
-          <div className="max-w-4xl mx-auto mb-12">
-            <MedalTable 
-              driverMedals={driverMedals} 
-              title="Current Season Medal Table" 
-            />
-          </div>
-        )}
-
         {/* Quick Links */}
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-black mb-6">Quick Links</h2>
