@@ -86,11 +86,13 @@ const Teams = () => {
                       </div>
                     </div>
                     
-                    <p className="text-gray-700 mb-4 leading-relaxed flex-grow">{description}</p>
-                    
                     {philosophy && (
                       <p className="text-sm italic text-gray-600 mb-4">"{philosophy}"</p>
                     )}
+                    
+                    <p className="text-gray-700 mb-4 leading-relaxed flex-grow">{description}</p>
+                    
+
 
                     {currentMembers.length > 0 && (
                       <div className="mb-4">
