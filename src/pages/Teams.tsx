@@ -92,6 +92,19 @@ const Teams = () => {
                     
                     <p className="text-gray-700 mb-4 leading-relaxed flex-grow">{description}</p>
                     
+                    {achievements && achievements.length > 0 && (
+                      <div>
+                        <h4 className="font-semibold text-black mb-2">Notable Achievements</h4>
+                        <ul className="text-sm text-gray-600 space-y-1">
+                          {achievements.map((achievement, idx) => (
+                            <li key={idx} className="flex items-center">
+                              <span className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span>
+                              {achievement}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
 
 
                     {currentMembers.length > 0 && (
@@ -110,19 +123,6 @@ const Teams = () => {
                       </div>
                     )}
 
-                    {achievements && achievements.length > 0 && (
-                      <div>
-                        <h4 className="font-semibold text-black mb-2">Notable Achievements</h4>
-                        <ul className="text-sm text-gray-600 space-y-1">
-                          {achievements.map((achievement, idx) => (
-                            <li key={idx} className="flex items-center">
-                              <span className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span>
-                              {achievement}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
                   </div>
                 );
               })}
