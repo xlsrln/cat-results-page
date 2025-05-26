@@ -53,10 +53,7 @@
 |    33 | mxcraven          |        0 |         0 |       0 |           0 |                 0 |         1 |       1 |
 
 
-
-## norway
-
-
+## rally 1: norway
 
 |   pos | name             | time      | powerstage   |   rally |   ps |   points | team              | penalty   | link |
 |------:|:-----------------|:----------|:-------------|--------:|-----:|---------:|:------------------|:----------|:-------------------------------------------------------------|
@@ -87,8 +84,7 @@
 |    25 | nap              | 12:17.842 | 03:04.92     |       1 |    0 |  1 |                   |           | [link](https://www.youtube.com/watch?v=HCn378Xv1Ns)          |
 |    26 | dougall          | 13:56.219 | 04:11.70     |       1 |    0 |  1 | Gaufre GRX        |           | [link](https://www.youtube.com/watch?v=b4rYRkP9No0)          |
 
-## germany
-
+## rally 2: germany
 
 
 |   pos | name              | time      | powerstage   |   rally |   ps |   points | team              | penalty   | link   |
@@ -117,8 +113,7 @@
 |    22 | shinuniwa         | 17:57.919 | 03:49.80     |       1 |    0 |  1 |                   |           | [link](https://youtu.be/x9tymUD2ZW8?si=6tt49dRj8ADyi5Zh)     |
 |    23 | nap               | 18:25.730 | 03:44.88     |       1 |    0 |  1 |                   |           | [link](https://www.youtube.com/watch?v=UwGFDsilOKo)          |
 
-## kenya
-
+## rally 3: kenya
 
 
 |   pos | name              | time      | powerstage   |   rally |   ps |   points | team              | penalty   | link |
@@ -151,8 +146,7 @@
 |    26 | revenger210       | 16:31.690 | 04:16.14     |       1 |    0 |  1 | noot squad        |           | [link](https://youtu.be/l4h9e4xmfEY)                      |
 |    27 | nap               | 16:39.844 | 04:25.72     |       1 |    0 |  1 |                   |           | [link](https://www.youtube.com/watch?v=zcIkvmzAdSA)             |
 
-## indonesia
-
+## rally 4: indonesia
 
 
 |   pos | name             | time      | powerstage   |   rally |   ps |   points | team              | penalty   | link |
@@ -177,7 +171,7 @@
 |    18 | shinuniwa        | 11:07.992 | 03:43.79     |       1 |    0 |  1 |                   |           | [link](https://youtu.be/i_7x2xBZlVs?si=clW8kYmxLacXGvhl)     |
 |    19 | nap              | 11:24.910 | 03:39.84     |       1 |    0 |  1 |                   |           | [link](https://www.youtube.com/watch?v=IgE2ZUN_A4o)          |
 
-## japan
+## rally 5: japan
 
 
 
@@ -205,7 +199,7 @@
 |    20 | tezzaioli         | 12:11.138 | 02:56.76     |       1 |    0 |  1 |                   |           | [link](https://youtu.be/C4nHyp9K16E)                     |
 |    21 | nap               | 12:58.133 | 03:05.86     |       1 |    0 |  1 |                   |           | [link](https://www.youtube.com/watch?v=NpYjUIFPhAo)            |
 
-## finland
+## rally 6: finland
 
 |   pos | name              | time      | powerstage   |   rally |   ps |   points | team              | penalty   | link |
 |------:|:------------------|:----------|:-------------|--------:|-----:|---------:|:------------------|:----------|:---------------------------------------------------------------|

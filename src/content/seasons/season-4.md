@@ -61,7 +61,7 @@
 
 
 
-## kenya
+## rally 1: kenya
 
 a good day to be on a safari
 
@@ -104,7 +104,7 @@ a good day to be on a safari
 |    35 | ausee                 | 17:40.178 | 04:58.60     |       1 | 0 |         1 | void rallysports  |          1 |       | [link](https://youtu.be/5M8pWaIMw1U)                         |
 |    36 | captn sharkhorse      | 24:20.161 | 06:31.48     |       1 | 0 |         1 | void rallysports  |          0 |       | [link](https://youtu.be/aGu91zm0C4Q)                         |
 
-## indonesia
+## rally 2: indonesia
 
 fast blast with a lil splash
 
@@ -143,7 +143,7 @@ fast blast with a lil splash
 |    31 | rain                  | 11:01.911 | 01:58.96     |       1 | 0 |         1 | bike-a-cycle      |          1 |       | [link](https://www.youtube.com/watch?v=ckx3erDNlSQ)            |
 |    32 | macii                 | 11:28.319 | 02:08.41     |       1 | 0 |         1 | bike-a-cycle      |          1 |       | [link](https://youtu.be/r8MsVKIwXwg)                           |
 
-## germany
+## rally 3: germany
 
 stay on the road!
 
@@ -182,7 +182,7 @@ stay on the road!
 |    31 | macii                 | 16:23.424 | 03:54.49     |       1 | 0 |         1 | bike-a-cycle      |          1 |       | [link](https://www.youtube.com/watch?v=_FOC8qlAvsc)          |
 |    32 | finnvbot              | 28:52.460 | 06:49.40     |       1 | 0 |         1 |                   |          0 |       | [link](https://youtu.be/oEO61oN7eM8)                         |
 
-## norway
+## rally 4: norway
 
 chilly! gotta go fast
 
@@ -215,7 +215,7 @@ chilly! gotta go fast
 |    25 | finnvbot              | 09:14.990 | 01:49.82     |       1 | 0 |         1 |                   |          0 |       | [link](https://youtu.be/OGyyhfGjcgI)                         |
 |    26 | gentlemen/cabbagewank | 09:16.811 | 01:51.66     |       1 | 0 |         1 | purple sunset     |          4 |       | [link](https://youtu.be/AQdrqZRNKdI)                         |
 
-## australia
+## rally 5: australia
 
 wow! a kangaroo?
 

@@ -39,7 +39,7 @@
 | 24  | Steamed Jams      |           0 |       0 |         0 |          0 |       0 |
 | 25  | Shelly Blossom    |           0 |       0 |         0 |          0 |       0 |
 
-## japan asphalt rally (warmup event)
+## rally 0: japan asphalt rally (warmup event)
 
 Congratulations to Wes, turbo and KK for finishing on the podium!
 
@@ -58,7 +58,7 @@ Congratulations to Wes, turbo and KK for finishing on the podium!
 
 
 
-## indonesia
+## rally 1: indonesia
 
 Well done Proporo!
 
@@ -81,7 +81,7 @@ Well done Proporo!
 |    15 | nap               | 14:22.01 | 01:11.10     |       1 |    0 |        1 |                   | [link](https://youtu.be/6-MwbFOtXYc)                                  |
 |    16 | Revenger210       | 15:43.84 | 01:24.96     |       0 |    0 |        0 |                   | [link](https://www.youtube.com/watch?v=Hr2ctY4ZnlA)                   |
 
-## kenya
+## rally 2: kenya
 
 Strong showing by Proporo and the returning PlayerZ, as well as a good effort by capablanca!
 
@@ -103,7 +103,7 @@ Strong showing by Proporo and the returning PlayerZ, as well as a good effort by
 |    14 | nap               | 19:47.08 | 03:48.52     |       2 |    0 |        2 |                   | [link](https://www.youtube.com/watch?v=GraQJSZkVI0)                    |
 |    15 | MxCraven          | 20:47.29 | 04:12.99     |       1 |    0 |        1 |                   | [link](https://www.twitch.tv/videos/1635003671)                        |
 
-## germany
+## rally 3: germany
 
 Domer signs for Brick Motorsports and a debut for Noot Squad. Everyone (mostly) stays on the road.
 
@@ -130,7 +130,7 @@ Domer signs for Brick Motorsports and a debut for Noot Squad. Everyone (mostly) 
 |    19 | Revenger210       | 20:28.61 | 01:52.36     |       0 |    0 |        0 | Noot Squad Rally  | [link](https://youtu.be/1ys3pa4Wj4A)                |
 |    20 | Steamed Jams      | 22:22.53 | 02:14.46     |       0 |    0 |        0 | Noot Squad Rally  | [link](https://youtu.be/4vVT7QAox18)                |
 
-## sardinia
+## rally 4: sardinia
 
 Toucan turned up! Proporo completes the impressive clean sweep in an exciting finish to the season!
 

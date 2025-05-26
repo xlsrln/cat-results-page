@@ -48,7 +48,7 @@
 | - | Kariston          |        1 |          0 |       0 |       0 |         0 |         0 |           0 |       1 |
 
 
-## norway
+## rally 1: norway
 
 Late wins the first event of season 2!
 
@@ -79,9 +79,9 @@ Late wins the first event of season 2!
 |    23 | Revenger210       | 09:57.957 | 01:53.41     |       1 |    0 |        1 | V-Rally Club      |           | [link](https://youtu.be/T_NkeOC8Png)                         |
 |    24 | TrekkerGek        | 10:02.252 | 01:57.06     |       1 |    0 |        1 |                   |           | [link](https://youtu.be/3k1jYKDwWrg)                         |
 |    25 | Kariston          | 10:26.040 | 01:47.15     |       1 |    0 |        1 | V-Rally Club      | 80        | [link](https://youtu.be/XzXfJFj6oLc)                         |
-|    26 | CAPT'N SHARKHORSE | 13:01.411 | 02:43.16     |       1 |    0 |        1 | void rallysports  |           | [link](https://youtu.be/-XFj4Lhv1K8)                         |
+|    26 | CAPTN SHARKHORSE | 13:01.411 | 02:43.16     |       1 |    0 |        1 | void rallysports  |           | [link](https://youtu.be/-XFj4Lhv1K8)                         |
 
-## sardinia
+## rally 2: sardinia
 
 With a intense fight through the night, Late beats Proporo and Turbo
 
@@ -111,7 +111,7 @@ With a intense fight through the night, Late beats Proporo and Turbo
 |    22 | Ausee             | 13:02.537 | 01:42.93     |       1 |    0 |        1 |                   |           | [link](https://youtu.be/49hQo-GXUoU)                         |
 |    23 | CAPT'N SHARKHORSE | 16:07.030 | 02:25.06     |       1 |    0 |        1 | void rallysports  |           | [link](https://youtu.be/XGMhv0c8TqM)                         |
 
-## japan
+## rally 3: japan
 
 An incredible run from Late ahead of Proporo, and a debut podium for Franky M!
 
@@ -138,7 +138,7 @@ An incredible run from Late ahead of Proporo, and a debut podium for Franky M!
 |    19 | Caden             | 14:44.453 | 03:31.08     |       1 |    0 |        1 | V-Rally Club      |           | [link](https://youtu.be/ULwQXyvNDpQ)                         |
 |    20 | nap               | 15:02.780 | 03:37.44     |       1 |    0 |        1 |                   |           | [link](https://youtu.be/ufvQsjv_heg)                         |
 
-## kenya
+## rally 4: kenya
 
 Late crushes everyone in Kenya!
 
@@ -164,7 +164,7 @@ Late crushes everyone in Kenya!
 |    18 | Caden             | 16:23.699 | 02:18.68     |       1 |    0 |        1 | V-Rally Club      |           | [link](https://youtu.be/4JVhBoV4KpA)                         |
 |    19 | nap               | 17:09.792 | 02:17.11     |       1 |    0 |        1 |                   |           | [link](https://www.youtube.com/watch?v=rBEGShKsIRA)          |
 
-## germany
+## rally 5: germany
 
 Late stays on the road to win his home rally!
 
@@ -188,7 +188,7 @@ Late stays on the road to win his home rally!
 |    16 | Red Sun           | 15:41.980 | 04:07.91     |       1 |    0 |        1 | Brick Motorsports |           | [link](https://youtu.be/OObYoxmTaFI)                         |
 |    17 | nap               | 17:32.551 | 04:27.54     |       1 |    0 |        1 |                   |           | [link](https://www.youtube.com/watch?v=T_vbuE2Ky_8)          |
 
-## finland
+## rally 6: finland
 
 Many cool cats and cool cuts!
 
@@ -213,7 +213,7 @@ Many cool cats and cool cuts!
 |    17 | nap               | 11:55.885 | 01:34.55     |       1 |    0 |        1 |                   |           | [link](https://www.youtube.com/watch?v=nvkkzodREpY)          |
 |    18 | Ausee             | 12:03.158 | 01:31.20     |       1 |    0 |        1 |                   |           | [link](https://youtu.be/spzpepy9EZI)                         |
 
-## indonesia
+## rally 7: indonesia
 
 Late might have sealed his championship, but Proporo wins the rally!
 
