@@ -5,7 +5,7 @@ export interface TeamInfo {
   foundedYear?: number;
   achievements?: string[];
   philosophy?: string;
-  imageUrl?: string; // Added imageUrl property
+  imageUrl?: string; // Updated imageUrl property
 }
 
 export const teamInformation: Record<string, TeamInfo> = {
@@ -15,7 +15,7 @@ export const teamInformation: Record<string, TeamInfo> = {
     foundedYear: 2021,
     philosophy: "Drive fast, take every shortcut, never brake.",
     achievements: ["Season 1 Team Champions", "Multiple individual rally wins"],
-    imageUrl: "/images/teams/cat-face-nospace.png"
+    imageUrl: new URL('../content/images/catface-nospace.png', import.meta.url).href
   },
   "G2D Righto": {
     name: "G2D Righto",
@@ -23,7 +23,7 @@ export const teamInformation: Record<string, TeamInfo> = {
     foundedYear: 2022,
     philosophy: "fun is good but winning is better",
     achievements: ["Champions of CAT S2 and S3"],
-    imageUrl: "/images/teams/g2d-righto.png"
+    imageUrl: new URL('../content/images/g2d-righto.png', import.meta.url).href
   },
   "Brick Motorsports": {
     name: "Brick Motorsports",
@@ -31,7 +31,7 @@ export const teamInformation: Record<string, TeamInfo> = {
     foundedYear: 2021,
     philosophy: "make bricks fly",
     achievements: ["Season 4 Team champions"],
-    imageUrl: "/images/teams/brick-motorsports.png"
+    imageUrl: new URL('../content/images/brick-motorsports.png', import.meta.url).href
   },
   "noot squad": {
     name: "Noot Squad Rally",
@@ -39,7 +39,7 @@ export const teamInformation: Record<string, TeamInfo> = {
     foundedYear: 2022,
     philosophy: "New perspectives, unlimited potential.",
     achievements: ["Rising stars in the championship", "Rapid skill development"],
-    imageUrl: "/images/teams/noot-squad.png"
+    imageUrl: new URL('../content/images/noot-squad.png', import.meta.url).href
   },
   "superturbo": {
     name: "Superturbo",
@@ -47,7 +47,7 @@ export const teamInformation: Record<string, TeamInfo> = {
     foundedYear: 1967,
     philosophy: "superturbo - the crowd’s choice.",
     achievements: ["Great success individually", "Real life karting kings"],
-    imageUrl: "/images/teams/superturbo.png"
+    imageUrl: new URL('../content/images/superturbo.png', import.meta.url).href
   },
   "purple sunset": {
     name: "purple sunset",
@@ -55,7 +55,7 @@ export const teamInformation: Record<string, TeamInfo> = {
     foundedYear: 2023,
     philosophy: "drive hills, pay bills",
     achievements: [],
-    imageUrl: "/images/teams/purple-sunset.png"
+    imageUrl: new URL('../content/images/purple-sunset.png', import.meta.url).href
   },
   "bike-a-cycle": {
     name: "bike-a-cycle",
@@ -63,7 +63,7 @@ export const teamInformation: Record<string, TeamInfo> = {
     foundedYear: 2023,
     philosophy: "allez allez allez",
     achievements: [],
-    imageUrl: "/images/teams/bike-a-cycle.png"
+    imageUrl: new URL('../content/images/bike-a-cycle.png', import.meta.url).href
   },
   "void rallysports": {
     name: "void rallysports",
@@ -71,7 +71,6 @@ export const teamInformation: Record<string, TeamInfo> = {
     foundedYear: 2023,
     philosophy: "'Rally with us if times are none and fun is all.' -Captn Sharkhorse",
     achievements: [],
-    imageUrl: "/images/teams/void-rallysports.png"
+    imageUrl: new URL('../content/images/void-rallysports.png', import.meta.url).href
   }
 };
-
