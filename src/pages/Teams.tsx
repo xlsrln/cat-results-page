@@ -94,20 +94,19 @@ const Teams = () => {
                     
                     {achievements && achievements.length > 0 && (
                       <p>
-                      <div>
-                        <h4 className="font-semibold text-black mb-2">Notable Achievements</h4>
-                        <ul className="text-sm text-gray-600 space-y-1">
-                          {achievements.map((achievement, idx) => (
-                            <li key={idx} className="flex items-center">
-                              <span className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span>
-                              {achievement}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                        <div>
+                          <h4 className="font-semibold text-black mb-2">Notable Achievements</h4>
+                          <ul className="text-sm text-gray-600 space-y-1">
+                            {achievements.map((achievement, idx) => (
+                              <li key={idx} className="flex items-center">
+                                <span className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2"></span>
+                                {achievement}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                       </p>
                     )}
-
 
                     {currentMembers.length > 0 && (
                       <div className="mb-4">
