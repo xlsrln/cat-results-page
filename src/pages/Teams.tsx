@@ -93,6 +93,7 @@ const Teams = () => {
                     <p className="text-gray-700 mb-4 leading-relaxed flex-grow">{description}</p>
                     
                     {achievements && achievements.length > 0 && (
+                      <p>
                       <div>
                         <h4 className="font-semibold text-black mb-2">Notable Achievements</h4>
                         <ul className="text-sm text-gray-600 space-y-1">
@@ -104,6 +105,7 @@ const Teams = () => {
                           ))}
                         </ul>
                       </div>
+                      </p>
                     )}
 
 
