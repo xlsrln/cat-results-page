@@ -109,7 +109,7 @@ const Teams = () => {
                     )}
                     
                     {currentMembers.length > 0 && (
-                      <div className="mt-6 mb-4"> // Add mt-6 class to increase top margin
+                      <div className="mt-6 mb-4"> 
                         <h4 className="font-semibold text-black mb-2 flex items-center">
                           <Users className="h-4 w-4 mr-1" />
                           Current Members ({currentMembers.length})
