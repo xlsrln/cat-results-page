@@ -1,88 +1,225 @@
+# Catface Ultimate Rally Master 😹
 
-# CAT Rally Master Championship
+Welcome to Ultimate Rally Master, the 4 game competition of ultimate rally skill!
 
-The CAT Rally Master Championship is an elite competition featuring the world's best rally drivers competing in special invitation-only events. These rallies are designed to push competitors to their absolute limits with unique challenges, extreme conditions, and specialized vehicle requirements.
+## The results are in!
 
-## About Rally Master
+The inaugral **Catface Rally Master** is colin mccrack!
 
-The Rally Master series runs parallel to the regular CAT Rally Championship seasons but features:
+| The overall top 3: |
+| ----- |
+| 🏆 colin mccrack |
+| 🥈 franky M. |
+| 🥉 nept |
 
-- Invitation-only participation based on exceptional performance in regular seasons
-- Specialized challenges that test the full range of driving skills
-- Unique stage formats not seen in regular championship events
-- Legacy vehicles from throughout rallying history
-- No championship points - each event stands alone as a prestigious achievement
+Thanks to all the competitors who took part!
 
-## Events
+In the individual games, we have the following:
 
-### Arctic Challenge (Finland)
-**Cars:** Group B vehicles only
+| art of rally:  | dirt rally 2:       | rush rally 3:       | richard burns rally:  |
+|----------------|---------------------|---------------------|-----------------------|
+|  🥇 franky    |  🥇 colin mccrack  |  🥇 franky         |  🥇 noEihaOo         |
+|  🥈 domer     |  🥈 colorcat       |  🥈 colin mccrack  |  🥈 dryout           |
+|  🥉 playerz   |  🥉 nept           |  🥉 nept           |  🥉 colin mccrack    |
 
-The ultimate winter rally challenge, featuring stages run in extreme cold (-30°C) with limited daylight hours. Drivers must manage not only the treacherous conditions but also the specialized equipment required for extreme cold.
+Full results in [rally master results](rally_master_results.md)
 
-| Stage | Weather | Winner | Winning Time |
-|-------|---------|--------|-------------|
-| Frozen Lake Circuit | Blizzard | S. Johansson | 8:12.67 |
-| Northern Lights Pass | Night | M. Weber | 12:34.89 |
-| Ice Cavern | Dawn | S. Johansson | 6:45.23 |
-| Reindeer Trail | Heavy Snow | C. Sainz Jr. | 14:28.56 |
 
-### Desert Marathon (Morocco)
-**Cars:** Classic rally cars (1970-1985)
+## Art of rally
 
-A two-day endurance event across the Sahara Desert, this rally tests not only speed but navigation and vehicle preservation skills. Limited service opportunities mean drivers must manage their vehicles carefully.
+Rules: as in CAT, but no power stage and no restarts
 
-| Stage | Weather | Winner | Winning Time |
-|-------|---------|--------|-------------|
-| Merzouga Dunes | Heat Wave | H. Tanaka | 1:24:35.42 |
-| Atlas Passage | Sandstorm | E. Williams | 58:23.17 |
-| Oasis Sprint | Sunset | M. Weber | 12:47.89 |
-| Night Navigation | Clear Night | C. Sainz Jr. | 2:05:18.34 |
+The two rallies are submitted separately, and you can re-submit as many times as you want
 
-### Mountain Masters (Switzerland)
-**Cars:** Modern WRC specifications
+### Rally 1: Norway
 
-The definitive mountain rally featuring narrow roads with sheer drops, rapid elevation changes, and technical sections that require perfect precision. Weather conditions can change rapidly between stages.
+Group 3 (approx 5-7 min)
 
-| Stage | Weather | Winner | Winning Time |
-|-------|---------|--------|-------------|
-| Alpine Ascent | Clear | S. Johansson | 16:54.23 |
-| Glacier Pass | Snow | A. Rossi | 14:27.68 |
-| Matterhorn View | Fog | J. Dupont | 18:39.14 |
-| Valley Descent | Rain | M. Weber | 20:12.56 |
+| stage      | weather        |
+| ------------- | ------------ |
+| grunnfor      | morning        |
+| lake rostavatn | afternoon  |
+| stronstad - r    | sunset      |
 
-### Historic Monaco
-**Cars:** Cars matching the original period (1960s rally cars)
 
-A recreation of the golden age of rallying on the historic Monte Carlo Rally route, including the famous Col de Turini. Drivers must use period-authentic vehicles and techniques.
+### Rally 2: Kenya
 
-| Stage | Weather | Winner | Winning Time |
-|-------|---------|--------|-------------|
-| Col de Turini | Snow/Ice | S. Johansson | 15:27.83 |
-| La Bollène-Vésubie | Dry/Night | M. Weber | 12:54.67 |
-| Sospel-Monaco | Rain | C. Sainz Jr. | 18:36.29 |
-| Monaco Circuit Special | Dry | E. Williams | 4:23.45 |
+Group A (approx 7-10 min)
 
-### Jungle Expedition (Brazil)
-**Cars:** Safari specification rally cars
+| stage      | weather        |
+| ------------- | ------------ |
+| lake nakuru      | morning        |
+| karura | afternoon  |
+| homa bay    | sunset      |
 
-The ultimate test of durability and adaptation, featuring water crossings, mud, dense vegetation, and unpredictable wildlife. This rally emphasizes careful driving and vehicle preservation.
+	
+## Dirt Rally 2.0
 
-| Stage | Weather | Winner | Winning Time |
-|-------|---------|--------|-------------|
-| Rainforest Trail | Heavy Rain | H. Tanaka | 32:45.67 |
-| River Crossing | Humid | M. Weber | 28:56.34 |
-| Anaconda Pass | Fog | C. Sainz Jr. | 25:12.89 |
-| Canopy Highway | Thunderstorm | S. Johansson | 35:48.23 |
+Custom rally > New Zealand > Group A
 
-## All-Time Rally Master Winners
+| stage      | weather        |
+| ------------- | ------------ |
+| Te awanga sprint forward | dry |
+| Ocean beach sprint forward | dry |
+| Elsthorpe sprint forward | dry |
 
-| Driver | Rally Master Wins |
-|--------|------------------|
-| Sarah Johansson | 7 |
-| Matthias Weber | 6 |
-| Carlos Sainz Jr. | 5 |
-| Emma Williams | 3 |
-| Hiroshi Tanaka | 3 |
-| Jean-Pierre Dupont | 1 |
-| Alessandro Rossi | 1 |
+No restarts
+
+Weather: “dry” on all stages
+
+Service: “short” on every stage
+
+Surface degradation setting: "full" or whatever the default is
+
+Free tyre changes, setups etc
+
+Estimated total time 10-15 minutes
+
+You can re-submit as many times as you want
+
+
+## Rush rally 3
+
+Single rally > Finland (all stages)
+
+Car choice: S class or below
+
+No restarts
+
+Estimated total time 10-12 minutes
+
+You can re-submit as many times as you want
+
+
+## Richard Burns Rally
+
+Practice or time trial, one video per stage (Re-submit as many times as you want)
+
+Any car, any setup, except the WRC classes (WRC 2.0/1.6)
+
+Stage 1: Gabiria-Legazpi (Spain, tarmac, damp)
+
+Stage 2: Carvalho de rei (Portugal, gravel, dry)
+
+Download and installation instructions: [rallysimfans.hu](https://rallysimfans.hu/rbr/download.php?download=rsfrbr)
+
+
+# Results
+
+
+## team standings
+
+| team              |   aor: norway |   aor: kenya |   dr 2: new zealand |   rr 3: finland |   rbr: gabiria-legazpi |   rbr: carvalho de rei |   total |   pos |
+|:------------------|--------------:|-------------:|--------------------:|----------------:|-----------------------:|-----------------------:|--------:|------:|
+| G2D Racing        |            28 |           27 |                  39 |              20 |                      7 |                     10 |     131 |     1 |
+| Brick Motorsports |            45 |           41 |                  20 |               0 |                      6 |                      6 |     118 |     2 |
+| superturbo        |            25 |           39 |                   0 |              25 |                     12 |                      8 |     109 |     3 |
+| cat face nospace  |            19 |           18 |                  16 |              16 |                     18 |                     19 |     106 |     4 |
+
+
+## standings
+
+| name          |   aor: norway |   aor: kenya |   dr 2: new zealand |   rr 3: finland |   rbr: gabiria-legazpi |   rbr: carvalho de rei |   total |   pos |
+|:--------------|--------------:|-------------:|--------------------:|----------------:|-----------------------:|-----------------------:|--------:|------:|
+| colin mccrack |            11 |            9 |                  25 |              20 |                      7 |                     10 |      82 |     1 |
+| Franky M.     |            25 |           25 |                   0 |              25 |                      0 |                      0 |      75 |     2 |
+| nept          |             7 |            8 |                  16 |              16 |                      8 |                      7 |      62 |     3 |
+| PlayerZ       |            16 |           16 |                  14 |               0 |                      0 |                      0 |      46 |     4 |
+| domer         |            20 |           20 |                   0 |               0 |                      0 |                      0 |      40 |     5 |
+| Colorcat      |            14 |            0 |                  20 |               0 |                      0 |                      0 |      34 |     6 |
+| Dryout        |             0 |           14 |                   0 |               0 |                     12 |                      8 |      34 |     7 |
+| Red Sun       |             9 |            6 |                   0 |               0 |                      6 |                      6 |      27 |     8 |
+| Inhake        |            12 |           11 |                   0 |               0 |                      0 |                      0 |      23 |     9 |
+| Major Clanger |            10 |           12 |                   0 |               0 |                      0 |                      0 |      22 |    10 |
+| NoEihaOo      |             0 |            0 |                   0 |               0 |                     10 |                     12 |      22 |    11 |
+| Hulter        |             8 |            5 |                   0 |               0 |                      0 |                      0 |      13 |    12 |
+| Tezzaioli     |             5 |            7 |                   0 |               0 |                      0 |                      0 |      12 |    13 |
+| Drumstick     |             0 |           10 |                   0 |               0 |                      0 |                      0 |      10 |    14 |
+| Ausee         |             4 |            4 |                   0 |               0 |                      0 |                      0 |       8 |    15 |
+| tracks0ft     |             6 |            0 |                   0 |               0 |                      0 |                      0 |       6 |    16 |
+
+
+
+## art of rally: norway
+
+|   pos | name          | time      |   points | team              | link                                                |
+|------:|:--------------|:----------|---------:|:------------------|:----------------------------------------------------|
+|     1 | Franky M.     | 05:22.061 |       25 | superturbo        | [link](https://youtu.be/gfejLYFDX_E)                |
+|     2 | domer         | 05:25.850 |       20 | Brick Motorsports | [link](https://youtu.be/_nUyNWbli5o?t=240)          |
+|     3 | PlayerZ       | 05:28.433 |       16 | G2D Racing        | [link](https://youtu.be/j5aAXGSDn88)                |
+|     4 | Colorcat      | 05:30.559 |       14 | Brick Motorsports | [link](https://youtu.be/nkq6P1pXhJ4)                |
+|     5 | Inhake        | 05:33.587 |       12 |                   | [link](https://www.youtube.com/watch?v=xFzgoaZvXn4) |
+|     6 | colin mccrack | 05:34.875 |       11 | G2D Racing        | [link](https://www.youtube.com/watch?v=9z8OGjtT1as) |
+|     7 | Major Clanger | 05:37.465 |       10 |                   | [link](https://www.youtube.com/watch?v=PglqtILRFWk) |
+|     8 | Red Sun       | 05:37.479 |        9 | Brick Motorsports | [link](https://youtu.be/X-sNtYILzkc)                |
+|     9 | Hulter        | 05:45.826 |        8 | cat face nospace  | [link](https://youtu.be/7-bNSKCew-w)                |
+|    10 | nept          | 05:47.171 |        7 | cat face nospace  | [link](https://youtu.be/Yrv8sZRiWRw)                |
+|    11 | tracks0ft     | 05:56.618 |        6 |                   | [link](https://youtu.be/OfpaPBGcMkY)                |
+|    12 | Tezzaioli     | 05:58.376 |        5 |                   | [link](https://youtu.be/ppn2qel6XJw)                |
+|    13 | Ausee         | 06:42.339 |        4 |                   | [link](https://youtu.be/KjpTXr9yBXw)                |
+
+## art of rally: kenya
+
+
+
+|   pos | name          | time      |   points | team              | link                                                |
+|------:|:--------------|:----------|---------:|:------------------|:----------------------------------------------------|
+|     1 | Franky M.     | 07:43.004 |       25 | superturbo        | [link](https://youtu.be/tvin58IxVQc)                |
+|     2 | domer         | 07:45.401 |       20 | Brick Motorsports | [link](https://youtu.be/ohV0ah0Td5I?t=180)          |
+|     3 | PlayerZ       | 07:47.571 |       16 | G2D Racing        | [link](https://youtu.be/p2EiAZoPy-U)                |
+|     4 | Dryout        | 07:50.944 |       14 | superturbo        | [link](https://youtu.be/a9NFXBtx0Ao)                |
+|     5 | Major Clanger | 07:53.133 |       12 |                   | [link](https://www.youtube.com/watch?v=DKlxGZ4DhIQ) |
+|     6 | Inhake        | 07:53.168 |       11 |                   | [link](https://www.youtube.com/watch?v=jDiS1RpiQ4s) |
+|     7 | Drumstick     | 07:55.143 |       10 | Brick Motorsports | [link](https://youtu.be/M8Ns_j2jIhE?t=180)          |
+|     8 | colin mccrack | 07:55.679 |        9 | G2D Racing        | [link](https://youtu.be/bInNMnrQNH0)                |
+|     9 | nept          | 08:02.998 |        8 | cat face nospace  | [link](https://youtu.be/l1pO5AdluKc)                |
+|    10 | Tezzaioli     | 08:17.528 |        7 |                   | [link](https://youtu.be/phiL-bw2s1c)                |
+|    11 | Red Sun       | 08:24.009 |        6 | Brick Motorsports | [link](https://youtu.be/XFk7jBht1gM)                |
+|    12 | Hulter        | 08:33.851 |        5 | cat face nospace  | [link](https://youtu.be/eBrDR8EQ45Q)                |
+|    13 | Ausee         | 09:35.441 |        4 |                   | [link](https://youtu.be/e-x7HEXI41I)                |
+
+## dirt rally 2: new zealand
+
+
+
+|   pos | name          | time      |   points | team              | link                                                |
+|------:|:--------------|:----------|---------:|:------------------|:----------------------------------------------------|
+|     1 | colin mccrack | 10:51.557 |       25 | G2D Racing        | [link](https://www.youtube.com/watch?v=W3Ch648fuPQ) |
+|     2 | Colorcat      | 11:07.636 |       20 | Brick Motorsports | [link](https://youtu.be/allLR3p_rLY)                |
+|     3 | nept          | 11:42.489 |       16 | cat face nospace  | [link](https://youtu.be/Oe7ZYp13io4)                |
+|     4 | PlayerZ       | 11:45.018 |       14 | G2D Racing        | [link](https://youtu.be/wMFyurNAHlc)                |
+
+## rush rally 3: finland
+
+
+|   pos | name          | time      |   points | team             | link                                                |
+|------:|:--------------|:----------|---------:|:-----------------|:----------------------------------------------------|
+|     1 | Franky M.     | 09:34.711 |       25 | superturbo       | [link](https://youtu.be/djQWA1SdaOI)                |
+|     2 | colin mccrack | 09:39.677 |       20 | G2D Racing       | [link](https://www.youtube.com/watch?v=3JZsT2md2SI) |
+|     3 | nept          | 10:39.403 |       16 | cat face nospace | [link](https://youtu.be/C04VFjfhn4M)                |
+
+## richard burns rally: gabiria-legazpi
+
+
+
+|   pos | name          | time      |   points | team              | link                                                |
+|------:|:--------------|:----------|---------:|:------------------|:----------------------------------------------------|
+|     1 | Dryout        | 04:32.573 |       12 | superturbo        | [link](https://youtu.be/8OpRfUjuTZg)                |
+|     2 | NoEihaOo      | 04:34.816 |       10 | cat face nospace  | [link](https://youtu.be/WaBD9c-o-xs)                |
+|     3 | nept          | 04:37.009 |        8 | cat face nospace  | [link](https://www.youtube.com/watch?v=3BUQoP27DwQ) |
+|     4 | colin mccrack | 04:37.260 |        7 | G2D Racing        | [link](https://www.youtube.com/watch?v=6ZMbIRQlD2c) |
+|     5 | Red Sun       | 04:54.420 |        6 | Brick Motorsports | [link](https://youtu.be/WpNsqaC2mX8)                |
+
+## richard burns rally: carvalho de rei
+
+
+
+|   pos | name          | time      |   points | team              | link                                                |
+|------:|:--------------|:----------|---------:|:------------------|:----------------------------------------------------|
+|     1 | NoEihaOo      | 05:12.891 |       12 | cat face nospace  | [link](https://youtu.be/vGTMnOs2Z-Q)                |
+|     2 | colin mccrack | 05:19.590 |       10 | G2D Racing        | [link](https://www.youtube.com/watch?v=XdtpXmxpuUU) |
+|     3 | Dryout        | 05:22.606 |        8 | superturbo        | [link](https://youtu.be/9HySEyJvvEM)                |
+|     4 | nept          | 05:38.670 |        7 | cat face nospace  | [link](https://youtu.be/4Cvs71kHEUc)                |
+|     5 | Red Sun       | 05:40.360 |        6 | Brick Motorsports | [link](https://youtu.be/B6yTpVGAnLk)                |
+
+Sun 18 Jun 21:00:16 CEST 2023
