@@ -188,10 +188,6 @@ const AllTimeStats = () => {
         {allTimeMedals.length > 0 || Object.keys(championshipsByDriver).length > 0 ? (
           <>
             <div className="my-6 flex justify-end">
-              <Button onClick={handleDownloadCSV}>
-                <Download className="mr-2 h-4 w-4" />
-                Download CSV
-              </Button>
             </div>
             <MedalTable 
               driverMedals={allTimeMedals} 
