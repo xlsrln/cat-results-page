@@ -13,22 +13,22 @@
       // https://github.com/rafgraph/spa-github-pages
       // This script checks for query parameters p (path) and q (query) and rewrites URL.
       (function(l) {
-        // Skip redirection for the homepage and hash-based routing
-        if (l.search && !l.search.includes('~and~')) { 
-          var q = {};
-          l.search.slice(1).split('&').forEach(function(v) {
-            var a = v.split('=');
-            q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
-          });
-          if (q.p !== undefined) {
-            window.history.replaceState(null, null,
-              l.pathname + (q.p || '') +
-              (q.q ? ('?' + q.q) : '') +
-              l.hash
-            );
-          }
+        var params = new URLSearchParams(l.search);
+        var pathParam = params.get('p'); // Path to redirect to, should be URI decoded
+        var queryParam = params.get('q'); // Original query string, should be URI decoded
+
+        if (pathParam) {
+          var newPath = decodeURIComponent(pathParam);
+          var newSearch = queryParam ? '?' + decodeURIComponent(queryParam) : '';
+          var newHash = l.hash; // Preserve the original hash
+
+          // Construct the new URL for history.replaceState
+          // Example: if p=/teams and q=name=cat, new URL is /teams?name=cat
+          var targetUrl = newPath + newSearch + newHash;
+          
+          window.history.replaceState(null, null, targetUrl);
         }
-      }(window.location))
+      }(window.location));
     </script>
     <!-- End Single Page Apps for GitHub Pages -->
   </head>

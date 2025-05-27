@@ -5,39 +5,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cat Results Page - Redirecting</title>
+    <title>Redirecting...</title>
     <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-      // MIT License
-      // https://github.com/rafgraph/spa-github-pages
-      // This script takes the current URL and converts it into the corresponding
-      // path of the URL that the custom domain should serve
-      
-      (function() {
-        // Parse the current URL
-        var url = window.location.href;
-        var origin = window.location.origin;
-        var pathname = window.location.pathname;
+      (function(l) {
+        var pathname = l.pathname; // e.g., /teams
+        var search = l.search;     // e.g., ?name=cat
+        var hash = l.hash;         // e.g., #section
+
+        // Construct the query parameters for index.html
+        // p: the path to redirect to (e.g., /teams), URI encoded
+        // q: the original query string (e.g., name=cat), URI encoded
+        var redirectUrl = l.origin + '/?p=' + encodeURIComponent(pathname);
         
-        // Check for the infinite redirect loop pattern
-        if (window.location.search.includes('~and~q=p=/')) {
-          // Clear the problematic query string and redirect to the clean path
-          window.location.replace(origin + pathname);
-          return;
+        if (search && search !== '?') { // If there's an original search string
+          redirectUrl += '&q=' + encodeURIComponent(search.slice(1)); // Remove leading '?' before encoding
         }
-        
-        // Standard SPA redirect for normal 404 handling
-        // If we're not in an infinite loop situation, redirect to the root with the path in the query
-        var pathSegments = pathname.split('/');
-        var cleanPath = pathname;
-        
-        // Remove any empty segments or trailing slashes
-        if (cleanPath.endsWith('/')) {
-          cleanPath = cleanPath.slice(0, -1);
-        }
-        
-        window.location.replace(origin + '/#' + cleanPath);
-      })();
+        redirectUrl += hash;
+
+        l.replace(redirectUrl);
+      }(window.location));
     </script>
   </head>
   <body>

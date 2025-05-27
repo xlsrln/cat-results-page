@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useQuery } from "@tanstack/react-query";
@@ -54,10 +53,10 @@ const Home = () => {
               <h3 className="text-lg font-semibold text-black mb-2">Previous Seasons</h3>
               <p className="text-gray-600 mb-3">Browse results from past championships</p>
               <div className="space-y-1">
-                <a href="season-1" className="block text-blue-600 hover:text-blue-800 text-sm">Season 4 Results</a>
-                <a href="season-2" className="block text-blue-600 hover:text-blue-800 text-sm">Season 3 Results</a>
-                <a href="season-3" className="block text-blue-600 hover:text-blue-800 text-sm">Season 2 Results</a>
-                <a href="season-4" className="block text-blue-600 hover:text-blue-800 text-sm">Season 1 Results</a>
+                <Link to="/season-1" className="block text-blue-600 hover:text-blue-800 text-sm">Season 1 Results</Link>
+                <Link to="/season-2" className="block text-blue-600 hover:text-blue-800 text-sm">Season 2 Results</Link>
+                <Link to="/season-3" className="block text-blue-600 hover:text-blue-800 text-sm">Season 3 Results</Link>
+                <Link to="/season-4" className="block text-blue-600 hover:text-blue-800 text-sm">Season 4 Results</Link>
               </div>
             </div>
             <Link 
