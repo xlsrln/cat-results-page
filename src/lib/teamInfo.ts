@@ -14,7 +14,7 @@ export const teamInformation: Record<string, TeamInfo> = {
     description: "Active since 2021, team Cat Face NoSpace come from the cold northern forests and refer to themselves as the beasts of the north.",
     foundedYear: 2021,
     philosophy: "Drive fast, take every shortcut, never brake.",
-    achievements: ["Season 1 Team Champions", "Multiple individual rally wins"],
+    achievements: ["Season 1 team Champions", "Oldest team in CAT"],
     imageUrl: new URL('../content/images/catface-nospace.png', import.meta.url).href
   },
   "G2D Righto": {
@@ -22,7 +22,7 @@ export const teamInformation: Record<string, TeamInfo> = {
     description: "Perennial competitors, G2D Racing has a mercenary reputation in the paddock despite their humble enthusiast origins, aggressively pursuing and fielding promising drivers. G2D's philosophy of The Racer's Choice revolves around letting each driver find the package that they can extract the most from, be it car or setup.",
     foundedYear: 2022,
     philosophy: "fun is good but winning is better",
-    achievements: ["Champions of CAT S2 and S3"],
+    achievements: ["Champions of season 2, 3 and 5", "Only team with a separate development team"],
     imageUrl: new URL('../content/images/g2d-righto.png', import.meta.url).href
   },
   "Brick Motorsports": {
@@ -30,7 +30,7 @@ export const teamInformation: Record<string, TeamInfo> = {
     description: "Brick Motorsports was created in 2021 by an international group of racers united by the mission to make bricks fly. Throughout the years Brick Motorsports has worked with talented drivers from Finland, Germany, USA, UK, Ukraine, Norway, and Antarctica.",
     foundedYear: 2021,
     philosophy: "make bricks fly",
-    achievements: ["Season 4 Team champions"],
+    achievements: ["Season 4 Team champions", "Largest roster in CAT"],
     imageUrl: new URL('../content/images/brick-motorsports.png', import.meta.url).href
   },
   "noot squad": {
@@ -54,7 +54,7 @@ export const teamInformation: Record<string, TeamInfo> = {
     description: "Founded in 2024 by two guys originating from the desolate arctic wastelands of Finland and northern Canada, these two have honed their driving skills in the hostile forest and backroads, mostly out of necessity rather than training. Armed with Fujin FRXs modified to group A spec, a couple Cozzie Transfer vans and a crippling debt with their houses on the line, Purple Sunset Motorsports is purely driven by the determination to prove itself in the Catface Rally, and maybe on the side win enough money to pay of their debts or at least convince the banks not to foreclose their houses.",
     foundedYear: 2023,
     philosophy: "drive hills, pay bills",
-    achievements: [],
+    achievements: ["Managed to stay solvent", "Highest output of cool liveries"],
     imageUrl: new URL('../content/images/purple-sunset.png', import.meta.url).href
   },
   "bike-a-cycle": {
@@ -62,7 +62,7 @@ export const teamInformation: Record<string, TeamInfo> = {
     description: "A group of mechanics of the continental bicycle racing team, bike-a-cycle, decided to use their vacation to go rallying after being suspended for putting petrol in their rider's water bottles. So here they are, roof racks installed, partially lycra clad, and confused as to why the gears are in a box and not just screwed onto the rear wheel, ready to go racing in cat!",
     foundedYear: 2023,
     philosophy: "allez allez allez",
-    achievements: [],
+    achievements: ['Holds many KOMs', 'Previously successful in ski jumping'],
     imageUrl: new URL('../content/images/bike-a-cycle.png', import.meta.url).href
   },
   "void rallysports": {
@@ -70,7 +70,7 @@ export const teamInformation: Record<string, TeamInfo> = {
     description: "After astrophysicists had found and understood all of space's anomalies, they turned to something more peculiar, the rally driver. They decided to make their own team and were met with little success but soon found their ryhthm. They now strive for speed and a great time.",
     foundedYear: 2023,
     philosophy: "'Rally with us if times are none and fun is all.' -Captn Sharkhorse",
-    achievements: [],
+    achievements: ['Managers of only black hole in the club'],
     imageUrl: new URL('../content/images/void-rallysports.png', import.meta.url).href
   }
 };
