@@ -51,7 +51,7 @@ export const teamInformation: Record<string, TeamInfo> = {
   },
   "purple sunset": {
     name: "purple sunset",
-    description: "Founded in 2024 by two individuals from the unforgiving landscapes of Finland and northern Canada, Purple Sunset Motorsports was born out of necessity and determination. Having honed their driving skills on the treacherous forest roads and backroads of their native lands, the team is now a major force in Catface Rally Club. With their houses on the line and a crippling debt to pay off, the team's motivation is twofold: to prove themselves in the sport and to win enough prize money to stave off foreclosure and keep their homes.",
+    description: "Founded in 2024 by two individuals from Finland and northern Canada, Purple Sunset Motorsports was born out of necessity and determination. With their driving skills forged on treacherous forest roads, the team now competes in the Catface Rally Club, driven by a two-fold need to prove themselves and pay off the debts that threaten their homes.",
     foundedYear: 2024,
     philosophy: "drive hills, pay bills",
     achievements: ["Managed to stay solvent", "Highest output of cool liveries"],
@@ -59,7 +59,7 @@ export const teamInformation: Record<string, TeamInfo> = {
   },
   "bike-a-cycle": {
     name: "bike-a-cycle",
-    description: "A group of mechanics of the continental bicycle racing team, bike-a-cycle, decided to use their vacation to go rallying after being suspended for putting petrol in their rider's water bottles. So here they are, roof racks installed, partially lycra clad, and confused as to why the gears are in a box and not just screwed onto the rear wheel, ready to go racing in cat!",
+    description: "After being suspended for putting petrol in their rider's water bottles, a group of mechanics of the continental bicycle racing team, bike-a-cycle, decided to try rallying. So here they are, roof racks installed, partially lycra clad, and confused as to why the gears are in a box and not just screwed onto the rear wheel, ready to go racing in cat!",
     foundedYear: 2022,
     philosophy: "allez allez allez",
     achievements: ['Holds many KOMs', 'Previously successful in ski jumping'],
