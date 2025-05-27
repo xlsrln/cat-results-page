@@ -24,4 +24,4 @@ Not every driver belongs to a team, and that's perfectly fine! Independent drive
 
 ## Team Championship Standings
 
-Check out the current [Team Championship standings](/results) to see how teams are performing this season!
+Check out the current results to see how teams are performing this season!
