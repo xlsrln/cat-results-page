@@ -35,7 +35,7 @@ export const teamInformation: Record<string, TeamInfo> = {
   },
   "noot squad": {
     name: "Noot Squad Rally",
-    description: "In 1990, two Swiss stop-motion artists created an anthropomorphic penguin children's show. Twenty-five years later, two lads from across Europe banded together to chill around and play, thus creating the Noot Squad. Their latest endeavor: to rally across the world, and to have fun along the way!",
+    description: "In 1990, two Swiss stop-motion artists created an anthropomorphic penguin children's show. Three decades later, two lads from across Europe banded together to chill around and play, thus creating the Noot Squad. Their latest endeavor: to rally across the world, and to have fun along the way!",
     foundedYear: 2022,
     philosophy: "New perspectives, unlimited potential.",
     achievements: ["Rising stars in the championship", "Rapid skill development"],
