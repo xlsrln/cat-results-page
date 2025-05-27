@@ -23,7 +23,7 @@ const PointsBreakdownTable: React.FC<PointsBreakdownTableProps> = ({ standings, 
     <Card className="shadow-xl mt-8"> {/* Removed bg-dark-charcoal */}
       <CardHeader>
         <CardTitle className="text-2xl text-black flex items-center">
-          <Trophy className="mr-2 h-6 w-6" /> Points Breakdown per Event
+          <Trophy className="mr-2 h-6 w-6" /> Championship overview
         </CardTitle>
       </CardHeader>
       <CardContent>

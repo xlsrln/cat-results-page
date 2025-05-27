@@ -20,7 +20,7 @@ const TeamPointsBreakdownTable: React.FC<TeamPointsBreakdownTableProps> = ({ sta
     <Card className="shadow-xl mt-8">
       <CardHeader>
         <CardTitle className="text-2xl text-black flex items-center">
-          <Users className="mr-2 h-6 w-6" /> Team Points Breakdown per Event
+          <Users className="mr-2 h-6 w-6" /> Team championship overview
         </CardTitle>
       </CardHeader>
       <CardContent>

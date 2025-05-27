@@ -265,7 +265,6 @@ const Index = () => {
             {teamChampionshipStandings.length > 0 && (
               <>
                 <TeamPointsBreakdownTable standings={teamChampionshipStandings} eventNames={orderedEventNames} />
-                <TeamChampionshipStandingsTable standings={teamChampionshipStandings} />
               </>
             )}
 
