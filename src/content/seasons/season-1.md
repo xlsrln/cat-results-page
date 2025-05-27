@@ -24,8 +24,8 @@
 | 9   | kk                |           9 |       0 |        15 |          0 |      24 |
 | 10  | nept              |           7 |       7 |         7 |          5 |      21 |
 | 11  | colin mccrack     |           0 |      10 |         5 |          4 |      19 |
-| 12  | Toucan            |           0 |       0 |         0 |         18 |      18 |
-| 13  | Dryout            |           0 |       0 |         8 |         10 |      18 |
+| 12  | toucan            |           0 |       0 |         0 |         18 |      18 |
+| 13  | dryout            |           0 |       0 |         8 |         10 |      18 |
 | 14  | capablanca        |           5 |       9 |         1 |          2 |      16 |
 | 15  | NoEihaOo          |           0 |       0 |         4 |          8 |      12 |
 | 16  | Fuksias           |           0 |       6 |         0 |          3 |       9 |
@@ -116,7 +116,7 @@ Domer signs for Brick Motorsports and a debut for Noot Squad. Everyone (mostly) 
 |     5 | wesley daggleston | 17:56.37 | 01:39.87     |      11 |    1 |       12 | Brick Motorsports | [link](https://youtu.be/AgwXtVFFKYE)                |
 |     6 | turbo             | 17:57.57 | 01:40.29     |      10 |    0 |       10 | G2D Racing        | [link](https://www.twitch.tv/videos/1650544639)     |
 |     7 | Get Goblinated    | 18:07.90 | 01:40.07     |       9 |    0 |        9 |                   | [link](https://youtu.be/RccW3YxI5Gw)                |
-|     8 | Dryout            | 18:14.00 | 01:40.60     |       8 |    0 |        8 |                   | [link](https://youtu.be/cJELaq_m6Zw)                |
+|     8 | dryout            | 18:14.00 | 01:40.60     |       8 |    0 |        8 |                   | [link](https://youtu.be/cJELaq_m6Zw)                |
 |     9 | nept              | 18:16.32 | 01:42.07     |       7 |    0 |        7 | cat face nospace  | [link](https://youtu.be/4T_Woy4mwJo)                |
 |    10 | Hulter            | 18:16.81 | 01:41.56     |       6 |    0 |        6 | cat face nospace  | [link](https://youtu.be/RN7452x9TBg)                |
 |    11 | colin mccrack     | 18:17.53 | 01:41.82     |       5 |    0 |        5 | G2D Racing        | [link](https://youtu.be/d0dGt4P9Nio)                |
@@ -132,16 +132,16 @@ Domer signs for Brick Motorsports and a debut for Noot Squad. Everyone (mostly) 
 
 ## rally 4: sardinia
 
-Toucan turned up! proporo completes the impressive clean sweep in an exciting finish to the season!
+toucan turned up! proporo completes the impressive clean sweep in an exciting finish to the season!
 
 |   pos | name              | time     | powerstage   |   rally |   ps |   points | team              | link   |
 |------:|:------------------|:---------|:-------------|--------:|-----:|---------:|:------------------|:-----------------------------------------------------------------------|
 |     1 | proporo           | 13:54.01 | 02:29.80     |      25 |    4 |       29 | cat face nospace  | [link](https://youtu.be/x_RKgrxlHCA)                                   |
 |     2 | playerz           | 13:58.62 | 02:29.87     |      20 |    3 |       23 | G2D Racing        | [link](https://youtu.be/Aja3JvinGlI)                                   |
-|     3 | Toucan            | 14:05.83 | 02:30.68     |      16 |    2 |       18 |                   | [link](https://youtu.be/gmkc5FMV_sU)                                   |
+|     3 | toucan            | 14:05.83 | 02:30.68     |      16 |    2 |       18 |                   | [link](https://youtu.be/gmkc5FMV_sU)                                   |
 |     4 | turbo             | 14:10.07 | 02:32.37     |      13 |    1 |       14 | G2D Racing        | [link](https://youtu.be/b2M_NwiNTWc)                                   |
 |     5 | wesley daggleston | 14:15.01 | 02:34.24     |      11 |    0 |       11 | Brick Motorsports | [link](https://youtu.be/DPnV3wiapdI)                                   |
-|     6 | Dryout            | 14:19.20 | 02:32.49     |      10 |    0 |       10 |                   | [link](https://youtu.be/gFG7qTHz2jU)                                   |
+|     6 | dryout            | 14:19.20 | 02:32.49     |      10 |    0 |       10 |                   | [link](https://youtu.be/gFG7qTHz2jU)                                   |
 |     7 | Hulter            | 14:25.47 | 02:34.46     |       9 |    0 |        9 | cat face nospace  | [link](https://youtu.be/hpgLa9rTroU)                                   |
 |     8 | NoEihaOo          | 14:25.80 | 02:34.86     |       8 |    0 |        8 | G2D Racing        | [link](https://youtu.be/8fgQxVAsQ98)                                   |
 |     9 | domer             | 14:28.15 | 02:35.93     |       7 |    0 |        7 | Brick Motorsports | [link](https://youtu.be/tEfH_3Gu7Vc)                                   |
