@@ -10,21 +10,37 @@
       // Single Page Apps for GitHub Pages
       // MIT License
       // https://github.com/rafgraph/spa-github-pages
-      // This script redirects to the index.html with path information in query params.
-      var segmentCount = 1; // 0 for user/org pages, 1 for project pages (e.g., user.github.io/repo-name)
+      // This script takes the current URL and converts it into the corresponding
+      // path of the URL that the custom domain should serve
       
-      var l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?p=/' + // Base path + /?p=/
-        l.pathname.slice(1).split('/').slice(segmentCount).join('/').replace(/&/g, '~and~') + // Actual path
-        (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') + // Original query string
-        l.hash
-      );
+      (function() {
+        // Parse the current URL
+        var url = window.location.href;
+        var origin = window.location.origin;
+        var pathname = window.location.pathname;
+        
+        // Check for the infinite redirect loop pattern
+        if (window.location.search.includes('~and~q=p=/')) {
+          // Clear the problematic query string and redirect to the clean path
+          window.location.replace(origin + pathname);
+          return;
+        }
+        
+        // Standard SPA redirect for normal 404 handling
+        // If we're not in an infinite loop situation, redirect to the root with the path in the query
+        var pathSegments = pathname.split('/');
+        var cleanPath = pathname;
+        
+        // Remove any empty segments or trailing slashes
+        if (cleanPath.endsWith('/')) {
+          cleanPath = cleanPath.slice(0, -1);
+        }
+        
+        window.location.replace(origin + '/#' + cleanPath);
+      })();
     </script>
   </head>
   <body>
     <p>If you are not redirected automatically, please <a href="/">click here to go to the homepage</a>.</p>
   </body>
 </html>
-
