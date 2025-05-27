@@ -1,5 +1,4 @@
-# Results
-
+# Season 3 results
 
 ## team standings
 

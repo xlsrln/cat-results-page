@@ -1,4 +1,4 @@
-# Results
+# Season 2 results
 
 ## team standings
 
