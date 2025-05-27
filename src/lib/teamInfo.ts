@@ -11,9 +11,9 @@ export interface TeamInfo {
 export const teamInformation: Record<string, TeamInfo> = {
   "cat face nospace": {
     name: "Cat Face Nospace",
-    description: "Active since 2021, team Cat Face NoSpace come from the cold northern forests and refer to themselves as the beasts of the north.",
+    description: "The elusive team Cat Face NoSpace come from the cold northern forests and refer to themselves as the beasts of the north. They claim to take every shortcut and to never brake.",
     foundedYear: 2021,
-    philosophy: "Drive fast, take every shortcut, never brake.",
+    philosophy: "Take every shortcut and never brake.",
     achievements: ["Season 1 team Champions", "Oldest team in CAT"],
     imageUrl: new URL('../content/images/catface-nospace.png', import.meta.url).href
   },
@@ -51,8 +51,8 @@ export const teamInformation: Record<string, TeamInfo> = {
   },
   "purple sunset": {
     name: "purple sunset",
-    description: "Founded in 2024 by two guys originating from the desolate arctic wastelands of Finland and northern Canada, these two have honed their driving skills in the hostile forest and backroads, mostly out of necessity rather than training. Armed with Fujin FRXs modified to group A spec, a couple Cozzie Transfer vans and a crippling debt with their houses on the line, Purple Sunset Motorsports is purely driven by the determination to prove itself in the Catface Rally, and maybe on the side win enough money to pay of their debts or at least convince the banks not to foreclose their houses.",
-    foundedYear: 2023,
+    description: "Founded in 2024 by two individuals from the unforgiving landscapes of Finland and northern Canada, Purple Sunset Motorsports was born out of necessity and determination. Having honed their driving skills on the treacherous forest roads and backroads of their native lands, the team is now a major force in Catface Rally Club. With their houses on the line and a crippling debt to pay off, the team's motivation is twofold: to prove themselves in the sport and to win enough prize money to stave off foreclosure and keep their homes.",
+    foundedYear: 2024,
     philosophy: "drive hills, pay bills",
     achievements: ["Managed to stay solvent", "Highest output of cool liveries"],
     imageUrl: new URL('../content/images/purple-sunset.png', import.meta.url).href
@@ -60,7 +60,7 @@ export const teamInformation: Record<string, TeamInfo> = {
   "bike-a-cycle": {
     name: "bike-a-cycle",
     description: "A group of mechanics of the continental bicycle racing team, bike-a-cycle, decided to use their vacation to go rallying after being suspended for putting petrol in their rider's water bottles. So here they are, roof racks installed, partially lycra clad, and confused as to why the gears are in a box and not just screwed onto the rear wheel, ready to go racing in cat!",
-    foundedYear: 2023,
+    foundedYear: 2022,
     philosophy: "allez allez allez",
     achievements: ['Holds many KOMs', 'Previously successful in ski jumping'],
     imageUrl: new URL('../content/images/bike-a-cycle.png', import.meta.url).href
@@ -70,7 +70,7 @@ export const teamInformation: Record<string, TeamInfo> = {
     description: "After astrophysicists had found and understood all of space's anomalies, they turned to something more peculiar, the rally driver. They decided to make their own team and were met with little success but soon found their ryhthm. They now strive for speed and a great time.",
     foundedYear: 2023,
     philosophy: "'Rally with us if times are none and fun is all.' -Captn Sharkhorse",
-    achievements: ['Managers of only black hole in the club'],
+    achievements: ['Managers of the only black hole in the club'],
     imageUrl: new URL('../content/images/void-rallysports.png', import.meta.url).href
   }
 };
