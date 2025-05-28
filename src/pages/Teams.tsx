@@ -35,6 +35,11 @@ const Teams = () => {
           <p className="text-xl text-gray-600">Meet the teams competing for glory</p>
         </header>
 
+        {/* Content from markdown */}
+        <div className="max-w-4xl mx-auto">
+          <MarkdownRenderer content={teamsContent} />
+        </div>
+
         {error && (
           <Alert variant="destructive" className="mb-8">
             <FileText className="h-4 w-4" />
@@ -150,11 +155,6 @@ const Teams = () => {
             </AlertDescription>
           </Alert>
         )}
-
-        {/* Content from markdown */}
-        <div className="max-w-4xl mx-auto">
-          <MarkdownRenderer content={teamsContent} />
-        </div>
       </div>
 
       <footer className="bg-gray-50 border-t py-8">

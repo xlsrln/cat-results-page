@@ -57,14 +57,6 @@ export const teamInformation: Record<string, TeamInfo> = {
     achievements: ["Managed to stay solvent", "Highest output of cool liveries"],
     imageUrl: new URL('../content/images/purple-sunset.png', import.meta.url).href
   },
-  "bike-a-cycle": {
-    name: "bike-a-cycle",
-    description: "After being suspended for putting petrol in their rider's water bottles, a group of mechanics of the continental bicycle racing team, bike-a-cycle, decided to try rallying. So here they are, roof racks installed, partially lycra clad, and confused as to why the gears are in a box and not just screwed onto the rear wheel, ready to go racing in cat!",
-    foundedYear: 2022,
-    philosophy: "allez allez allez",
-    achievements: ['Holds many KOMs', 'Previously successful in ski jumping'],
-    imageUrl: new URL('../content/images/bike-a-cycle.png', import.meta.url).href
-  },
   "void rallysports": {
     name: "void rallysports",
     description: "After astrophysicists had found and understood all of space's anomalies, they turned to something more peculiar, the rally driver. They decided to make their own team and were met with little success but soon found their ryhthm. They now strive for speed and a great time.",
@@ -72,5 +64,13 @@ export const teamInformation: Record<string, TeamInfo> = {
     philosophy: "'Rally with us if times are none and fun is all.' -Captn Sharkhorse",
     achievements: ['Managers of the only black hole in the club'],
     imageUrl: new URL('../content/images/void-rallysports.png', import.meta.url).href
+  },
+  "bike-a-cycle": {
+    name: "bike-a-cycle",
+    description: "After being suspended for putting petrol in their rider's water bottles, a group of mechanics of the continental bicycle racing team, bike-a-cycle, decided to try rallying. So here they are, roof racks installed, partially lycra clad, and confused as to why the gears are in a box and not just screwed onto the rear wheel, ready to go racing in cat!",
+    foundedYear: 2022,
+    philosophy: "allez allez allez",
+    achievements: ['Holds many KOMs', 'Previously successful in ski jumping'],
+    imageUrl: new URL('../content/images/bike-a-cycle.png', import.meta.url).href
   }
 };
