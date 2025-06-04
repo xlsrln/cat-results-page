@@ -12,7 +12,8 @@ The championship is meant to be fun and easy to participate in. It relies on a c
 Special shoutout to our **cool cat of the year** winners:
 - 2022: domer
 - 2023: Franky M.
-- 2024: TBD
+- 2024: Radi
+- 2025: TBD
 
 and our **driver** and **team champions**:
 
