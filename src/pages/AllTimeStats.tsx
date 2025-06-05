@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navigation from '@/components/Navigation';
 import { MedalTable } from '@/components/MedalTable';
+import { VisualMedalDisplay } from '@/components/VisualMedalDisplay';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/components/ui/card";
 import { Download, Trophy, Users, ListChecks } from 'lucide-react';
@@ -194,6 +195,14 @@ const AllTimeStats = () => {
               championshipsByDriver={championshipsByDriver} 
               title="Driver Accolades" 
             />
+            
+            <div className="mt-12">
+              <VisualMedalDisplay 
+                driverMedals={allTimeMedals} 
+                championshipsByDriver={championshipsByDriver} 
+                title="Visual Medal Gallery" 
+              />
+            </div>
           </>
         ) : (
           <div className="text-center py-8">
