@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Trophy } from "lucide-react";
 import { DriverMedals } from "@/lib/medalCounter";
@@ -15,16 +14,13 @@ export const VisualMedalDisplay: React.FC<VisualMedalDisplayProps> = ({
   title = "Visual Medal Display", 
   championshipsByDriver 
 }) => {
-  // Sort drivers the same way as the main medal table
+  // Olympic-style sorting: Championships first, then Gold, Silver, Bronze
   const enrichedDriverMedals = driverMedals.map(driver => ({
     ...driver,
     championships: championshipsByDriver?.[driver.name] || 0,
   })).sort((a, b) => {
     if (b.championships !== a.championships) {
       return b.championships - a.championships;
-    }
-    if (b.total !== a.total) {
-      return b.total - a.total;
     }
     if (b.medals.gold !== a.medals.gold) {
       return b.medals.gold - a.medals.gold;

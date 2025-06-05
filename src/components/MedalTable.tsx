@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Medal, Trophy } from "lucide-react"; // Added Trophy
@@ -11,19 +10,13 @@ interface MedalTableProps {
 }
 
 export const MedalTable: React.FC<MedalTableProps> = ({ driverMedals, title = "Medal Table", championshipsByDriver }) => {
-  // Combine driver data with championships for sorting if championships are primary sort criteria (optional)
-  // For now, we sort by total medals, then gold, silver, bronze, then championships.
-  // If championshipsByDriver is undefined or empty, it means no championship data available or needed for this instance of the table.
-
+  // Olympic-style sorting: Championships first, then Gold, Silver, Bronze
   const enrichedDriverMedals = driverMedals.map(driver => ({
     ...driver,
     championships: championshipsByDriver?.[driver.name] || 0,
   })).sort((a, b) => {
     if (b.championships !== a.championships) {
       return b.championships - a.championships;
-    }
-    if (b.total !== a.total) {
-      return b.total - a.total;
     }
     if (b.medals.gold !== a.medals.gold) {
       return b.medals.gold - a.medals.gold;
@@ -33,7 +26,6 @@ export const MedalTable: React.FC<MedalTableProps> = ({ driverMedals, title = "M
     }
     return b.medals.bronze - a.medals.bronze;
   });
-
 
   if (enrichedDriverMedals.length === 0) {
     return (
