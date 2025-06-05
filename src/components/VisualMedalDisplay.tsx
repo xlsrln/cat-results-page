@@ -2,6 +2,7 @@
 import React from 'react';
 import { Trophy } from "lucide-react";
 import { DriverMedals } from "@/lib/medalCounter";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 interface VisualMedalDisplayProps {
   driverMedals: DriverMedals[];
@@ -48,41 +49,56 @@ export const VisualMedalDisplay: React.FC<VisualMedalDisplayProps> = ({
         <Trophy className="h-5 w-5 mr-2 text-yellow-500" />
         {title}
       </h3>
-      <div className="bg-white border rounded-lg p-6 shadow-sm">
-        <div className="space-y-3">
-          {enrichedDriverMedals.map((driver, index) => (
-            <div key={driver.name} className="flex items-center gap-4">
-              <span className="text-sm font-medium text-gray-500 w-8">#{index + 1}</span>
-              <span className="text-lg font-semibold text-black min-w-0 flex-shrink-0">{driver.name}</span>
-              <div className="flex items-center gap-1 flex-wrap">
-                {/* Championships */}
-                {Array.from({ length: driver.championships }).map((_, i) => (
-                  <span key={`championship-${i}`} className="text-lg">🏆</span>
-                ))}
-                
-                {/* Gold medals */}
-                {Array.from({ length: driver.medals.gold }).map((_, i) => (
-                  <span key={`gold-${i}`} className="text-lg">🥇</span>
-                ))}
-                
-                {/* Silver medals */}
-                {Array.from({ length: driver.medals.silver }).map((_, i) => (
-                  <span key={`silver-${i}`} className="text-lg">🥈</span>
-                ))}
-                
-                {/* Bronze medals */}
-                {Array.from({ length: driver.medals.bronze }).map((_, i) => (
-                  <span key={`bronze-${i}`} className="text-lg">🥉</span>
-                ))}
-                
-                {/* Show message if no medals */}
-                {driver.total === 0 && driver.championships === 0 && (
-                  <span className="text-gray-400 italic text-sm">No medals yet</span>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
+      <div className="bg-white border rounded-lg shadow-sm overflow-hidden">
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead className="w-16">#</TableHead>
+              <TableHead>Driver</TableHead>
+              <TableHead>Medals & Championships</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {enrichedDriverMedals.map((driver, index) => (
+              <TableRow key={driver.name}>
+                <TableCell className="font-medium text-gray-500">
+                  {index + 1}
+                </TableCell>
+                <TableCell className="font-semibold text-black">
+                  {driver.name}
+                </TableCell>
+                <TableCell>
+                  <div className="flex items-center gap-1 flex-wrap">
+                    {/* Championships */}
+                    {Array.from({ length: driver.championships }).map((_, i) => (
+                      <span key={`championship-${i}`} className="text-lg">🏆</span>
+                    ))}
+                    
+                    {/* Gold medals */}
+                    {Array.from({ length: driver.medals.gold }).map((_, i) => (
+                      <span key={`gold-${i}`} className="text-lg">🥇</span>
+                    ))}
+                    
+                    {/* Silver medals */}
+                    {Array.from({ length: driver.medals.silver }).map((_, i) => (
+                      <span key={`silver-${i}`} className="text-lg">🥈</span>
+                    ))}
+                    
+                    {/* Bronze medals */}
+                    {Array.from({ length: driver.medals.bronze }).map((_, i) => (
+                      <span key={`bronze-${i}`} className="text-lg">🥉</span>
+                    ))}
+                    
+                    {/* Show message if no medals */}
+                    {driver.total === 0 && driver.championships === 0 && (
+                      <span className="text-gray-400 italic text-sm">No medals yet</span>
+                    )}
+                  </div>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
       </div>
     </div>
   );
