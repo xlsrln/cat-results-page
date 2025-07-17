@@ -61,18 +61,14 @@ const Navigation = () => {
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="z-50"> 
                   <ul className="grid w-[400px] gap-3 p-4"> {/* Changed div to ul for ListItem */}
+                    {/*  todo remove this
                     <ListItem to="/results" title="Current Season">
                       Season 5 standings and results
                     </ListItem>
+                    */}
                     <ListItem to="/hall-of-fame" title="Hall of Fame">
                        Driver medals, championships, and team accolades
                     </ListItem>
-                    {/* All-Time Stats link removed as it's now Hall of Fame */}
-                    {/* 
-                    <ListItem to="/all-time-stats" title="All-Time Stats">
-                      Aggregate championship medals across all seasons
-                    </ListItem> 
-                    */}
                     <div className="border-t pt-3 mt-2"> {/* Added mt-2 for spacing */}
                       <p className="text-xs text-muted-foreground px-3 mb-2">Previous Seasons & Events</p>
                       <div className="grid grid-cols-3 gap-2">
