@@ -57,6 +57,7 @@ const Home = () => {
                 <Link to="/season-2" className="block text-blue-600 hover:text-blue-800 text-sm">Season 2 Results</Link>
                 <Link to="/season-3" className="block text-blue-600 hover:text-blue-800 text-sm">Season 3 Results</Link>
                 <Link to="/season-4" className="block text-blue-600 hover:text-blue-800 text-sm">Season 4 Results</Link>
+                <Link to="/season-5" className="block text-blue-600 hover:text-blue-800 text-sm">Season 5 Results</Link>
               </div>
             </div>
             <Link 

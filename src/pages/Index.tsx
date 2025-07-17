@@ -18,7 +18,8 @@ import { slugify } from "@/lib/slugify";
 import { fetchTeamData, TeamMembership } from "@/lib/teamData";
 import { calculateTeamChampionshipStandings, TeamChampionshipEntry } from "@/lib/teamPointsCalculator";
 
-const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvpxG6EchgG9RszhPdZwv8-ZkHSRo9zxu7moy6t4Nbvg0-Sxi9h7sazU4PdR0lP8T8c5NkFYNgHtL9/pub?gid=1794825689&single=true&output=csv";
+//const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvpxG6EchgG9RszhPdZwv8-ZkHSRo9zxu7moy6t4Nbvg0-Sxi9h7sazU4PdR0lP8T8c5NkFYNgHtL9/pub?gid=1794825689&single=true&output=csv";
+const CSV_URL = "";
 
 interface TournamentData {
   [key: string]: string;
