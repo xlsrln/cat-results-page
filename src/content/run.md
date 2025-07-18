@@ -1,5 +1,3 @@
-## Welcome to the Catface Running Club!
-
 The Catface running club is a club for the joy of running, whether it's fast or slow, up a mountain or on a treadmill.
 
 Anyone is free to compete for catface in their local races - just enter "cat face nospace" as your team in the form! 
