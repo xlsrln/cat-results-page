@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Results from "./pages/Results";
 import Teams from "./pages/Teams";
 import Rules from "./pages/Rules";
+import Running from "./pages/Running";
 import Stages from "./pages/Stages";
 import Season1 from "./pages/Season1";
 import Season2 from "./pages/Season2";
@@ -36,6 +37,7 @@ const App = () => (
             <Route path="/results" element={<Results />} />
             <Route path="/teams" element={<Teams />} />
             <Route path="/rules" element={<Rules />} />
+            <Route path="/running" element={<Running />} />
             <Route path="/stages" element={<Stages />} />
             <Route path="/season-1" element={<Season1 />} />
             <Route path="/season-2" element={<Season2 />} />
