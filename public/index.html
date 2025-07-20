@@ -9,7 +9,6 @@
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
       // Single Page Apps for GitHub Pages
-      // This script checks for query parameters p (path) and q (query) and rewrites URL.
       (function(l) {
         var params = new URLSearchParams(l.search);
         var pathParam = params.get('p');
@@ -20,17 +19,9 @@
           var newSearch = queryParam ? '?' + decodeURIComponent(queryParam) : '';
           var newHash = l.hash;
           
-          // Instead of immediately replacing state, store the redirect info
-          // for React Router to handle after it initializes
-          sessionStorage.setItem('github-pages-redirect', JSON.stringify({
-            path: newPath,
-            search: newSearch,
-            hash: newHash
-          }));
-          
-          // Clean up the URL immediately to avoid the ?p= showing
-          var cleanUrl = l.origin + newPath + newSearch + newHash;
-          window.history.replaceState(null, null, cleanUrl);
+          // Directly replace the URL without using sessionStorage
+          var newUrl = l.origin + newPath + newSearch + newHash;
+          window.history.replaceState(null, null, newUrl);
         }
       }(window.location));
     </script>
