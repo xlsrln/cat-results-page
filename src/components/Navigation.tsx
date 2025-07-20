@@ -1,15 +1,16 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  // NavigationMenuLink, // No longer using asChild for these Links
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { cn } from "@/lib/utils"; // For cn helper if needed for custom styling
+import { cn } from "@/lib/utils";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 // Re-usable ListItem component for NavigationMenu
 const ListItem = React.forwardRef<
@@ -39,6 +40,9 @@ ListItem.displayName = "ListItem";
 
 
 const Navigation = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const isMobile = useIsMobile();
+
   return (
     <nav className="bg-white shadow-sm border-b">
       <div className="container mx-auto px-4 py-4">
@@ -47,7 +51,16 @@ const Navigation = () => {
             Catface Rally Club
           </Link>
           
-          <NavigationMenu>
+          {/* Mobile menu button */}
+          {isMobile ? (
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-2 rounded-md hover:bg-gray-100"
+            >
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          ) : (
+            <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
                  <Link to="/" className="text-gray-700 hover:text-black font-medium px-4 py-2 text-base inline-flex items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground">
@@ -119,7 +132,88 @@ const Navigation = () => {
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
+          )}
         </div>
+        
+        {/* Mobile menu */}
+        {isMobile && mobileMenuOpen && (
+          <div className="mt-4 pb-4 border-t">
+            <div className="flex flex-col space-y-2 pt-4">
+              <Link 
+                to="/" 
+                className="text-gray-700 hover:text-black font-medium px-4 py-2 rounded-md hover:bg-gray-100"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Home
+              </Link>
+              
+              <div className="px-4 py-2">
+                <p className="text-sm font-medium text-gray-900 mb-2">Results</p>
+                <div className="ml-4 space-y-1">
+                  <Link 
+                    to="/hall-of-fame" 
+                    className="block text-gray-600 hover:text-black py-1"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Hall of Fame
+                  </Link>
+                  <div className="space-y-1">
+                    <p className="text-xs text-gray-500 mt-2 mb-1">Previous Seasons</p>
+                    {[
+                      { to: "/season-1", label: "Season 1" },
+                      { to: "/season-2", label: "Season 2" },
+                      { to: "/season-3", label: "Season 3" },
+                      { to: "/season-4", label: "Season 4" },
+                      { to: "/season-5", label: "Season 5" },
+                      { to: "/rally-master", label: "Rally Master" },
+                    ].map((item) => (
+                      <Link
+                        key={item.to}
+                        to={item.to}
+                        className="block text-gray-600 hover:text-black py-1 text-sm"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              
+              <Link 
+                to="/teams" 
+                className="text-gray-700 hover:text-black font-medium px-4 py-2 rounded-md hover:bg-gray-100"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Teams
+              </Link>
+              
+              <Link 
+                to="/stages" 
+                className="text-gray-700 hover:text-black font-medium px-4 py-2 rounded-md hover:bg-gray-100"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Stages
+              </Link>
+              
+              <Link 
+                to="/rules" 
+                className="text-gray-700 hover:text-black font-medium px-4 py-2 rounded-md hover:bg-gray-100"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Rules
+              </Link>
+              
+              <Link 
+                to="/running" 
+                className="text-gray-700 hover:text-black font-medium px-4 py-2 rounded-md hover:bg-gray-100"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Running
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );
