@@ -9,24 +9,28 @@
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
       // Single Page Apps for GitHub Pages
-      // MIT License
-      // https://github.com/rafgraph/spa-github-pages
       // This script checks for query parameters p (path) and q (query) and rewrites URL.
       (function(l) {
         var params = new URLSearchParams(l.search);
-        var pathParam = params.get('p'); // Path to redirect to, should be URI decoded
-        var queryParam = params.get('q'); // Original query string, should be URI decoded
+        var pathParam = params.get('p');
+        var queryParam = params.get('q');
 
         if (pathParam) {
           var newPath = decodeURIComponent(pathParam);
           var newSearch = queryParam ? '?' + decodeURIComponent(queryParam) : '';
-          var newHash = l.hash; // Preserve the original hash
-
-          // Construct the new URL for history.replaceState
-          // Example: if p=/teams and q=name=cat, new URL is /teams?name=cat
-          var targetUrl = newPath + newSearch + newHash;
+          var newHash = l.hash;
           
-          window.history.replaceState(null, null, targetUrl);
+          // Instead of immediately replacing state, store the redirect info
+          // for React Router to handle after it initializes
+          sessionStorage.setItem('github-pages-redirect', JSON.stringify({
+            path: newPath,
+            search: newSearch,
+            hash: newHash
+          }));
+          
+          // Clean up the URL immediately to avoid the ?p= showing
+          var cleanUrl = l.origin + newPath + newSearch + newHash;
+          window.history.replaceState(null, null, cleanUrl);
         }
       }(window.location));
     </script>

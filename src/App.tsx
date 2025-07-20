@@ -1,9 +1,10 @@
 
+import { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Results from "./pages/Results";
 import Teams from "./pages/Teams";
@@ -25,6 +26,33 @@ const queryClient = new QueryClient();
 
 const VITE_BASE_PATH = import.meta.env.BASE_URL;
 
+// Component to handle GitHub Pages redirects
+const GitHubPagesHandler = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    // Check if we have a stored redirect from GitHub Pages
+    const redirectInfo = sessionStorage.getItem('github-pages-redirect');
+    if (redirectInfo) {
+      try {
+        const { path, search, hash } = JSON.parse(redirectInfo);
+        sessionStorage.removeItem('github-pages-redirect');
+        
+        // Only navigate if we're currently on the home page and the redirect is different
+        if (location.pathname === '/' && path !== '/') {
+          navigate(path + search + hash, { replace: true });
+        }
+      } catch (e) {
+        // Clean up invalid data
+        sessionStorage.removeItem('github-pages-redirect');
+      }
+    }
+  }, [navigate, location.pathname]);
+
+  return null;
+};
+
 const App = () => (
   <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
     <QueryClientProvider client={queryClient}>
@@ -32,6 +60,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter basename={VITE_BASE_PATH}>
+          <GitHubPagesHandler />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/results" element={<Results />} />
