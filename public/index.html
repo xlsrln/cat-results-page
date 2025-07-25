@@ -10,18 +10,33 @@
     <script type="text/javascript">
       // Single Page Apps for GitHub Pages
       (function(l) {
+        console.log('[index.html] Starting URL rewrite process');
+        console.log('[index.html] Current location:', l.href);
+        console.log('[index.html] Search params:', l.search);
+        
         var params = new URLSearchParams(l.search);
         var pathParam = params.get('p');
         var queryParam = params.get('q');
+
+        console.log('[index.html] pathParam:', pathParam);
+        console.log('[index.html] queryParam:', queryParam);
 
         if (pathParam) {
           var newPath = decodeURIComponent(pathParam);
           var newSearch = queryParam ? '?' + decodeURIComponent(queryParam) : '';
           var newHash = l.hash;
           
+          console.log('[index.html] Decoded newPath:', newPath);
+          console.log('[index.html] Decoded newSearch:', newSearch);
+          console.log('[index.html] Hash:', newHash);
+          
           // Directly replace the URL without using sessionStorage
           var newUrl = l.origin + newPath + newSearch + newHash;
+          console.log('[index.html] Final URL after rewrite:', newUrl);
           window.history.replaceState(null, null, newUrl);
+          console.log('[index.html] URL rewrite completed');
+        } else {
+          console.log('[index.html] No pathParam found, no rewrite needed');
         }
       }(window.location));
     </script>

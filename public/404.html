@@ -8,9 +8,16 @@
     <title>Redirecting...</title>
     <script type="text/javascript">
       (function(l) {
+        console.log('[404.html] Starting redirect process');
+        console.log('[404.html] Current location:', l.href);
+        
         var pathname = l.pathname; // e.g., /teams
         var search = l.search;     // e.g., ?name=cat
         var hash = l.hash;         // e.g., #section
+
+        console.log('[404.html] Parsed pathname:', pathname);
+        console.log('[404.html] Parsed search:', search);
+        console.log('[404.html] Parsed hash:', hash);
 
         // Construct the query parameters for index.html
         // p: the path to redirect to (e.g., /teams), URI encoded
@@ -22,6 +29,7 @@
         }
         redirectUrl += hash;
 
+        console.log('[404.html] Redirecting to:', redirectUrl);
         l.replace(redirectUrl);
       }(window.location));
     </script>

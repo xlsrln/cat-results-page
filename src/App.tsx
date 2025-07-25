@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import DebugRouter from "@/components/DebugRouter";
 import Home from "./pages/Home";
 import Results from "./pages/Results";
 import Teams from "./pages/Teams";
@@ -33,6 +34,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter basename={VITE_BASE_PATH}>
+          <DebugRouter />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/results" element={<Results />} />
